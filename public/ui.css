@@ -296,22 +296,23 @@ button.disabled {
 
 /* Form elements */
 .input-text {
-  border: 1px solid var(--dark-gray);
+  background-color: #f9f9f9;
+  border: 1px solid var(--light-gray);
 }
 
 .input-text:hover {
-  background-color: var(--light-gray);
-  border: 1px solid var(--dark-gray);
+  background-color: #f5f5f5;
+  border: 1px solid var(--light-gray);
 }
 
 .input-text:focus {
-  background-color: var(--light-gray);
+  background-color: #f1f1f1;
   border: 1px solid var(--dark-gray);
 }
 
 .select {
   color: var(--black);
-  border: 1px solid var(--dark-gray);
+  border: 1px solid var(--light-gray);
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: 99% center;
@@ -324,13 +325,13 @@ button.disabled {
 }
 
 .select:hover {
-  background-color: var(--light-gray);
-  border: 1px solid var(--dark-gray);
+  background-color: #f9f9f9;
+  border: 1px solid var(--light-gray);
 }
 
 .select:focus {
   background-color: var(--light-gray);
-  border: 1px solid var(--dark-gray);
+  border: 1px solid var(--light-gray);
 }
 
 /* Switch */
@@ -697,13 +698,22 @@ button.disabled {
 
 /* Cards */
 .card {
-  width: 25%;
+  width: 300px;
   margin: 0 10px;
   border-radius: 10px;
+  display: inline-block;
   background-color: var(--white);
   white-space: initial !important;
   border: 1px solid var(--light-gray);
   box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+
+.card:last-child {
+  margin-right: 0;
 }
 
 .card-title span {
@@ -1408,10 +1418,4 @@ input[type="range" i]::-webkit-slider-thumb{
   user-select: none;
   margin: 2px 5px 0 5px;
   display: inline-block;
-}
-
-@media (max-width: 500px) {
-  .card {
-    width: 100%;
-  }
 }

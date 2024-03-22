@@ -7,7 +7,7 @@ import ButtonLink from '../Button/ButtonLink';
 
 const EventCard = memo(({ from, when, name, venue, image, color }) => (
   <div className='card'>
-    <Link to='/'>
+    <Link to='/event'>
       <div className='card-title'>
         <span>{name}</span>
       </div>
@@ -35,7 +35,7 @@ const EventCard = memo(({ from, when, name, venue, image, color }) => (
         color={`${color}-filled`}
         text='Buy tickets'
         rightIcon='arrow_forward'
-        onClick='/'
+        onClick='/event'
       />
     </div>
   </div>

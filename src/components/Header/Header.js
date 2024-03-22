@@ -13,7 +13,7 @@ const Header = memo(() => (
           </svg>
         </Link>
       </div>
-      <div className='links'>
+      <div className='links responsive-hide'>
         <Link to='/' className='gray'>
           Home
         </Link>
@@ -31,8 +31,8 @@ const Header = memo(() => (
         </Link>
       </div>
       <div className='members'>
-        <Link to='/members/register' className='blue'>
-          Register
+        <Link to='/members/signup' className='blue'>
+          Sign up
         </Link>
         <span>or</span>
         <ButtonLink color='blue-filled' text='Sign in' onClick='/members/signin' />

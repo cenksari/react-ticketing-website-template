@@ -23,7 +23,7 @@ const Footer = memo(() => (
         <Link to='/venues' className='white'>
           Venues
         </Link>
-        <Link to='/venues' className='white'>
+        <Link to='/tickets' className='white'>
           My tickets
         </Link>
       </div>
@@ -34,16 +34,16 @@ const Footer = memo(() => (
         <Link to='/news' className='white'>
           News
         </Link>
-        <Link to='/search' className='white'>
+        <Link to='/contact' className='white'>
           Contact us
         </Link>
-        <Link to='/search' className='white'>
+        <Link to='/organizers' className='white'>
           For organizers
         </Link>
       </div>
       <div className='members'>
-        <Link to='/members/register' className='white'>
-          Register
+        <Link to='/members/signup' className='white'>
+          Sign up
         </Link>
         <span>or</span>
         <ButtonLink color='blue-filled' text='Sign in' onClick='/members/signin' />
@@ -61,11 +61,11 @@ const Footer = memo(() => (
     <div className='copy'>
       <span>&copy; 2024 - Modern ticketing</span>
       <div className='terms'>
-        <Link to='/'>Privacy policy</Link>
+        <Link to='/legal/privacy-policy'>Privacy policy</Link>
         &nbsp;&bull;&nbsp;
-        <Link to='/'>Cookies</Link>
+        <Link to='/legal/cookies'>Cookies</Link>
         &nbsp;&bull;&nbsp;
-        <Link to='/'>Terms of service</Link>
+        <Link to='/legal/terms-of-service'>Terms of service</Link>
       </div>
     </div>
   </footer>
