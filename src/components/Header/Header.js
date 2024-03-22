@@ -17,8 +17,8 @@ const Header = memo(() => (
         <Link to='/' className='gray'>
           Home
         </Link>
-        <Link to='/search' className='gray'>
-          Events
+        <Link to='/discover' className='gray'>
+          Discover
         </Link>
         <Link to='/venues' className='gray'>
           Venues

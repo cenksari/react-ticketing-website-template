@@ -17,11 +17,14 @@ const Footer = memo(() => (
         <Link to='/' className='white'>
           Home
         </Link>
-        <Link to='/search' className='white'>
-          Events
+        <Link to='/discover' className='white'>
+          Discover
         </Link>
         <Link to='/venues' className='white'>
           Venues
+        </Link>
+        <Link to='/venues' className='white'>
+          My tickets
         </Link>
       </div>
       <div className='links'>
@@ -33,6 +36,9 @@ const Footer = memo(() => (
         </Link>
         <Link to='/search' className='white'>
           Contact us
+        </Link>
+        <Link to='/search' className='white'>
+          For organizers
         </Link>
       </div>
       <div className='members'>
@@ -46,7 +52,7 @@ const Footer = memo(() => (
     <div className='newsletter'>
       <p>Don&apos;t miss the latest on Modern ticketing news and events.</p>
       <div className='input-container'>
-        <input type='text' placeholder='your@emailaddress.com' />
+        <input type='text' name='email' autoComplete='off' placeholder='your@emailaddress.com' />
         <button type='button'>
           <i className='material-icons'>arrow_forward</i>
         </button>
@@ -54,6 +60,13 @@ const Footer = memo(() => (
     </div>
     <div className='copy'>
       <span>&copy; 2024 - Modern ticketing</span>
+      <div className='terms'>
+        <Link to='/'>Privacy policy</Link>
+        &nbsp;&bull;&nbsp;
+        <Link to='/'>Cookies</Link>
+        &nbsp;&bull;&nbsp;
+        <Link to='/'>Terms of service</Link>
+      </div>
     </div>
   </footer>
 ));
