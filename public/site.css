@@ -336,11 +336,21 @@ footer .terms a:hover {
 .slider .slide {
   width: 100%;
   height: 550px;
+  margin: 0 10px;
   position: relative;
   border-radius: 20px;
+  display: inline-block;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.slider .slide:first-child {
+  margin-left: 0;
+}
+
+.slider .slide:last-child {
+  margin-right: 0;
 }
 
 .slider .slide .info {

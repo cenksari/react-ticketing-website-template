@@ -17,30 +17,56 @@ const Home = () => (
           <Heading type={2} color='orange' text='Featured' />
         </div>
         <div className='slider'>
-          <Link to='/event'>
-            <div
-              className='slide'
-              style={{
-                backgroundImage: `url("https://images.unsplash.com/photo-1522158637959-30385a09e0da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-              }}
-            >
-              <div className='info'>
-                <div className='flex flex-v-center flex-space-between'>
-                  <div>
-                    <Heading type={3} color='orange' text='Event name goes here' />
-                    <p className='white'>Tue, Sep 21, 2024 19:00</p>
-                    <p className='white'>Royal Albert Hall</p>
+          <MultipleSlider>
+            <Link to='/event'>
+              <div
+                className='slide'
+                style={{
+                  backgroundImage: `url("https://images.unsplash.com/photo-1522158637959-30385a09e0da?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
+                }}
+              >
+                <div className='info'>
+                  <div className='flex flex-v-center flex-space-between'>
+                    <div>
+                      <Heading type={3} color='orange' text='Event name goes here' />
+                      <p className='white'>Tue, Sep 21, 2024 19:00</p>
+                      <p className='white'>Royal Albert Hall</p>
+                    </div>
+                    <Button
+                      color='orange-filled responsive-hide'
+                      text='Buy tickets'
+                      rightIcon='arrow_forward'
+                      onClick={() => {}}
+                    />
                   </div>
-                  <Button
-                    color='orange-filled responsive-hide'
-                    text='Buy tickets'
-                    rightIcon='arrow_forward'
-                    onClick={() => {}}
-                  />
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+            <Link to='/event' className='slide'>
+              <div
+                className='slide'
+                style={{
+                  backgroundImage: `url("https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
+                }}
+              >
+                <div className='info'>
+                  <div className='flex flex-v-center flex-space-between'>
+                    <div>
+                      <Heading type={3} color='green' text='Event name goes here' />
+                      <p className='white'>Tue, Sep 21, 2024 19:00</p>
+                      <p className='white'>Royal Albert Hall</p>
+                    </div>
+                    <Button
+                      color='green-filled responsive-hide'
+                      text='Buy tickets'
+                      rightIcon='arrow_forward'
+                      onClick={() => {}}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </MultipleSlider>
         </div>
       </div>
     </Section>
