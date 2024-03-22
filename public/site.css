@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap&family=Material+Icons&display=swap&subset=latin,latin-ext');
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, h7, nav, header, footer, section {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  border-radius: 0;
+  appearance: none;
+  font-size: 1.15rem;
+  font-style: normal;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-family: "Rethink Sans", sans-serif;;
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--gray);
+}
+
+html, body {
+  background-color: var(--light-gray);
+}
+
+a {
+  text-decoration: none;
+}
+
+.responsive-hide {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1250px;
+}
+
+header {
+  background-color: var(--white);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container .logo svg {
+  width: 100px;
+  fill: var(--gray);
+}
+
+header .container .links a {
+  margin: 0 15px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+header .container .links a:hover {
+  text-decoration: underline;
+}
+
+header .container .members a,
+header .container .members span {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+header .container .members a {
+  text-decoration: underline;
+}
+
+header .container .members span {
+  font-weight: 600;
+}
+
+footer {
+  padding: 40px 0;
+  color: var(--white);
+  background-color: var(--blackest-gray);
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .container .logo svg {
+  width: 100px;
+  fill: var(--white);
+}
+
+footer .container .links a {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+footer .container .links a:hover {
+  text-decoration: underline;
+}
+
+footer .container .members a,
+footer .container .members span {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+footer .container .members a {
+  text-decoration: underline;
+}
+
+footer .container .members span {
+  font-weight: 600;
+}
+
+footer .copy {
+  margin-top: 50px;
+  text-align: center;
+}
+
+footer .copy span {
+  user-select: none;
+  color: var(--dark-gray);
+}
+
+footer .newsletter {
+  text-align: center;
+  margin: 50px 0 20px 0;
+}
+
+footer .newsletter .input-container {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  border-radius: 30em;
+  margin: 15px auto 0 auto;
+  justify-content: space-between;
+  background-color: var(--white);
+}
+
+footer .newsletter .input-container input {
+  border-radius: 30em;
+  background-color: transparent;
+}
+
+footer .newsletter .input-container button {
+  padding: 20px;
+  border-radius: 30em;
+  background-color: transparent;
+}
+
+footer .newsletter .input-container button:active {
+  background-color: var(--light-gray);
+}
+
+.section {
+  padding: 30px 0;
+}
+
+@media (max-width: 800px) {
+  html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, h7, nav, header, footer, section {
+    font-size: 1em;
+  }
+
+  .responsive-hide {
+    display: unset;
+  }
+}
