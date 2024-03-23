@@ -8,6 +8,7 @@ import Forgot from '../pages/Members/Forgot';
 
 import Discover from '../pages/Discover/Discover';
 import Venues from '../pages/Venue/Venues';
+import News from '../pages/News/News';
 
 const Navigation = () => (
   <Routes>
@@ -19,6 +20,7 @@ const Navigation = () => (
 
     <Route path='/discover' element={<Discover />} />
     <Route path='/venues' element={<Venues />} />
+    <Route path='/news' element={<News />} />
   </Routes>
 );
 
