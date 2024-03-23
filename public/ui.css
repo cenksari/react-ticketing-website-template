@@ -50,7 +50,7 @@ h6 {
 }
 
 input, select, textarea, button {
-  padding: 15px;
+  padding: 10px;
   overflow: auto;
   color: var(--black);
   border-radius: 10px;
