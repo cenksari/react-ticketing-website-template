@@ -10,6 +10,7 @@ import Discover from '../pages/Discover/Discover';
 import Venues from '../pages/Venue/Venues';
 import News from '../pages/News/News';
 import Contact from '../pages/Contact/Contact';
+import Help from '../pages/Help/Help';
 
 const Navigation = () => (
   <Routes>
@@ -23,6 +24,7 @@ const Navigation = () => (
     <Route path='/venues' element={<Venues />} />
     <Route path='/news' element={<News />} />
     <Route path='/contact' element={<Contact />} />
+    <Route path='/help' element={<Help />} />
   </Routes>
 );
 
