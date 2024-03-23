@@ -37,8 +37,8 @@ const Footer = memo(() => (
         <Link to='/contact' className='white'>
           Contact us
         </Link>
-        <Link to='/organizers' className='white'>
-          For organizers
+        <Link to='/promoters' className='white'>
+          For promoters
         </Link>
       </div>
       <div className='members'>

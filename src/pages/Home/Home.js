@@ -178,7 +178,7 @@ const Home = () => (
             text='Get started'
             color='purple-filled'
             rightIcon='arrow_forward'
-            onClick='/'
+            onClick='/promoters'
           />
         </div>
       </div>
@@ -283,7 +283,7 @@ const Home = () => (
             text='Get started'
             color='yellow-filled'
             rightIcon='arrow_forward'
-            onClick='/'
+            onClick='/promoters'
           />
         </div>
       </div>
