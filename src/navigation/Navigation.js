@@ -14,6 +14,7 @@ import News from '../pages/News/News';
 import Contact from '../pages/Contact/Contact';
 import Help from '../pages/Help/Help';
 import Promoters from '../pages/Promoters/Promoters';
+import Legal from '../pages/Legal/Legal';
 
 const Navigation = () => (
   <Routes>
@@ -31,6 +32,7 @@ const Navigation = () => (
     <Route path='/contact' element={<Contact />} />
     <Route path='/help' element={<Help />} />
     <Route path='/promoters' element={<Promoters />} />
+    <Route path='/legal/:url' element={<Legal />} />
   </Routes>
 );
 
