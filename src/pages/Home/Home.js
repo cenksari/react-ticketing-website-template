@@ -7,7 +7,7 @@ import Section from '../../components/Section/Section';
 import Heading from '../../components/Heading/Heading';
 import EventCard from '../../components/Card/EventCard';
 import ButtonLink from '../../components/Button/ButtonLink';
-import MultipleSlider from '../../components/Slick/MultipleSlider';
+import MultipleSlider from '../../components/Slider/MultipleSlider';
 
 const Home = () => (
   <Master>

@@ -219,6 +219,7 @@ footer .terms a:hover {
 }
 
 .paragraph-container p {
+  color: var(--gray);
   margin-bottom: 15px;
 }
 
@@ -277,7 +278,7 @@ footer .terms a:hover {
 .scrollable {
   width: 100%;
   padding: 0 5px;
-  overflow: hidden;
+  overflow-x: hidden;
   white-space: nowrap;
   padding-bottom: 15px;
 }
@@ -454,14 +455,14 @@ footer .terms a:hover {
 
 .blur-cover {
   width: 100%;
-  height: 600px;
+  height: 550px;
   overflow: hidden;
   position: relative;
 }
 
 .event-cover {
   width: 100%;
-  height: 600px;
+  height: 550px;
   overflow: hidden;
   filter: blur(25px);
   transform: scale(1.1);
@@ -473,6 +474,7 @@ footer .terms a:hover {
   right: 0;
   bottom: 0;
   display: flex;
+  text-align: center;
   position: absolute;
   align-items: center;
   flex-direction: column;
@@ -490,6 +492,15 @@ footer .terms a:hover {
 .cover-info h5,
 .cover-info h6 {
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.event-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-details .paragraph-container {
+  padding-right: 20px;
 }
 
 .ticket-box {
@@ -515,8 +526,26 @@ footer .terms a:hover {
   border-bottom: 1px solid var(--light-gray);
 }
 
+.ticket-box .ticket-box-line i {
+  cursor: help;
+  margin-left: 5px;
+  user-select: none;
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--dark-gray);
+}
+
+.ticket-box .ticket-box-line i:hover {
+  color: var(--blue);
+}
+
+.ticket-box .ticket-box-line:hover {
+  background-color: #f9f9f9;
+}
+
 .ticket-box .ticket-box-line span {
   font-size: 0.8em;
+  display: inline-block;
 }
 
 .ticket-box .ticket-box-line:last-child {
@@ -529,9 +558,54 @@ footer .terms a:hover {
   background-color: var(--light-gray);
 }
 
+.ticket-box .quantity {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.ticket-box .quantity input,
+.ticket-box .quantity button {
+  width: unset;
+  height: 30px;
+  border-radius: 0;
+  display: inline-block;
+  border: 1px solid var(--blue);
+}
+
+.ticket-box .quantity input {
+  padding: 0;
+  width: 50px;
+  text-align: center;
+  border: 1px solid var(--light-gray);
+}
+
+.ticket-box .quantity button {
+  padding: 0;
+  width: 30px;
+  color: var(--white);
+  background-color: var(--blue);
+}
+
 @media (max-width: 900px) {
   html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, h7, nav, header, footer, section {
     font-size: 1.05rem;
+  }
+
+  .scrollable {
+    overflow-x: auto;
+  }
+
+  .event-details {
+    flex-direction: column;
+  }
+
+  .event-details .paragraph-container {
+    padding-right: unset;
+  }
+
+  .ticket-box {
+    min-width: 100%;
+    margin-top: 30px;
   }
 }
 

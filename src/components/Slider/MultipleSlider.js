@@ -28,14 +28,6 @@ const MultipleSlider = memo(({ children }) => {
     } else {
       setRightArrowDisable(false);
     }
-
-    // if (hideLeftScroll && hideRightScroll) {
-    //   navRef.current.style.overflowX = 'hidden';
-    //   navRef.current.style.paddingBottom = '0px';
-    // } else {
-    //   navRef.current.style.overflowX = 'auto';
-    //   navRef.current.style.paddingBottom = '15px';
-    // }
   };
 
   // const mouseUp = () => {

@@ -52,8 +52,14 @@ const Footer = memo(() => (
     <div className='newsletter'>
       <p>Don&apos;t miss the latest on Modern ticketing news and events.</p>
       <div className='input-container'>
-        <input type='text' name='email' autoComplete='off' placeholder='your@emailaddress.com' />
-        <button type='button'>
+        <input
+          type='email'
+          name='email'
+          autoComplete='off'
+          placeholder='your@emailaddress.com'
+          required
+        />
+        <button type='submit'>
           <i className='material-icons'>arrow_forward</i>
         </button>
       </div>

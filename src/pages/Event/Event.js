@@ -5,7 +5,7 @@ import Button from '../../components/Button/Button';
 import Section from '../../components/Section/Section';
 import Heading from '../../components/Heading/Heading';
 import EventCard from '../../components/Card/EventCard';
-import MultipleSlider from '../../components/Slick/MultipleSlider';
+import MultipleSlider from '../../components/Slider/MultipleSlider';
 
 const Forgot = () => (
   <Master>
@@ -28,35 +28,70 @@ const Forgot = () => (
     </div>
     <Section className='white-background'>
       <div className='container'>
-        <div className='flex flex-space-between'>
+        <div className='event-details'>
           <div>
             <Heading type={4} color='gray' text='Event details' />
             <div className='paragraph-container gray'>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                qui dolorem ipsum quia dolor sit amet.
+              </p>
             </div>
           </div>
-          <div className='ticket-box'>
-            <div className='ticket-box-header'>
-              <Heading type={5} color='gray' text='Tickets' />
-            </div>
-            <div className='ticket-box-content'>
-              <div className='ticket-box-line'>
-                <span>Family</span>
+          <div>
+            <div className='ticket-box'>
+              <div className='ticket-box-header'>
+                <Heading type={5} color='gray' text='Tickets' />
               </div>
-              <div className='ticket-box-line'>
-                <span>Adult</span>
+              <div className='ticket-box-content'>
+                <div className='ticket-box-line'>
+                  <div className='quantity'>
+                    <button type='button'>-</button>
+                    <input type='text' name='q1' value='1' onChange={() => {}} />
+                    <button type='button'>+</button>
+                  </div>
+                  <span>Family</span>
+                </div>
+                <div className='ticket-box-line'>
+                  <div className='quantity'>
+                    <button type='button'>-</button>
+                    <input type='text' name='q2' value='1' onChange={() => {}} />
+                    <button type='button'>+</button>
+                  </div>
+                  <span>Adult</span>
+                </div>
+                <div className='ticket-box-line'>
+                  <div className='quantity'>
+                    <button type='button'>-</button>
+                    <input type='text' name='q3' value='1' onChange={() => {}} />
+                    <button type='button'>+</button>
+                  </div>
+                  <span>Child</span>
+                  <i className='material-icons' title='Information about child tickets'>
+                    info
+                  </i>
+                </div>
               </div>
-              <div className='ticket-box-line'>
-                <span>Child</span>
+              <div className='ticket-box-buttons'>
+                <Button
+                  type='button'
+                  color='blue-filled'
+                  text='Buy tickets'
+                  rightIcon='arrow_forward'
+                />
               </div>
-            </div>
-            <div className='ticket-box-buttons'>
-              <Button
-                type='button'
-                color='blue-filled'
-                text='Buy tickets'
-                rightIcon='arrow_forward'
-              />
             </div>
           </div>
         </div>
