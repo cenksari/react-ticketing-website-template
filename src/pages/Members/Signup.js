@@ -72,6 +72,7 @@ const Signup = () => (
                   maxLength={64}
                   placeholder='Enter your name'
                   onChange={() => {}}
+                  required
                 />
               </div>
             </div>
@@ -87,6 +88,7 @@ const Signup = () => (
                   maxLength={64}
                   placeholder='Enter your last name'
                   onChange={() => {}}
+                  required
                 />
               </div>
             </div>
@@ -102,6 +104,7 @@ const Signup = () => (
                   maxLength={128}
                   placeholder='Enter your e-mail address'
                   onChange={() => {}}
+                  required
                 />
               </div>
             </div>
@@ -116,6 +119,7 @@ const Signup = () => (
                 maxLength={64}
                 placeholder='Enter your password'
                 onChange={() => {}}
+                required
               />
             </div>
             <div className='form-line'>

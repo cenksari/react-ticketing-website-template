@@ -29,6 +29,7 @@ const Forgot = () => (
                   maxLength={128}
                   placeholder='Enter your e-mail address'
                   onChange={() => {}}
+                  required
                 />
               </div>
             </div>

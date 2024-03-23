@@ -71,6 +71,7 @@ const Signin = () => (
                   maxLength={128}
                   placeholder='Enter your e-mail address'
                   onChange={() => {}}
+                  required
                 />
               </div>
             </div>
@@ -88,6 +89,7 @@ const Signin = () => (
                 maxLength={64}
                 placeholder='Enter your password'
                 onChange={() => {}}
+                required
               />
             </div>
             <div className='form-buttons'>

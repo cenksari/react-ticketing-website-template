@@ -28,6 +28,7 @@ const ActivationCode = () => (
                 maxLength={10}
                 placeholder='Enter your activation code'
                 onChange={() => {}}
+                required
               />
             </div>
             <div className='form-buttons'>

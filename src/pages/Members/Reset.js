@@ -26,6 +26,7 @@ const Reset = () => (
                 maxLength={64}
                 placeholder='Enter your new password'
                 onChange={() => {}}
+                required
               />
             </div>
             <div className='form-line'>
@@ -39,6 +40,7 @@ const Reset = () => (
                 maxLength={64}
                 placeholder='Re-enter your password'
                 onChange={() => {}}
+                required
               />
             </div>
             <div className='form-buttons'>
