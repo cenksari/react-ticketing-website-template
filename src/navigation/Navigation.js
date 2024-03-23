@@ -7,6 +7,7 @@ import Signup from '../pages/Members/Signup';
 import Forgot from '../pages/Members/Forgot';
 
 import Discover from '../pages/Discover/Discover';
+import Venues from '../pages/Venue/Venues';
 
 const Navigation = () => (
   <Routes>
@@ -17,6 +18,7 @@ const Navigation = () => (
     <Route path='/members/forgot-password' element={<Forgot />} />
 
     <Route path='/discover' element={<Discover />} />
+    <Route path='/venues' element={<Venues />} />
   </Routes>
 );
 
