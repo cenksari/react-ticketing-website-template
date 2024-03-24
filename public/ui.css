@@ -712,10 +712,6 @@ button.disabled {
       0 0 0 1px rgba(17, 24, 39, .05);
 }
 
-.card:first-child {
-  margin-left: 0;
-}
-
 .card-title span {
   padding: 15px;
   display: block;

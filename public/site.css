@@ -336,10 +336,6 @@ footer .terms a:hover {
       0 0 0 1px rgba(17, 24, 39, .05);
 }
 
-.box:first-child {
-  margin-left: 0;
-}
-
 .box-inner {
   height: 275px;
   display: flex;
