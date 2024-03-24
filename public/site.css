@@ -617,6 +617,7 @@ footer .terms a:hover {
 
   .scrollable {
     overflow-x: auto;
+    padding-bottom: 0;
   }
 
   .event-details {
@@ -674,5 +675,9 @@ footer .terms a:hover {
 
   .form.shrink {
     max-width: 97%;
+  }
+
+  .section {
+    padding: 20px;
   }
 }
