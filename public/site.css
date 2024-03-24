@@ -87,14 +87,13 @@ header .container .logo button {
 }
 
 header .container .logo button {
-  margin-left: 5px;
-  padding: 5px 5px 5px 5px;
+  padding: 5px;
 }
 
 header .container .logo button i {
   width: unset !important;
   height: unset !important;
-  font-size: 2em !important;
+  font-size: 1.8em !important;
   vertical-align: unset !important;
 }
 
@@ -251,8 +250,7 @@ footer .terms a:hover {
 .carousel {
   width: 100%;
   position: relative;
-  padding: 5px 0 0 0;
-  margin: 20px 0 10px 0;
+  margin: 20px 0 0 0;
 }
 
 .scroll-container {
@@ -298,10 +296,8 @@ footer .terms a:hover {
 
 .scrollable {
   width: 100%;
-  padding: 0 5px;
   overflow-x: hidden;
   white-space: nowrap;
-  padding-bottom: 15px;
 }
 
 .scrollable::-webkit-scrollbar {
@@ -327,11 +323,11 @@ footer .terms a:hover {
   width: 300px;
   height: 300px;
   padding: 10px;
-  margin: 0 10px;
   user-select: none;
   text-align: center;
   border-radius: 10px;
   display: inline-block;
+  margin: 0 10px 15px 10px;
   background-color: var(--white);
   white-space: initial !important;
   box-shadow: 
@@ -344,12 +340,8 @@ footer .terms a:hover {
   margin-left: 0;
 }
 
-.box:last-child {
-  margin-right: 0;
-}
-
 .box-inner {
-  height: 280px;
+  height: 275px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -474,7 +466,7 @@ footer .terms a:hover {
 }
 
 .filters .button {
-  padding: 15px 20px;
+  padding: 10px 20px;
 }
 
 .blur-cover {
@@ -621,7 +613,6 @@ footer .terms a:hover {
 
   .scrollable {
     overflow-x: auto;
-    padding-bottom: 0;
   }
 
   .event-details {

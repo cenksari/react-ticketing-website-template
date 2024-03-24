@@ -75,7 +75,7 @@ const Home = () => (
       <div className='container'>
         <div className='flex flex-v-center flex-space-between'>
           <div className='title'>
-            <Heading type={3} color='gray' text='Filter for me:' />
+            <Heading type={2} color='gray' text='Filter for me:' />
           </div>
           <div className='filters responsive-hide'>
             <ButtonLink color='gray-overlay' text='This week' onClick='/' />
@@ -86,7 +86,7 @@ const Home = () => (
             &nbsp;&nbsp;
             <ButtonLink color='gray-overlay' text='Under £20' onClick='/' />
           </div>
-          <div className='responsive-show'>
+          <div className='filters responsive-show'>
             <ButtonLink
               color='gray-overlay'
               text='Filters'

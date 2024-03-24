@@ -145,6 +145,7 @@ button, .button {
   line-height: 100%;
   padding: 15px 30px;
   border-radius: 50em;
+  white-space: nowrap;
   background: transparent;
   transition: all .2s ease-in-out;
   text-decoration: none !important;
@@ -699,9 +700,9 @@ button.disabled {
 /* Cards */
 .card {
   width: 300px;
-  margin: 0 10px;
   border-radius: 10px;
   display: inline-block;
+  margin: 0 10px 15px 10px;
   background-color: var(--white);
   white-space: initial !important;
   border: 1px solid var(--light-gray);
@@ -713,10 +714,6 @@ button.disabled {
 
 .card:first-child {
   margin-left: 0;
-}
-
-.card:last-child {
-  margin-right: 0;
 }
 
 .card-title span {
