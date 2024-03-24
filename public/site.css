@@ -81,6 +81,23 @@ header .container .logo svg {
   fill: var(--gray);
 }
 
+header .container .logo a,
+header .container .logo button {
+  vertical-align: middle;
+}
+
+header .container .logo button {
+  margin-left: 10px;
+  padding: 5px 5px 5px 5px;
+}
+
+header .container .logo button i {
+  width: unset !important;
+  height: unset !important;
+  font-size: 2em !important;
+  vertical-align: unset !important;
+}
+
 header .container .links a {
   margin: 0 15px;
   font-weight: 500;
@@ -528,7 +545,7 @@ footer .terms a:hover {
 }
 
 .ticket-box .ticket-box-line {
-  padding: 10px;
+  padding: 15px 10px;
   border-bottom: 1px solid rgba(17, 24, 39, .1);
 }
 
@@ -550,7 +567,6 @@ footer .terms a:hover {
 }
 
 .ticket-box .ticket-box-line span {
-  font-size: 0.8em;
   display: inline-block;
 }
 
