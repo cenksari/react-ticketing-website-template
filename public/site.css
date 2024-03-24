@@ -231,6 +231,10 @@ footer .terms a:hover {
   padding: 30px 0;
 }
 
+.section.no-padding-top {
+  padding-top: 0;
+}
+
 .section.white {
   background-color: var(--white);
 }
@@ -345,7 +349,7 @@ footer .terms a:hover {
 }
 
 .box-inner {
-  height: 300px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;

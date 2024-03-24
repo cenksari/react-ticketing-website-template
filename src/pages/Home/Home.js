@@ -71,7 +71,7 @@ const Home = () => (
       </div>
     </Section>
 
-    <Section>
+    <Section className='no-padding-top'>
       <div className='container'>
         <div className='flex flex-v-center flex-space-between'>
           <div className='title'>
