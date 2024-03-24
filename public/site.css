@@ -313,7 +313,10 @@ footer .terms a:hover {
   display: inline-block;
   background-color: var(--white);
   white-space: initial !important;
-  box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+  box-shadow: 
+      0 4px 6px -4px rgba(0, 0, 0, .1), 
+      0 10px 15px -3px rgba(0, 0, 0, .1), 
+      0 0 0 1px rgba(17, 24, 39, .05);
 }
 
 .box:first-child {
@@ -507,7 +510,10 @@ footer .terms a:hover {
   min-width: 400px;
   border-radius: 10px;
   border: 1px solid var(--light-gray);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 
+      0 4px 6px -4px rgba(0, 0, 0, .1), 
+      0 10px 15px -3px rgba(0, 0, 0, .1), 
+      0 0 0 1px rgba(17, 24, 39, .05);
 }
 
 .ticket-box .ticket-box-header {
@@ -523,7 +529,7 @@ footer .terms a:hover {
 
 .ticket-box .ticket-box-line {
   padding: 10px;
-  border-bottom: 1px solid var(--light-gray);
+  border-bottom: 1px solid rgba(17, 24, 39, .1);
 }
 
 .ticket-box .ticket-box-line i {
@@ -555,6 +561,8 @@ footer .terms a:hover {
 .ticket-box .ticket-box-buttons {
   padding: 15px 0;
   text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   background-color: var(--light-gray);
 }
 

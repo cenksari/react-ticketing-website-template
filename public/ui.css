@@ -705,7 +705,10 @@ button.disabled {
   background-color: var(--white);
   white-space: initial !important;
   border: 1px solid var(--light-gray);
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 
+      0 4px 6px -4px rgba(0, 0, 0, .1), 
+      0 10px 15px -3px rgba(0, 0, 0, .1), 
+      0 0 0 1px rgba(17, 24, 39, .05);
 }
 
 .card:first-child {
