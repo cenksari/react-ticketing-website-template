@@ -4,7 +4,7 @@ import Button from '../../components/Button/Button';
 import Section from '../../components/Section/Section';
 import Heading from '../../components/Heading/Heading';
 
-const ActivationCode = () => (
+const Activation = () => (
   <Master>
     <Section className='white-background'>
       <div className='container'>
@@ -41,4 +41,4 @@ const ActivationCode = () => (
   </Master>
 );
 
-export default ActivationCode;
+export default Activation;

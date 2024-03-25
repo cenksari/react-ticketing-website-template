@@ -33,7 +33,7 @@ const EventCard = memo(({ from, when, name, venue, image, color }) => (
       <ButtonLink
         type='button'
         color={`${color}-filled`}
-        text='Buy tickets'
+        text='Details'
         rightIcon='arrow_forward'
         onClick='/event'
       />

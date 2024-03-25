@@ -34,7 +34,7 @@ const Home = () => (
                     </div>
                     <Button
                       color='orange-filled responsive-hide'
-                      text='Buy tickets'
+                      text='Details'
                       rightIcon='arrow_forward'
                       onClick={() => {}}
                     />
@@ -58,7 +58,7 @@ const Home = () => (
                     </div>
                     <Button
                       color='green-filled responsive-hide'
-                      text='Buy tickets'
+                      text='Details'
                       rightIcon='arrow_forward'
                       onClick={() => {}}
                     />

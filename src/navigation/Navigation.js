@@ -6,7 +6,7 @@ import Signin from '../pages/Members/Signin';
 import Signup from '../pages/Members/Signup';
 import Forgot from '../pages/Members/Forgot';
 import Reset from '../pages/Members/Reset';
-import ActivationCode from '../pages/Members/ActivationCode';
+import Activation from '../pages/Members/Activation';
 
 import Discover from '../pages/Discover/Discover';
 import Venues from '../pages/Venue/Venues';
@@ -22,9 +22,9 @@ const Navigation = () => (
     <Route path='/event' element={<Event />} />
     <Route path='/members/signin' element={<Signin />} />
     <Route path='/members/signup' element={<Signup />} />
+    <Route path='/members/activation' element={<Activation />} />
     <Route path='/members/forgot-password' element={<Forgot />} />
     <Route path='/members/reset-password' element={<Reset />} />
-    <Route path='/members/activation-code' element={<ActivationCode />} />
 
     <Route path='/discover' element={<Discover />} />
     <Route path='/venues' element={<Venues />} />
