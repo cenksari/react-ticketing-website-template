@@ -20,57 +20,61 @@ const Discover = () => {
   return (
     <Master>
       <Section className='white-background'>
-        <div className='container center'>
-          <Heading type={1} color='gray' text='Discover' />
-          <p className='gray'>Discover, search and filter best events in London.</p>
+        <div className='container'>
+          <div className='center'>
+            <Heading type={1} color='gray' text='Discover' />
+            <p className='gray'>Discover, search and filter best events in London.</p>
 
-          {!expand ? (
-            <button type='button' className='expand-button' onClick={() => setExpand(true)}>
-              <i className='material-icons'>keyboard_arrow_down</i>
-            </button>
-          ) : (
-            <>
-              <div className='top-search'>
-                <form className='form shrink' noValidate onSubmit={handleSubmit}>
-                  <div className='form-elements'>
-                    <div className='form-line'>
-                      <Input
-                        type='text'
-                        name='code'
-                        value=''
-                        maxLength={10}
-                        placeholder='Event, venue, artist, keyword'
-                        onChange={() => {}}
-                        required
-                      />
+            {!expand ? (
+              <button type='button' className='expand-button' onClick={() => setExpand(true)}>
+                <i className='material-icons'>keyboard_arrow_down</i>
+              </button>
+            ) : (
+              <>
+                <div className='top-search'>
+                  <form className='form shrink' noValidate onSubmit={handleSubmit}>
+                    <div className='form-elements'>
+                      <div className='form-line'>
+                        <Input
+                          type='text'
+                          name='code'
+                          value=''
+                          maxLength={10}
+                          placeholder='Event, venue, artist, keyword'
+                          onChange={() => {}}
+                          required
+                        />
+                      </div>
+                      <div className='form-buttons'>
+                        <Button
+                          type='submit'
+                          color='blue-filled'
+                          text='Search events'
+                          leftIcon='search'
+                        />
+                      </div>
                     </div>
-                    <div className='form-buttons'>
-                      <Button
-                        type='submit'
-                        color='blue-filled'
-                        text='Search events'
-                        leftIcon='search'
-                      />
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div className='circle-buttons'>
-                <MultipleSlider>
-                  <CircleButton icon='theater_comedy' text='Theater' onClick='/discover' />
-                  <CircleButton icon='stadium' text='Concert' onClick='/discover' />
-                  <CircleButton icon='child_care' text='Kids' onClick='/discover' />
-                  <CircleButton icon='sports_football' text='Sports' onClick='/discover' />
-                  <CircleButton icon='attractions' text='Attractions' onClick='/discover' />
-                </MultipleSlider>
-              </div>
-            </>
-          )}
+                  </form>
+                </div>
+                <div className='circle-buttons'>
+                  <MultipleSlider>
+                    <CircleButton icon='theater_comedy' text='Theater' onClick='/discover' />
+                    <CircleButton icon='stadium' text='Concert' onClick='/discover' />
+                    <CircleButton icon='child_care' text='Kids' onClick='/discover' />
+                    <CircleButton icon='sports_football' text='Sports' onClick='/discover' />
+                    <CircleButton icon='attractions' text='Attractions' onClick='/discover' />
+                  </MultipleSlider>
+                </div>
+              </>
+            )}
+          </div>
 
           {expand && (
-            <button type='button' className='expand-button' onClick={() => setExpand(false)}>
-              <i className='material-icons'>keyboard_arrow_up</i>
-            </button>
+            <div className='center'>
+              <button type='button' className='expand-button' onClick={() => setExpand(false)}>
+                <i className='material-icons'>keyboard_arrow_up</i>
+              </button>
+            </div>
           )}
         </div>
       </Section>
