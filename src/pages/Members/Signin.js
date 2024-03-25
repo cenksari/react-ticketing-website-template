@@ -15,15 +15,16 @@ const Signin = () => {
     <Master>
       <Section className='white-background'>
         <div className='container'>
-          <Heading type={1} color='gray' text='Sign in' />
-          <p className='gray'>
-            Please enter your e-mail address and password to sign in. Don&apos;t have an account?{' '}
-            <Link to='/members/signup' className='blue'>
-              Sign up here
-            </Link>
-            .
-          </p>
-
+          <div className='center'>
+            <Heading type={1} color='gray' text='Sign in' />
+            <p className='gray'>
+              Please enter your e-mail address and password to sign in. Don&apos;t have an account?{' '}
+              <Link to='/members/signup' className='blue'>
+                Sign up here
+              </Link>
+              .
+            </p>
+          </div>
           <form className='form shrink' noValidate onSubmit={handleSubmit}>
             <div className='form-elements'>
               <div className='form-line'>

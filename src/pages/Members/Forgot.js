@@ -13,13 +13,14 @@ const Forgot = () => {
     <Master>
       <Section className='white-background'>
         <div className='container'>
-          <Heading type={1} color='gray' text='Forgot password' />
-          <p className='gray'>
-            Please enter your registered email address. Instructions for resetting your password
-            will have sent to your email address. If you do not see the email in a few minutes,
-            check your junk mail or spam folder.
-          </p>
-
+          <div className='center'>
+            <Heading type={1} color='gray' text='Forgot password' />
+            <p className='gray'>
+              Please enter your registered email address. Instructions for resetting your password
+              will have sent to your email address. If you do not see the email in a few minutes,
+              check your junk mail or spam folder.
+            </p>
+          </div>
           <form className='form shrink' noValidate onSubmit={handleSubmit}>
             <div className='form-elements'>
               <div className='form-line'>

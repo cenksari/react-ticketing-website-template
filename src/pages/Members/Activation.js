@@ -13,13 +13,14 @@ const Activation = () => {
     <Master>
       <Section className='white-background'>
         <div className='container'>
-          <Heading type={1} color='gray' text='Account activation' />
-          <p className='gray'>
-            Before you can sign in, you must activate your account with the code sent to your email
-            address. If you do not see the email in a few minutes, check your junk mail or spam
-            folder.
-          </p>
-
+          <div className='center'>
+            <Heading type={1} color='gray' text='Account activation' />
+            <p className='gray'>
+              Before you can sign in, you must activate your account with the code sent to your
+              email address. If you do not see the email in a few minutes, check your junk mail or
+              spam folder.
+            </p>
+          </div>
           <form className='form shrink' noValidate onSubmit={handleSubmit}>
             <div className='form-elements'>
               <div className='form-line'>

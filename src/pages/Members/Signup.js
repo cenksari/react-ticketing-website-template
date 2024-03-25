@@ -20,15 +20,16 @@ const Signup = () => {
     <Master>
       <Section className='white-background'>
         <div className='container'>
-          <Heading type={1} color='gray' text='Sign up' />
-          <p className='gray'>
-            Create an account to customize your experience for your ticketing journey.{' '}
-            <Link to='/members/signin' className='blue'>
-              Click here
-            </Link>{' '}
-            to sign in if you already have an account.
-          </p>
-
+          <div className='center'>
+            <Heading type={1} color='gray' text='Sign up' />
+            <p className='gray'>
+              Create an account to customize your experience for your ticketing journey.{' '}
+              <Link to='/members/signin' className='blue'>
+                Click here
+              </Link>{' '}
+              to sign in if you already have an account.
+            </p>
+          </div>
           <form className='form shrink' noValidate onSubmit={handleSubmit}>
             <div className='form-elements'>
               <div className='form-line'>
@@ -142,7 +143,7 @@ const Signup = () => {
                   </Link>{' '}
                   and{' '}
                   <Link to='/legal/terms-of-service' className='blue'>
-                    Terms of service
+                    TOS
                   </Link>
                 </Switch>
               </div>

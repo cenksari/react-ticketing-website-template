@@ -13,11 +13,12 @@ const Reset = () => {
     <Master>
       <Section className='white-background'>
         <div className='container'>
-          <Heading type={1} color='gray' text='Reset password' />
-          <p className='gray'>
-            Please enter your new password. We will change your password immediately.
-          </p>
-
+          <div className='center'>
+            <Heading type={1} color='gray' text='Reset password' />
+            <p className='gray'>
+              Please enter your new password. We will change your password immediately.
+            </p>
+          </div>
           <form className='form shrink' noValidate onSubmit={handleSubmit}>
             <div className='form-elements'>
               <div className='form-line'>

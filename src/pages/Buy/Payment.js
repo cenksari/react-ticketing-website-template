@@ -14,14 +14,16 @@ const Payment = () => {
   return (
     <Master>
       <Section className='white-background'>
-        <div className='container center'>
-          <Heading type={1} color='gray' text='Buy tickets' />
-          <p className='gray'>
-            Please enter your personal &amp; payment details. We will issue and send your tickets
-            your e-mail address immediately.
-          </p>
+        <div className='container'>
+          <div className='center'>
+            <Heading type={1} color='gray' text='Buy tickets' />
+            <p className='gray'>
+              Please enter your personal &amp; payment details. We will issue and send your tickets
+              your e-mail address immediately.
+            </p>
+          </div>
 
-          <form className='form shrink' noValidate onSubmit={handleSubmit}>
+          <form className='form shrink center' noValidate onSubmit={handleSubmit}>
             <div className='form-elements'>
               <div className='form-line'>
                 <Heading type={5} color='gray' text='Details' />
@@ -168,7 +170,7 @@ const Payment = () => {
               <div className='form-buttons'>
                 <Button type='submit' color='blue-filled' text='Place payment & Buy tickets' />
               </div>
-              <div className='form-line center padding-top'>
+              <div className='form-line padding-top'>
                 <p>
                   By clicking place payment button I agree to the&nbsp;
                   <Link to='/legal/terms-of-service' className='blue'>
