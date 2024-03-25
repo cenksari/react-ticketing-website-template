@@ -11,7 +11,7 @@ import MultipleSlider from '../../components/Slider/MultipleSlider';
 
 const Home = () => (
   <Master>
-    <Section>
+    <Section className='white-background'>
       <div className='container'>
         <div>
           <Heading type={2} color='orange' text='Featured' />
@@ -71,7 +71,7 @@ const Home = () => (
       </div>
     </Section>
 
-    <Section className='no-padding-top'>
+    <Section className='white-background no-padding-top'>
       <div className='container'>
         <div className='flex flex-v-center flex-space-between'>
           <div className='title'>
@@ -98,7 +98,7 @@ const Home = () => (
       </div>
     </Section>
 
-    <Section className='white-background'>
+    <Section>
       <div className='container'>
         <div className='title flex flex-v-center flex-space-between'>
           <Heading type={2} color='blue' text='Latest events' />
@@ -165,7 +165,7 @@ const Home = () => (
       </div>
     </Section>
 
-    <Section>
+    <Section className='white-background'>
       <div className='container responsive-center'>
         <Heading type={2} color='purple' text='Sustainable ticketing' />
         <p className='gray'>
@@ -184,7 +184,7 @@ const Home = () => (
       </div>
     </Section>
 
-    <Section className='white-background'>
+    <Section>
       <div className='container'>
         <div className='title flex flex-v-center flex-space-between'>
           <Heading type={2} color='red' text='More events' />

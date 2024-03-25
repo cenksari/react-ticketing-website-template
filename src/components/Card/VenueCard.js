@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 import Badge from '../Badge/Badge';
 import ButtonLink from '../Button/ButtonLink';
 
-const EventCard = memo(({ from, when, name, venue, image, color }) => (
+const EventCard = memo(({ name, location, image, color }) => (
   <div className='card'>
-    <Link to='/event'>
-      <div className='card-title'>
+    <Link to='/venue'>
+      <div className='card-title venue'>
         <span>{name}</span>
       </div>
       <div
@@ -22,13 +22,7 @@ const EventCard = memo(({ from, when, name, venue, image, color }) => (
       </div>
       <div className='card-info'>
         <span>
-          <i className='material-icons'>event</i> {when}
-        </span>
-        <span>
-          <i className='material-icons'>apartment</i> {venue}
-        </span>
-        <span>
-          <i className='material-icons'>local_activity</i> from <strong>£{from}</strong>
+          <i className='material-icons'>location_on</i> {location}
         </span>
       </div>
     </Link>
@@ -38,17 +32,15 @@ const EventCard = memo(({ from, when, name, venue, image, color }) => (
         color={`${color}-filled`}
         text='Details'
         rightIcon='arrow_forward'
-        onClick='/event'
+        onClick='/venue'
       />
     </div>
   </div>
 ));
 
 EventCard.propTypes = {
-  from: PropTypes.string.isRequired,
-  when: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  venue: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
 };

@@ -712,6 +712,11 @@ button.disabled {
       0 0 0 1px rgba(17, 24, 39, .05);
 }
 
+.card-title {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 .card-title span {
   padding: 15px;
   display: block;
@@ -723,9 +728,15 @@ button.disabled {
 .card-image {
   width: 100%;
   height: 200px;
+  padding: 10px;
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.card-image .badge {
+  font-size: 0.7em;
 }
 
 .card-info {

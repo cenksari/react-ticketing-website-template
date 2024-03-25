@@ -670,6 +670,7 @@ footer .terms a:hover {
 
 .circle-buttons {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .circle-button {
@@ -680,8 +681,8 @@ footer .terms a:hover {
 }
 
 .circle-button .circle {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   display: flex;
   margin: 0 15px;
   text-align: center;
@@ -794,6 +795,31 @@ footer .terms a:hover {
   font-size: 1.3em;
   margin-bottom: 10px;
   display: inline-block;
+}
+
+.card-title.venue {
+  background-color: var(--blackest-gray);
+}
+
+.card-title.venue span {
+  color: var(--white);
+}
+
+.ticker {
+  padding: 15px 0;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--blackest-gray);
+}
+
+.expand-button i {
+  width: unset !important;
+  height: unset !important;
+  font-size: 2em !important;
+}
+
+.expand-button:active {
+  color: var(--blue);
 }
 
 @media (max-width: 900px) {

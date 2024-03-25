@@ -132,7 +132,7 @@ const Forgot = () => {
         </div>
       </Section>
 
-      <Section className='gray-background'>
+      <Section>
         <div className='container'>
           <Heading type={4} color='orange' text='Other events' />
 

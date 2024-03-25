@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Master from '../../components/Layout/Master';
 import Input from '../../components/Form/Input';
 import Button from '../../components/Button/Button';
@@ -9,6 +11,8 @@ import ButtonLink from '../../components/Button/ButtonLink';
 import MultipleSlider from '../../components/Slider/MultipleSlider';
 
 const Discover = () => {
+  const [expand, setExpand] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -20,40 +24,54 @@ const Discover = () => {
           <Heading type={1} color='gray' text='Discover' />
           <p className='gray'>Discover, search and filter best events in London.</p>
 
-          <div className='top-search'>
-            <form className='form shrink' noValidate onSubmit={handleSubmit}>
-              <div className='form-elements'>
-                <div className='form-line'>
-                  <Input
-                    type='text'
-                    name='code'
-                    value=''
-                    maxLength={10}
-                    placeholder='Event, venue, artist, keyword'
-                    onChange={() => {}}
-                    required
-                  />
-                </div>
-                <div className='form-buttons'>
-                  <Button
-                    type='submit'
-                    color='blue-filled'
-                    text='Search events'
-                    leftIcon='search'
-                  />
-                </div>
+          {!expand ? (
+            <button type='button' className='expand-button' onClick={() => setExpand(true)}>
+              <i className='material-icons'>keyboard_arrow_down</i>
+            </button>
+          ) : (
+            <>
+              <div className='top-search'>
+                <form className='form shrink' noValidate onSubmit={handleSubmit}>
+                  <div className='form-elements'>
+                    <div className='form-line'>
+                      <Input
+                        type='text'
+                        name='code'
+                        value=''
+                        maxLength={10}
+                        placeholder='Event, venue, artist, keyword'
+                        onChange={() => {}}
+                        required
+                      />
+                    </div>
+                    <div className='form-buttons'>
+                      <Button
+                        type='submit'
+                        color='blue-filled'
+                        text='Search events'
+                        leftIcon='search'
+                      />
+                    </div>
+                  </div>
+                </form>
               </div>
-            </form>
-          </div>
-          <div className='circle-buttons'>
-            <MultipleSlider>
-              <CircleButton icon='theater_comedy' text='Theater' onClick='/discover' />
-              <CircleButton icon='stadium' text='Concert' onClick='/discover' />
-              <CircleButton icon='child_care' text='Kids' onClick='/discover' />
-              <CircleButton icon='sports_football' text='Sports' onClick='/discover' />
-              <CircleButton icon='attractions' text='Attractions' onClick='/discover' />
-            </MultipleSlider>
-          </div>
+              <div className='circle-buttons'>
+                <MultipleSlider>
+                  <CircleButton icon='theater_comedy' text='Theater' onClick='/discover' />
+                  <CircleButton icon='stadium' text='Concert' onClick='/discover' />
+                  <CircleButton icon='child_care' text='Kids' onClick='/discover' />
+                  <CircleButton icon='sports_football' text='Sports' onClick='/discover' />
+                  <CircleButton icon='attractions' text='Attractions' onClick='/discover' />
+                </MultipleSlider>
+              </div>
+            </>
+          )}
+
+          {expand && (
+            <button type='button' className='expand-button' onClick={() => setExpand(false)}>
+              <i className='material-icons'>keyboard_arrow_up</i>
+            </button>
+          )}
         </div>
       </Section>
 
@@ -125,33 +143,6 @@ const Discover = () => {
       </Section>
 
       <Section className='white-background'>
-        <div className='container'>
-          <div className='flex flex-v-center flex-space-between'>
-            <div className='title'>
-              <Heading type={2} color='gray' text='Filter for me:' />
-            </div>
-            <div className='filters responsive-hide'>
-              <ButtonLink color='gray-overlay' text='This week' onClick='/' />
-              &nbsp;&nbsp;
-              <ButtonLink color='gray-overlay' text='This weekend' onClick='/' />
-              &nbsp;&nbsp;
-              <ButtonLink color='gray-overlay' text='This month' onClick='/' />
-              &nbsp;&nbsp;
-              <ButtonLink color='gray-overlay' text='Under £20' onClick='/' />
-            </div>
-            <div className='filters responsive-show'>
-              <ButtonLink
-                color='gray-overlay'
-                text='Filters'
-                rightIcon='keyboard_arrow_down'
-                onClick='/'
-              />
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      <Section>
         <div className='container'>
           <div className='title flex flex-v-center flex-space-between'>
             <Heading type={2} color='red' text='More events' />
@@ -283,7 +274,7 @@ const Discover = () => {
         </div>
       </Section>
 
-      <Section>
+      <Section className='white-background'>
         <div className='container'>
           <div className='title flex flex-v-center flex-space-between'>
             <Heading type={2} color='purple' text='For kids' />
