@@ -1,6 +1,6 @@
 {
   "name": "modern-ticketing",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.2",

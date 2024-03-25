@@ -52,19 +52,16 @@ const Venues = () => {
                       />
                     </div>
                   </div>
-                  <div>
-                    <button
-                      type='button'
-                      className='expand-button'
-                      onClick={() => setExpand(false)}
-                    >
-                      <i className='material-icons'>keyboard_arrow_up</i>
-                    </button>
-                  </div>
                 </form>
               </div>
             )}
           </div>
+
+          {expand && (
+            <button type='button' className='expand-button' onClick={() => setExpand(false)}>
+              <i className='material-icons'>keyboard_arrow_up</i>
+            </button>
+          )}
         </div>
       </Section>
 
