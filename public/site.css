@@ -39,8 +39,20 @@ p {
   line-height: 160%;
 }
 
+.left {
+  text-align: left;
+}
+
 .center {
   text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.padding-top {
+  padding-top: 20px;
 }
 
 .responsive-hide {
@@ -431,6 +443,11 @@ footer .terms a:hover {
   margin-bottom: 20px;
 }
 
+.form .form-elements .form-line .two-line {
+  width: 50%;
+  padding: 0 10px;
+}
+
 .form .form-elements .form-line .label-line {
   margin-bottom: 15px;
 }
@@ -682,6 +699,40 @@ footer .terms a:hover {
   margin-top: 10px;
 }
 
+.table {
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+}
+
+.table tr {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.table th, td {
+  padding: 10px;
+}
+
+.table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.table th {
+  user-select: none;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--blackest-gray);
+}
+
+.table td {
+  border-bottom: 1px solid #f1f1f1;
+}
+
 @media (max-width: 900px) {
   html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, h7, nav, header, footer, section {
     font-size: 1.05rem;
@@ -759,5 +810,9 @@ footer .terms a:hover {
 
   .circle-button .circle i {
     font-size: 1.5em;
+  }
+
+  .form .form-buttons {
+    text-align: center;
   }
 }

@@ -16,6 +16,8 @@ import Help from '../pages/Help/Help';
 import Promoters from '../pages/Promoters/Promoters';
 import Legal from '../pages/Legal/Legal';
 
+import Payment from '../pages/Buy/Payment';
+
 const Navigation = () => (
   <Routes>
     <Route path='/' element={<Home />} />
@@ -25,6 +27,8 @@ const Navigation = () => (
     <Route path='/members/activation' element={<Activation />} />
     <Route path='/members/forgot-password' element={<Forgot />} />
     <Route path='/members/reset-password' element={<Reset />} />
+
+    <Route path='/buy' element={<Payment />} />
 
     <Route path='/discover' element={<Discover />} />
     <Route path='/venues' element={<Venues />} />
