@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, h7, nav, header, footer, section {
+html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, nav, header, footer, section {
   margin: 0;
   border: 0;
   padding: 0;
@@ -15,6 +15,7 @@ html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr
   appearance: none;
   font-size: 1.15rem;
   font-style: normal;
+  list-style-type: none;
   box-sizing: border-box;
   vertical-align: baseline;
   font-optical-sizing: auto;
@@ -745,6 +746,54 @@ footer .terms a:hover {
 
 .table td {
   border-bottom: 1px solid #f1f1f1;
+}
+
+.main-menu-backdrop {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  z-index: 99999999;
+  animation: fade-in 0.5s forwards;
+  background-color: rgba(0,0,0,0.4);
+}
+
+@keyframes fade-in { 100% { opacity: 1; }}
+
+.main-menu {
+  width: 90%;
+  padding: 20px;
+  display: fixed;
+  background-color: var(--blackest-gray);
+}
+
+.main-menu .top {
+  text-align: right;
+}
+
+.main-menu .top button {
+  padding: 0 0 10px 10px;
+}
+
+.main-menu .top button i {
+  color: var(--white);
+  width: unset !important;
+  height: unset !important;
+  font-size: 1.8em !important;
+}
+
+.main-menu .logo svg {
+  width: 100px;
+  fill: var(--white);
+}
+
+.main-menu ul li a {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 @media (max-width: 900px) {
