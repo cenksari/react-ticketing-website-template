@@ -6,6 +6,7 @@ import Signin from '../pages/Members/Signin';
 import Signup from '../pages/Members/Signup';
 import Forgot from '../pages/Members/Forgot';
 import Reset from '../pages/Members/Reset';
+import Tickets from '../pages/Tickets/Tickets';
 import Activation from '../pages/Members/Activation';
 
 import Discover from '../pages/Discover/Discover';
@@ -22,6 +23,7 @@ const Navigation = () => (
   <Routes>
     <Route path='/' element={<Home />} />
     <Route path='/event' element={<Event />} />
+    <Route path='/tickets' element={<Tickets />} />
     <Route path='/members/signin' element={<Signin />} />
     <Route path='/members/signup' element={<Signup />} />
     <Route path='/members/activation' element={<Activation />} />
