@@ -40,6 +40,14 @@ p {
   line-height: 160%;
 }
 
+section {
+  padding: 20px 0;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
 .left {
   text-align: left;
 }
@@ -72,7 +80,7 @@ p {
 
 .container {
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
   max-width: 1700px;
 }
 
@@ -287,31 +295,15 @@ footer .terms a:hover {
   margin-bottom: 0;
 }
 
-.section {
-  padding: 30px 0;
-}
-
-.section.no-padding-top {
-  padding-top: 0;
-}
-
-.section.white {
-  background-color: var(--white);
-}
-
 .paragraph-container p {
   color: var(--gray);
   margin-bottom: 15px;
 }
 
-.paragraph-container p:last-child {
-  margin-bottom: 15px;
-}
-
 .carousel {
-  width: 100%;
+  max-width: 1700px;
   position: relative;
-  margin: 20px 0 0 0;
+  margin: 20px auto 0 auto;
 }
 
 .scroll-container {
@@ -364,20 +356,21 @@ footer .terms a:hover {
 .scrollable::-webkit-scrollbar {
   height: 5px;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .scrollable::-webkit-scrollbar-track {
   border-radius: 4px;
-  background-color: #f5f5f5;
+  background-color: transparent;
 }
 
 .scrollable::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: #cccccc;
+  background-color: transparent;
 }
 
 .scrollable::-webkit-scrollbar-thumb:window-inactive {
-  background: #cccccc;
+  background: transparent;
 }
 
 .box {
@@ -823,8 +816,12 @@ footer .terms a:hover {
 }
 
 @media (max-width: 900px) {
-  html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, h7, nav, header, footer, section {
+  html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, nav, header, footer, section {
     font-size: 1.05rem;
+  }
+
+  .container {
+    padding: 0 10px;
   }
 
   .scrollable {
@@ -890,10 +887,6 @@ footer .terms a:hover {
 
   .form.shrink {
     max-width: 97%;
-  }
-
-  .section {
-    padding: 20px 0;
   }
 
   .circle-button .circle {

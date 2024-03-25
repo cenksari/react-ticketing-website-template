@@ -3,7 +3,7 @@ import { memo } from 'react';
 import PropTypes from 'prop-types';
 
 const Section = memo(({ children, className }) => (
-  <section className={className ? `section ${className}` : 'section'}>{children}</section>
+  <section className={className ? `${className}` : 'no-style'}>{children}</section>
 ));
 
 Section.defaultProps = {
