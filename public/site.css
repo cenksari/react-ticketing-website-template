@@ -60,7 +60,7 @@ p {
 .container {
   margin: 0 auto;
   padding: 0 10px;
-  max-width: 1250px;
+  max-width: 1700px;
 }
 
 header {
@@ -120,6 +120,40 @@ header .container .members a {
 header .container .members span {
   font-weight: 600;
 }
+
+/* Black theme */
+.black-theme header {
+  box-shadow: none;
+  margin-bottom: 0;
+  border-bottom: 1px solid #000000;
+  background-color: var(--blackest-gray);
+}
+
+.black-theme header .container .logo svg {
+  fill: var(--white);
+}
+
+.black-theme header .container .links a,
+.black-theme header .container .members span {
+  color: var(--white);
+}
+
+.black-theme .white-background {
+  background-color: #020409;
+}
+
+.black-theme .gray-background {
+  background-color: #0e1117;
+}
+
+.black-theme .gray {
+  color: #e6edf3;
+}
+
+.black-theme .paragraph-container p {
+  color: #e6edf3;
+}
+
 
 footer {
   padding: 40px 0;
@@ -389,7 +423,7 @@ footer .terms a:hover {
 }
 
 .form.shrink {
-  max-width: 800px;
+  max-width: 80%;
   margin: 50px auto;
 }
 
@@ -602,6 +636,52 @@ footer .terms a:hover {
   background-color: var(--blue);
 }
 
+.circle-buttons {
+  text-align: center;
+}
+
+.circle-button {
+  user-select: none;
+  color: var(--gray);
+  text-align: center;
+  display: inline-block;
+}
+
+.circle-button .circle {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  margin: 0 15px;
+  text-align: center;
+  align-items: center;
+  border-radius: 50em;
+  justify-content: center;
+  border: 1px solid var(--light-gray);
+  box-shadow: 
+      0 4px 6px -4px rgba(0, 0, 0, .1), 
+      0 10px 15px -3px rgba(0, 0, 0, .1), 
+      0 0 0 1px rgba(17, 24, 39, .05);
+}
+
+.circle-button .circle:hover {
+  background-color: #f9f9f9;
+}
+
+.circle-button .circle:active {
+  background-color: var(--light-gray);
+}
+
+.circle-button i {
+  font-size: 2.3em;
+  color: var(--gray);
+}
+
+.circle-button span {
+  display: block;
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+
 @media (max-width: 900px) {
   html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, h7, nav, header, footer, section {
     font-size: 1.05rem;
@@ -670,5 +750,14 @@ footer .terms a:hover {
 
   .section {
     padding: 20px 0;
+  }
+
+  .circle-button .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle-button .circle i {
+    font-size: 1.5em;
   }
 }

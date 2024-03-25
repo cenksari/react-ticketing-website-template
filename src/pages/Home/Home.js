@@ -275,6 +275,10 @@ const Home = () => (
               <i className='material-icons green'>arrow_forward</i>
               <p>Speaking honestly to customers and treating them like family</p>
             </Box>
+            <Box className='gray'>
+              <i className='material-icons yellow'>arrow_forward</i>
+              <p>Speaking honestly to customers and treating them like family</p>
+            </Box>
           </MultipleSlider>
         </div>
 

@@ -10,7 +10,9 @@ import Heading from '../../components/Heading/Heading';
 const Signup = () => {
   const navigate = useNavigate();
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     navigate('/members/activation');
   };
 
