@@ -88,9 +88,18 @@ header .container {
   justify-content: space-between;
 }
 
+header .container .logo {
+  width: 150px;
+  white-space: nowrap;
+}
+
 header .container .logo svg {
   width: 100px;
   fill: var(--gray);
+}
+
+header .container .logo a {
+  display: inline-block;
 }
 
 header .container .logo a,
@@ -100,6 +109,7 @@ header .container .logo button {
 
 header .container .logo button {
   padding: 5px;
+  display: none;
 }
 
 header .container .logo button i {
@@ -119,9 +129,13 @@ header .container .links a:hover {
   text-decoration: underline;
 }
 
+header .container .members {
+  white-space: nowrap;
+}
+
 header .container .members a,
 header .container .members span {
-  margin-right: 10px;
+  margin-right: 5px;
   display: inline-block;
 }
 
@@ -767,6 +781,10 @@ footer .terms a:hover {
 
   .responsive-center {
     text-align: center;
+  }
+
+  header .container .logo button {
+    display: inline-block;
   }
 
   footer .container {
