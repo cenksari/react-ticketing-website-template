@@ -511,7 +511,7 @@ footer .terms a:hover {
   height: 550px;
   overflow: hidden;
   filter: blur(25px);
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .cover-info {
