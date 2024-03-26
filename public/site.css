@@ -827,6 +827,36 @@ footer .terms a:hover {
   color: var(--blue);
 }
 
+.help-top div {
+  width: 33.33%;
+}
+
+.help-top div i {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.help-top a {
+  text-decoration: underline;
+}
+
+.help-bottom {
+  margin-bottom: 30px;
+}
+
+.help-bottom .links {
+  padding-bottom: 50px;
+}
+
+.help-bottom .links a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.help-bottom-box {
+  width: 33.33%;
+}
+
 @media (max-width: 900px) {
   html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, nav, header, footer, section {
     font-size: 1.05rem;

@@ -30,6 +30,37 @@ const Promoters = () => (
             free!
           </p>
         </div>
+
+        <div className='button-container center'>
+          <ButtonLink
+            text='Get started'
+            color='red-filled'
+            rightIcon='arrow_forward'
+            onClick='/promoters'
+          />
+        </div>
+      </div>
+    </Section>
+
+    <Section className='white-background'>
+      <div className='container'>
+        <div className='center'>
+          <Heading type={2} color='purple' text='Sustainable ticketing' />
+          <p className='gray'>
+            Stunning, white-labelled pages to promote your event. To get started selling tickets
+            online with Modern ticketing, you&apos;ll first create a beautiful event website to
+            promote your event.
+          </p>
+        </div>
+
+        <div className='button-container center'>
+          <ButtonLink
+            text='Get started'
+            color='purple-filled'
+            rightIcon='arrow_forward'
+            onClick='/promoters'
+          />
+        </div>
       </div>
     </Section>
 
