@@ -381,7 +381,7 @@ footer .terms a:hover {
   text-align: center;
   border-radius: 10px;
   display: inline-block;
-  margin: 2px 10px 15px 0;
+  margin: 2px 20px 15px 0;
   background-color: var(--white);
   white-space: initial !important;
   box-shadow: 
@@ -391,7 +391,7 @@ footer .terms a:hover {
 }
 
 .box:first-child {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .box-inner {
@@ -680,7 +680,7 @@ footer .terms a:hover {
 
 .circle-buttons {
   text-align: center;
-  margin: 30px 0;
+  margin: 30px 0 10px 0;
 }
 
 .circle-button {
@@ -820,6 +820,10 @@ footer .terms a:hover {
   text-align: center;
   color: var(--white);
   background-color: var(--blackest-gray);
+}
+
+.expand-button {
+  padding-bottom: 0;
 }
 
 .expand-button i {

@@ -78,6 +78,16 @@ const Header = memo(() => {
                   </Link>
                 </li>
                 <li>
+                  <Link to='/tickets' className='white'>
+                    My tickets
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/help' className='white'>
+                    Help
+                  </Link>
+                </li>
+                <li>
                   <Link to='/news' className='white'>
                     News
                   </Link>
@@ -88,8 +98,8 @@ const Header = memo(() => {
                   </Link>
                 </li>
                 <li>
-                  <Link to='/tickets' className='white'>
-                    My tickets
+                  <Link to='/promoters' className='white'>
+                    For promoters
                   </Link>
                 </li>
               </ul>
