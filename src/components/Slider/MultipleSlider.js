@@ -14,7 +14,8 @@ const MultipleSlider = memo(({ children }) => {
   const buttons = () => {
     const { offsetWidth, scrollWidth, scrollLeft } = navRef.current;
 
-    const hideLeftScroll = scrollLeft === 0;
+    const hideLeftScroll = scrollLeft <= 0;
+
     const hideRightScroll = scrollWidth - Math.round(scrollLeft) <= offsetWidth;
 
     if (hideLeftScroll) {
