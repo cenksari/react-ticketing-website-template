@@ -21,12 +21,15 @@ const Promoters = () => (
     </Section>
 
     <Section>
-      <div className='center'>
-        <Heading type={2} color='red' text='Manage everything with a single application' />
-        <p className='gray'>
-          With our specially designed Promoter application, you can track ticket sales in real-time
-          and admit customers at the door with your barcode scanner. Plus, it&apos;s free!
-        </p>
+      <div className='container'>
+        <div className='center'>
+          <Heading type={2} color='red' text='Manage everything with a single application' />
+          <p className='gray'>
+            With our specially designed Promoter application, you can track ticket sales in
+            real-time and admit customers at the door with your barcode scanner. Plus, it&apos;s
+            free!
+          </p>
+        </div>
       </div>
     </Section>
 

@@ -381,7 +381,7 @@ footer .terms a:hover {
   text-align: center;
   border-radius: 10px;
   display: inline-block;
-  margin: 0 10px 15px 10px;
+  margin: 2px 10px 15px 0;
   background-color: var(--white);
   white-space: initial !important;
   box-shadow: 
@@ -390,9 +390,14 @@ footer .terms a:hover {
       0 0 0 1px rgba(17, 24, 39, .05);
 }
 
+.box:first-child {
+  margin-left: 10px;
+}
+
 .box-inner {
   height: 275px;
   display: flex;
+  border-radius: 10px;
   flex-direction: column;
   justify-content: center;
 }
@@ -602,7 +607,6 @@ footer .terms a:hover {
 
 .ticket-box .ticket-box-line i {
   cursor: help;
-  margin-left: 5px;
   user-select: none;
   display: inline-block;
   vertical-align: middle;
@@ -617,8 +621,12 @@ footer .terms a:hover {
   background-color: #f9f9f9;
 }
 
-.ticket-box .ticket-box-line span {
+.ticket-box .ticket-box-line span,
+.ticket-box .ticket-box-line strong {
+  font-size: 0.9em;
+  margin-right: 5px;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .ticket-box .ticket-box-line:last-child {
@@ -626,11 +634,15 @@ footer .terms a:hover {
 }
 
 .ticket-box .ticket-box-buttons {
-  padding: 15px 0;
+  padding: 15px;
   text-align: center;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: var(--light-gray);
+}
+
+.ticket-box .ticket-box-buttons button {
+  width: 100%;
 }
 
 .ticket-box .quantity {
@@ -818,10 +830,6 @@ footer .terms a:hover {
 @media (max-width: 900px) {
   html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, nav, header, footer, section {
     font-size: 1.05rem;
-  }
-
-  .container {
-    padding: 0 10px;
   }
 
   .scrollable {

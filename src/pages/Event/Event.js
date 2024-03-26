@@ -72,6 +72,7 @@ const Forgot = () => {
                       <button type='button'>+</button>
                     </div>
                     <span>Family</span>
+                    <strong>£20</strong>
                   </div>
                   <div className='ticket-box-line'>
                     <div className='quantity'>
@@ -80,6 +81,7 @@ const Forgot = () => {
                       <button type='button'>+</button>
                     </div>
                     <span>Adult</span>
+                    <strong>£20</strong>
                   </div>
                   <div className='ticket-box-line'>
                     <div className='quantity'>
@@ -88,6 +90,7 @@ const Forgot = () => {
                       <button type='button'>+</button>
                     </div>
                     <span>Child</span>
+                    <strong>£20</strong>
                     <i className='material-icons' title='Information about child tickets'>
                       info
                     </i>
