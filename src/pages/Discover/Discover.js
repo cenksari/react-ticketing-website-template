@@ -11,7 +11,7 @@ import ButtonLink from '../../components/Button/ButtonLink';
 import MultipleSlider from '../../components/Slider/MultipleSlider';
 
 const Discover = () => {
-  const [expand, setExpand] = useState(false);
+  const [expand, setExpand] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ const Discover = () => {
             ) : (
               <>
                 <div className='top-search'>
-                  <form className='form shrink' noValidate onSubmit={handleSubmit}>
+                  <form className='form' noValidate onSubmit={handleSubmit}>
                     <div className='form-elements'>
                       <div className='form-line'>
                         <Input
@@ -67,15 +67,13 @@ const Discover = () => {
                 </div>
               </>
             )}
-          </div>
 
-          {expand && (
-            <div className='center'>
+            {expand && (
               <button type='button' className='expand-button' onClick={() => setExpand(false)}>
                 <i className='material-icons'>keyboard_arrow_up</i>
               </button>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </Section>
 

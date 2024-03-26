@@ -30,7 +30,7 @@ const Venues = () => {
               </button>
             ) : (
               <div className='top-search'>
-                <form className='form shrink' noValidate onSubmit={handleSubmit}>
+                <form className='form' noValidate onSubmit={handleSubmit}>
                   <div className='form-elements'>
                     <div className='form-line'>
                       <Input
@@ -55,15 +55,13 @@ const Venues = () => {
                 </form>
               </div>
             )}
-          </div>
 
-          {expand && (
-            <div className='center'>
+            {expand && (
               <button type='button' className='expand-button' onClick={() => setExpand(false)}>
                 <i className='material-icons'>keyboard_arrow_up</i>
               </button>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </Section>
 
