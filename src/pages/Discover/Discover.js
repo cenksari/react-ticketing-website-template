@@ -1,17 +1,17 @@
 import { useState } from 'react';
 
-import Master from '../../components/Layout/Master';
 import Input from '../../components/Form/Input';
 import Button from '../../components/Button/Button';
-import CircleButton from '../../components/Button/CircleButton';
+import Master from '../../components/Layout/Master';
 import Section from '../../components/Section/Section';
 import Heading from '../../components/Heading/Heading';
 import EventCard from '../../components/Card/EventCard';
 import ButtonLink from '../../components/Button/ButtonLink';
+import CircleButton from '../../components/Button/CircleButton';
 import MultipleSlider from '../../components/Slider/MultipleSlider';
 
 const Discover = () => {
-  const [expand, setExpand] = useState(true);
+  const [expand, setExpand] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,13 +24,17 @@ const Discover = () => {
           <div className='center'>
             <Heading type={1} color='gray' text='Discover' />
             <p className='gray'>Discover, search and filter best events in London.</p>
+          </div>
+        </div>
 
-            {!expand ? (
-              <button type='button' className='expand-button' onClick={() => setExpand(true)}>
-                <i className='material-icons'>keyboard_arrow_down</i>
-              </button>
-            ) : (
-              <>
+        <div className='center'>
+          {!expand ? (
+            <button type='button' className='expand-button' onClick={() => setExpand(true)}>
+              <i className='material-icons'>keyboard_arrow_down</i>
+            </button>
+          ) : (
+            <>
+              <div className='container'>
                 <div className='top-search'>
                   <form className='form' noValidate onSubmit={handleSubmit}>
                     <div className='form-elements'>
@@ -56,24 +60,24 @@ const Discover = () => {
                     </div>
                   </form>
                 </div>
-                <div className='circle-buttons'>
-                  <MultipleSlider>
-                    <CircleButton icon='theater_comedy' text='Theater' onClick='/discover' />
-                    <CircleButton icon='stadium' text='Concert' onClick='/discover' />
-                    <CircleButton icon='child_care' text='Kids' onClick='/discover' />
-                    <CircleButton icon='sports_football' text='Sports' onClick='/discover' />
-                    <CircleButton icon='attractions' text='Attractions' onClick='/discover' />
-                  </MultipleSlider>
-                </div>
-              </>
-            )}
+              </div>
+              <div className='circle-buttons'>
+                <MultipleSlider>
+                  <CircleButton icon='theater_comedy' text='Theater' onClick='/discover' />
+                  <CircleButton icon='stadium' text='Concert' onClick='/discover' />
+                  <CircleButton icon='child_care' text='Kids' onClick='/discover' />
+                  <CircleButton icon='sports_football' text='Sports' onClick='/discover' />
+                  <CircleButton icon='attractions' text='Attractions' onClick='/discover' />
+                </MultipleSlider>
+              </div>
+            </>
+          )}
 
-            {expand && (
-              <button type='button' className='expand-button' onClick={() => setExpand(false)}>
-                <i className='material-icons'>keyboard_arrow_up</i>
-              </button>
-            )}
-          </div>
+          {expand && (
+            <button type='button' className='expand-button' onClick={() => setExpand(false)}>
+              <i className='material-icons'>keyboard_arrow_up</i>
+            </button>
+          )}
         </div>
       </Section>
 
