@@ -144,12 +144,16 @@ header .container .members {
 
 header .container .members a,
 header .container .members span {
-  margin-right: 5px;
+  margin-right: 10px;
   display: inline-block;
 }
 
 header .container .members a {
   text-decoration: underline;
+}
+
+header .container .members a:last-child {
+  margin-right: 0;
 }
 
 header .container .members span {

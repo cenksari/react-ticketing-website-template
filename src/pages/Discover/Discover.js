@@ -11,7 +11,7 @@ import CircleButton from '../../components/Button/CircleButton';
 import MultipleSlider from '../../components/Slider/MultipleSlider';
 
 const Discover = () => {
-  const [expand, setExpand] = useState(false);
+  const [expand, setExpand] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -68,6 +68,8 @@ const Discover = () => {
                   <CircleButton icon='child_care' text='Kids' onClick='/discover' />
                   <CircleButton icon='sports_football' text='Sports' onClick='/discover' />
                   <CircleButton icon='attractions' text='Attractions' onClick='/discover' />
+                  <CircleButton icon='piano' text='Musical' onClick='/discover' />
+                  <CircleButton icon='festival' text='Festival' onClick='/discover' />
                 </MultipleSlider>
               </div>
             </>
