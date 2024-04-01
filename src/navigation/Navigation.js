@@ -8,6 +8,7 @@ import Forgot from '../pages/Members/Forgot';
 import Reset from '../pages/Members/Reset';
 import Tickets from '../pages/Tickets/Tickets';
 import Activation from '../pages/Members/Activation';
+import Profile from '../pages/Members/Profile';
 
 import Discover from '../pages/Discover/Discover';
 import Venues from '../pages/Venue/Venues';
@@ -24,6 +25,7 @@ const Navigation = () => (
     <Route path='/' element={<Home />} />
     <Route path='/event' element={<Event />} />
     <Route path='/tickets' element={<Tickets />} />
+    <Route path='/members' element={<Profile />} />
     <Route path='/members/signin' element={<Signin />} />
     <Route path='/members/signup' element={<Signup />} />
     <Route path='/members/activation' element={<Activation />} />

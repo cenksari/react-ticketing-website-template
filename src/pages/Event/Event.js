@@ -123,7 +123,7 @@ const Forgot = () => {
           <div className='paragraph-container'>
             <p className='gray'>Lorem ipsum dolor sit amet consecteteur adispicing elit.</p>
             <p>
-              <Link to='/' className='blue'>
+              <Link to='/venue' className='blue'>
                 Venue details
               </Link>{' '}
               &bull;{' '}

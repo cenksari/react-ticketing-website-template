@@ -98,7 +98,7 @@ header .container {
 }
 
 header .container .logo {
-  width: 150px;
+  width: 250px;
   white-space: nowrap;
 }
 
@@ -139,6 +139,8 @@ header .container .links a:hover {
 }
 
 header .container .members {
+  width: 250px;
+  text-align: right;
   white-space: nowrap;
 }
 
@@ -179,10 +181,6 @@ header .container .members span {
 
 .black-theme .white-background {
   background-color: #020409;
-}
-
-.black-theme .gray-background {
-  background-color: #0e1117;
 }
 
 .black-theme .gray {
@@ -974,5 +972,12 @@ footer .terms a:hover {
 
   .help-bottom-box:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  header .container .logo,
+  header .container .members {
+    width: unset;
   }
 }
