@@ -6,7 +6,9 @@ const Contact = () => (
   <Master>
     <Section className='white-background'>
       <div className='container'>
-        <Heading type={1} color='gray' text='Contact' />
+        <div className='center'>
+          <Heading type={1} color='gray' text='Contact us' />
+        </div>
       </div>
     </Section>
   </Master>

@@ -6,7 +6,9 @@ const News = () => (
   <Master>
     <Section className='white-background'>
       <div className='container'>
-        <Heading type={1} color='gray' text='News' />
+        <div className='center'>
+          <Heading type={1} color='gray' text='News' />
+        </div>
       </div>
     </Section>
   </Master>
