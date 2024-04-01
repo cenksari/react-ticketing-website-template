@@ -873,6 +873,10 @@ footer .terms a:hover {
   width: 33.33%;
 }
 
+.help-bottom-box a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 900px) {
   html, body, input, select, textarea, button, p, span, div, i, em, img, table, tr, th, td, strong, a, ul, li, h1, h2, h3, h4, h5, h6, nav, header, footer, section {
     font-size: 1.05rem;
@@ -903,10 +907,6 @@ footer .terms a:hover {
 
   .responsive-show {
     display: unset;
-  }
-
-  .responsive-center {
-    text-align: center;
   }
 
   header .container .logo button {

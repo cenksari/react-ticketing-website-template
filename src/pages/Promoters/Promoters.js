@@ -29,15 +29,14 @@ const Promoters = () => (
             real-time and admit customers at the door with your barcode scanner. Plus, it&apos;s
             free!
           </p>
-        </div>
-
-        <div className='button-container center'>
-          <ButtonLink
-            text='Get started'
-            color='red-filled'
-            rightIcon='arrow_forward'
-            onClick='/promoters'
-          />
+          <div className='button-container'>
+            <ButtonLink
+              text='Get started'
+              color='red-filled'
+              rightIcon='arrow_forward'
+              onClick='/promoters'
+            />
+          </div>
         </div>
       </div>
     </Section>
@@ -51,15 +50,14 @@ const Promoters = () => (
             online with Modern ticketing, you&apos;ll first create a beautiful event website to
             promote your event.
           </p>
-        </div>
-
-        <div className='button-container center'>
-          <ButtonLink
-            text='Get started'
-            color='purple-filled'
-            rightIcon='arrow_forward'
-            onClick='/promoters'
-          />
+          <div className='button-container'>
+            <ButtonLink
+              text='Get started'
+              color='purple-filled'
+              rightIcon='arrow_forward'
+              onClick='/promoters'
+            />
+          </div>
         </div>
       </div>
     </Section>

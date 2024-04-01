@@ -10,7 +10,7 @@ import Heading from '../../components/Heading/Heading';
 import ButtonLink from '../../components/Button/ButtonLink';
 
 const Help = () => {
-  const [expand, setExpand] = useState(false);
+  const [expand, setExpand] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -90,70 +90,72 @@ const Help = () => {
         </div>
       </Section>
 
-      <Section>
-        <div className='container center'>
-          <Heading type={2} color='gray' text='Featured articles' />
-          <div className='help-bottom flex flex-space-around padding-top padding-bottom'>
-            <div className='help-bottom-box'>
-              <div className='links'>
-                <Heading type={5} color='gray' text='About us' />
-                <Link to='/' className='blue'>
-                  What is ticketing?
-                </Link>
-                <Link to='/' className='blue'>
-                  What is ticketing?
-                </Link>
-              </div>
+      <Section className='white-background'>
+        <div className='container'>
+          <div className='center'>
+            <Heading type={2} color='gray' text='Featured articles' />
+            <div className='help-bottom flex flex-space-around padding-top padding-bottom'>
+              <div className='help-bottom-box'>
+                <div className='links'>
+                  <Heading type={5} color='gray' text='About us' />
+                  <Link to='/' className='blue'>
+                    What is ticketing?
+                  </Link>
+                  <Link to='/' className='blue'>
+                    What is ticketing?
+                  </Link>
+                </div>
 
+                <ButtonLink
+                  onClick='/'
+                  color='gray-overlay'
+                  rightIcon='arrow_forward'
+                  text='See all'
+                />
+              </div>
+              <div className='help-bottom-box'>
+                <div className='links'>
+                  <Heading type={5} color='gray' text='Account' />
+                  <Link to='/' className='blue'>
+                    How to sign in?
+                  </Link>
+                  <Link to='/' className='blue'>
+                    What is ticketing?
+                  </Link>
+                </div>
+
+                <ButtonLink
+                  onClick='/'
+                  color='gray-overlay'
+                  rightIcon='arrow_forward'
+                  text='See all'
+                />
+              </div>
+              <div className='help-bottom-box'>
+                <div className='links'>
+                  <Heading type={5} color='gray' text='Using system' />
+                  <Link to='/' className='blue'>
+                    How can I get my tickets?
+                  </Link>
+                </div>
+
+                <ButtonLink
+                  onClick='/'
+                  color='gray-overlay'
+                  rightIcon='arrow_forward'
+                  text='See all'
+                />
+              </div>
+            </div>
+
+            <div className='button-container'>
               <ButtonLink
                 onClick='/'
-                color='gray-overlay'
+                color='gray-filled'
                 rightIcon='arrow_forward'
-                text='See all'
+                text='See all articles'
               />
             </div>
-            <div className='help-bottom-box'>
-              <div className='links'>
-                <Heading type={5} color='gray' text='Account' />
-                <Link to='/' className='blue'>
-                  How to sign in?
-                </Link>
-                <Link to='/' className='blue'>
-                  What is ticketing?
-                </Link>
-              </div>
-
-              <ButtonLink
-                onClick='/'
-                color='gray-overlay'
-                rightIcon='arrow_forward'
-                text='See all'
-              />
-            </div>
-            <div className='help-bottom-box'>
-              <div className='links'>
-                <Heading type={5} color='gray' text='Using system' />
-                <Link to='/' className='blue'>
-                  How can I get my tickets?
-                </Link>
-              </div>
-
-              <ButtonLink
-                onClick='/'
-                color='gray-overlay'
-                rightIcon='arrow_forward'
-                text='See all'
-              />
-            </div>
-          </div>
-
-          <div className='button-container'>
-            <ButtonLink
-              onClick='/'
-              color='gray-filled'
-              rightIcon='arrow_forward'
-              text='See all articles'
-            />
           </div>
         </div>
       </Section>
