@@ -112,7 +112,7 @@ const Profile = () => {
                 />
               </div>
               <div className='form-buttons'>
-                <Button type='submit' color='blue-filled' text='Update' />
+                <Button type='submit' color='blue-filled' text='Update profile' />
               </div>
             </div>
           </form>
