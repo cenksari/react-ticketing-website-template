@@ -162,6 +162,36 @@ header .container .members span {
   font-weight: 600;
 }
 
+header .container .members img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50em;
+  vertical-align: middle;
+}
+
+header .container .members .menu-opener {
+  padding: 0;
+  line-height: unset;
+}
+
+header .container .members .menu-opener i {
+  width: unset !important;
+  height: unset !important;
+  font-size: 1.3em !important;
+}
+
+header .container .members .menu-opener span {
+  margin-right: 0;
+}
+
+header .container .dropdown {
+  top: 85px;
+  right: 15px;
+  z-index: 9999;
+  min-width: 200px;
+  position: absolute;
+}
+
 /* Black theme */
 .black-theme header {
   box-shadow: none;

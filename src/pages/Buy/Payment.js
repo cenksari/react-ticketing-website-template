@@ -168,7 +168,7 @@ const Payment = () => {
                 </div>
               </div>
               <div className='form-buttons'>
-                <Button type='submit' color='blue-filled' text='Place payment & Buy tickets' />
+                <Button type='submit' color='blue-filled' text='Place payment & Issue tickets' />
               </div>
               <div className='form-line padding-top'>
                 <p>

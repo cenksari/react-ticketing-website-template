@@ -1,13 +1,29 @@
 import { memo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
+import Dropdown from '../Dropdown/Dropdown';
+// eslint-disable-next-line no-unused-vars
 import ButtonLink from '../Button/ButtonLink';
+import DropdownItem from '../Dropdown/DropdownItem';
 
 const Header = memo(() => {
+  const navigate = useNavigate();
+
   const [menu, setMenu] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const menuState = () => {
     setMenu((state) => !state);
+  };
+
+  const dropdownState = () => {
+    setDropdown((state) => !state);
+  };
+
+  const setNavigation = (url) => {
+    navigate(url);
+
+    dropdownState();
   };
 
   return (
@@ -35,12 +51,31 @@ const Header = memo(() => {
           </Link>
         </div>
         <div className='members'>
-          <Link to='/members/signup' className='blue'>
+          {/* <Link to='/members/signup' className='blue'>
             Sign up
           </Link>
           <span>or</span>
-          <ButtonLink color='blue-filled' text='Sign in' onClick='/members/signin' />
+          <ButtonLink color='blue-filled' text='Sign in' onClick='/members/signin' /> */}
+          <Link to='/members'>
+            <img src='https://www.cenksari.com/content/profile.jpg' alt='' />
+          </Link>
+          <button type='button' className='menu-opener' onClick={() => dropdownState()}>
+            <span>
+              Cenk
+              <i className='material-icons'>
+                {dropdown ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}
+              </i>
+            </span>
+          </button>
         </div>
+        {dropdown && (
+          <Dropdown color='gray'>
+            <DropdownItem text='My tickets' onClick={() => setNavigation('/tickets')} />
+            <DropdownItem text='My account' onClick={() => setNavigation('/members')} />
+            <hr />
+            <DropdownItem text='Sign out' onClick={() => setNavigation('/members/signout')} />
+          </Dropdown>
+        )}
       </div>
       {menu && (
         <div className='main-menu-backdrop'>
