@@ -1,5 +1,7 @@
-import { memo, useState } from 'react';
+import { memo, useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+
+import useClickOutside from '../../hooks/useClickOutside';
 
 import Dropdown from '../Dropdown/Dropdown';
 // eslint-disable-next-line no-unused-vars
@@ -8,23 +10,22 @@ import DropdownItem from '../Dropdown/DropdownItem';
 import ProfilePhoto from '../ProfilePhoto/ProfilePhoto';
 
 const Header = memo(() => {
+  const wrapperRef = useRef();
   const navigate = useNavigate();
 
   const [menu, setMenu] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
+  useClickOutside(wrapperRef, () => {
+    setDropdown(false);
+  });
+
   const menuState = () => {
     setMenu((state) => !state);
   };
 
-  const dropdownState = () => {
-    setDropdown((state) => !state);
-  };
-
   const setNavigation = (url) => {
     navigate(url);
-
-    dropdownState();
   };
 
   return (
@@ -51,7 +52,7 @@ const Header = memo(() => {
             News
           </Link>
         </div>
-        <div className='members'>
+        <div className='members' ref={wrapperRef}>
           {/* <Link to='/members/signup' className='blue'>
             Sign up
           </Link>
@@ -60,7 +61,7 @@ const Header = memo(() => {
           <Link to='/members'>
             <ProfilePhoto image='https://www.cenksari.com/content/profile.jpg' size='small' />
           </Link>
-          <button type='button' className='menu-opener' onClick={() => dropdownState()}>
+          <button type='button' className='menu-opener' onClick={() => setDropdown(!dropdown)}>
             <span>
               Cenk
               <i className='material-icons'>
@@ -68,15 +69,15 @@ const Header = memo(() => {
               </i>
             </span>
           </button>
+          {dropdown && (
+            <Dropdown color='gray'>
+              <DropdownItem text='My tickets' onClick={() => setNavigation('/tickets')} />
+              <DropdownItem text='My account' onClick={() => setNavigation('/members')} />
+              <hr />
+              <DropdownItem text='Sign out' onClick={() => setNavigation('/members/signout')} />
+            </Dropdown>
+          )}
         </div>
-        {dropdown && (
-          <Dropdown color='gray'>
-            <DropdownItem text='My tickets' onClick={() => setNavigation('/tickets')} />
-            <DropdownItem text='My account' onClick={() => setNavigation('/members')} />
-            <hr />
-            <DropdownItem text='Sign out' onClick={() => setNavigation('/members/signout')} />
-          </Dropdown>
-        )}
       </div>
       {menu && (
         <div className='main-menu-backdrop'>
