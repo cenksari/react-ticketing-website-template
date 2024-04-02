@@ -74,7 +74,7 @@ const Home = () => (
       <div className='container'>
         <div className='flex flex-v-center flex-space-between'>
           <div className='title'>
-            <Heading type={2} color='gray' text='Filter for me:' />
+            <Heading type={2} color='gray' text='Filter for me' />
           </div>
           <div className='filters responsive-hide'>
             <ButtonLink color='gray-overlay' text='This week' onClick='/' />
@@ -161,27 +161,6 @@ const Home = () => (
             image='https://images.unsplash.com/photo-1472691681358-fdf00a4bfcfe?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           />
         </MultipleSlider>
-      </div>
-    </Section>
-
-    <Section className='white-background'>
-      <div className='container'>
-        <div className='center'>
-          <Heading type={2} color='purple' text='Sustainable ticketing' />
-          <p className='gray'>
-            Stunning, white-labelled pages to promote your event. To get started selling tickets
-            online with Modern ticketing, you&apos;ll first create a beautiful event website to
-            promote your event.
-          </p>
-          <div className='button-container'>
-            <ButtonLink
-              text='Get started'
-              color='purple-filled'
-              rightIcon='arrow_forward'
-              onClick='/promoters'
-            />
-          </div>
-        </div>
       </div>
     </Section>
 

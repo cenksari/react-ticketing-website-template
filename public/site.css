@@ -163,7 +163,7 @@ header .container .members span {
 }
 
 header .container .members .menu-opener {
-  padding: 0;
+  padding: 10px 0;
   line-height: unset;
 }
 
