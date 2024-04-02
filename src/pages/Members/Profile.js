@@ -33,16 +33,14 @@ const Profile = () => {
                 <ButtonGroupItem text='My tickets' onClick={() => navigate('/tickets')} />
               </ButtonGroup>
             </div>
+            <div>
+              <ProfilePhoto image='https://www.cenksari.com/content/profile.jpg' size='large' />
+              <span className='muted'>click profile picture to change</span>
+            </div>
           </div>
 
           <form className='form shrink' noValidate onSubmit={handleSubmit}>
             <div className='form-elements'>
-              <div className='form-line'>
-                <div className='one-line center'>
-                  <ProfilePhoto image='https://www.cenksari.com/content/profile.jpg' size='large' />
-                  <span className='center muted'>click profile picture to change</span>
-                </div>
-              </div>
               <div className='form-line'>
                 <div className='one-line'>
                   <div className='label-line'>

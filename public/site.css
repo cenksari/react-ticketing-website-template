@@ -494,6 +494,10 @@ footer .terms a:hover {
   font-weight: 500;
 }
 
+.form .form-elements .form-line .label-line a:hover {
+  text-decoration: underline;
+}
+
 .form .form-buttons {
   text-align: right;
 }
@@ -902,6 +906,7 @@ footer .terms a:hover {
 
 .muted {
   display: block;
+  font-size: 0.9em;
   margin-top: 10px;
   user-select: none;
   color: var(--dark-gray);
