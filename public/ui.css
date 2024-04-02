@@ -1224,6 +1224,10 @@ button.disabled {
   transform: none;
 }
 
+.button-group button:active {
+  background-color: var(--light-gray);
+}
+
 .button-group button.active {
   color: var(--white) !important;
 }
