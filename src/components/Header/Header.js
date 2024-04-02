@@ -5,6 +5,7 @@ import Dropdown from '../Dropdown/Dropdown';
 // eslint-disable-next-line no-unused-vars
 import ButtonLink from '../Button/ButtonLink';
 import DropdownItem from '../Dropdown/DropdownItem';
+import ProfilePhoto from '../ProfilePhoto/ProfilePhoto';
 
 const Header = memo(() => {
   const navigate = useNavigate();
@@ -57,7 +58,7 @@ const Header = memo(() => {
           <span>or</span>
           <ButtonLink color='blue-filled' text='Sign in' onClick='/members/signin' /> */}
           <Link to='/members'>
-            <img src='https://www.cenksari.com/content/profile.jpg' alt='' />
+            <ProfilePhoto image='https://www.cenksari.com/content/profile.jpg' size='small' />
           </Link>
           <button type='button' className='menu-opener' onClick={() => dropdownState()}>
             <span>

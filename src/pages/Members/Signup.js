@@ -119,7 +119,7 @@ const Signup = () => {
                 </div>
               </div>
               <div className='form-line'>
-                <div className='label-line flex flex-v-center flex-space-between'>
+                <div className='label-line'>
                   <label htmlFor='password'>Password</label>
                 </div>
                 <Input
@@ -133,7 +133,7 @@ const Signup = () => {
                 />
               </div>
               <div className='form-line'>
-                <div className='label-line flex flex-v-center flex-space-between'>
+                <div className='label-line'>
                   <label>Agreements</label>
                 </div>
                 <Switch name='tos' color='blue'>
