@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 
 const MultipleSlider = memo(({ children }) => {
   const navRef = useRef(null);
-  // const startX = useRef(null);
-  // const isDown = useRef(false);
-  // const scrollLeftX = useRef(null);
+  const startX = useRef(null);
+  const isDown = useRef(false);
+  const scrollLeftX = useRef(null);
+  const preventClick = useRef(false);
 
   const [leftArrowDisable, setLeftArrowDisable] = useState(true);
   const [rightArrowDisable, setRightArrowDisable] = useState(false);
@@ -31,83 +32,92 @@ const MultipleSlider = memo(({ children }) => {
     }
   };
 
-  // const mouseUp = () => {
-  //   isDown.current = false;
-  // };
-
-  // const mouseDown = (e) => {
-  //   isDown.current = true;
-
-  //   startX.current = e.pageX - navRef.current.offsetLeft;
-  //   scrollLeftX.current = navRef.current.scrollLeft;
-
-  //   buttons();
-  // };
-
-  // const mouseMove = (e) => {
-  //   if (!isDown.current) return;
+  // const wheel = (e) => {
+  //   if (e.deltaY === 0) return;
 
   //   e.preventDefault();
 
-  //   const x = e.pageX - navRef.current.offsetLeft;
-
-  //   const walk = x - startX.current;
-  //   navRef.current.scrollLeft = scrollLeftX.current - walk;
-
-  //   buttons();
+  //   navRef.current.scrollTo({
+  //     left: navRef.current.scrollLeft + e.deltaY,
+  //   });
   // };
 
-  // const mouseLeave = () => {
-  //   isDown.current = false;
-  // };
+  const click = (e) => {
+    if (preventClick.current) {
+      e.preventDefault();
+    }
+  };
 
   const scroll = () => {
     buttons();
   };
 
-  const wheel = (e) => {
-    if (e.deltaY === 0) return;
+  const mouseUp = () => {
+    isDown.current = false;
+  };
+
+  const mouseDown = (e) => {
+    e.preventDefault();
+
+    isDown.current = true;
+
+    startX.current = e.pageX - navRef.current.offsetLeft;
+    scrollLeftX.current = navRef.current.scrollLeft;
+
+    preventClick.current = false;
+
+    buttons();
+  };
+
+  const mouseMove = (e) => {
+    if (!isDown.current) return;
 
     e.preventDefault();
 
-    navRef.current.scrollTo({
-      left: navRef.current.scrollLeft + e.deltaY,
-    });
+    const x = e.pageX - navRef.current.offsetLeft;
+
+    const walk = x - startX.current;
+    navRef.current.scrollLeft = scrollLeftX.current - walk;
+
+    preventClick.current = true;
+
+    buttons();
   };
 
-  // eslint-disable-next-line consistent-return
+  const mouseLeave = () => {
+    isDown.current = false;
+  };
+
   useEffect(() => {
     buttons();
 
-    if (navRef && navRef.current) {
-      const elementRef = navRef.current;
+    const elementRef = navRef.current;
 
-      window.addEventListener('resize', scroll);
+    window.addEventListener('resize', scroll);
+    // elementRef.addEventListener('wheel', wheel);
+    elementRef.addEventListener('click', click);
+    elementRef.addEventListener('scroll', scroll);
+    elementRef.addEventListener('mouseup', mouseUp);
+    elementRef.addEventListener('mousedown', mouseDown);
+    elementRef.addEventListener('mousemove', mouseMove);
+    elementRef.addEventListener('mouseleave', mouseLeave);
 
-      elementRef.addEventListener('wheel', wheel);
-      elementRef.addEventListener('scroll', scroll);
-      // elementRef.addEventListener('mouseup', mouseUp);
-      // elementRef.addEventListener('mousedown', mouseDown);
-      // elementRef.addEventListener('mousemove', mouseMove);
-      // elementRef.addEventListener('mouseleave', mouseLeave);
+    const { offsetWidth, scrollWidth } = elementRef;
 
-      const { offsetWidth, scrollWidth } = elementRef;
-
-      if (offsetWidth === scrollWidth) {
-        setRightArrowDisable(true);
-      }
-
-      return () => {
-        window.removeEventListener('resize', scroll);
-
-        elementRef.removeEventListener('wheel', wheel);
-        elementRef.removeEventListener('scroll', scroll);
-        // elementRef.removeEventListener('mouseup', mouseUp);
-        // elementRef.removeEventListener('mousedown', mouseDown);
-        // elementRef.removeEventListener('mousemove', mouseMove);
-        // elementRef.removeEventListener('mouseleave', mouseLeave);
-      };
+    if (offsetWidth === scrollWidth) {
+      setRightArrowDisable(true);
     }
+
+    return () => {
+      window.removeEventListener('resize', scroll);
+      // elementRef.removeEventListener('wheel', wheel);
+      elementRef.removeEventListener('click', click);
+      elementRef.removeEventListener('scroll', scroll);
+      elementRef.removeEventListener('mouseup', mouseUp);
+      elementRef.removeEventListener('mousedown', mouseDown);
+      elementRef.removeEventListener('mousemove', mouseMove);
+      elementRef.removeEventListener('mouseleave', mouseLeave);
+    };
   }, []);
 
   const handleHorizantalScroll = (element, speed, step) => {
@@ -120,7 +130,7 @@ const MultipleSlider = memo(({ children }) => {
 
       scrollAmount += Math.abs(step);
 
-      if (scrollAmount >= 200) {
+      if (scrollAmount >= 320) {
         clearInterval(slideTimer);
       }
 
@@ -140,7 +150,7 @@ const MultipleSlider = memo(({ children }) => {
                 ? 'button button-gray button-circle'
                 : 'button button-default button-circle'
             }
-            onClick={() => handleHorizantalScroll(navRef.current, 25, -10)}
+            onClick={() => handleHorizantalScroll(navRef.current, 15, -20)}
           >
             <i className='material-icons'>chevron_left</i>
           </button>
@@ -159,7 +169,7 @@ const MultipleSlider = memo(({ children }) => {
                 ? 'button button-gray button-circle'
                 : 'button button-default button-circle'
             }
-            onClick={() => handleHorizantalScroll(navRef.current, 25, 10)}
+            onClick={() => handleHorizantalScroll(navRef.current, 15, 20)}
           >
             <i className='material-icons'>chevron_right</i>
           </button>

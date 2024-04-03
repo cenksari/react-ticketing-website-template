@@ -374,23 +374,23 @@ footer .terms a:hover {
 
 .scrollable {
   width: 100%;
+  user-select: none;
   overflow-x: hidden;
   white-space: nowrap;
 }
 
 .scrollable::-webkit-scrollbar {
-  height: 5px;
-  border-radius: 4px;
+  height: 1px;
   background-color: transparent;
 }
 
 .scrollable::-webkit-scrollbar-track {
-  border-radius: 4px;
+  height: 1px;
   background-color: transparent;
 }
 
 .scrollable::-webkit-scrollbar-thumb {
-  border-radius: 4px;
+  height: 1px;
   background-color: transparent;
 }
 
