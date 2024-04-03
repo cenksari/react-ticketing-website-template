@@ -152,6 +152,7 @@ button, .button {
 }
 
 button i, .button i {
+  margin-top: -2px;
   width: 22px !important;
   height: 22px !important;
   font-size: 22px !important;

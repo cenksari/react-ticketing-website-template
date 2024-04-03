@@ -356,7 +356,7 @@ footer .terms a:hover {
 
 .scroll-container .left-arrow button,
 .scroll-container .right-arrow button {
-  padding: 5px;
+  padding: 4px;
   border-radius: 50em;
   background-color: var(--white);
   border: 2px solid var(--dark-gray);
@@ -370,6 +370,7 @@ footer .terms a:hover {
 
 .scroll-container .left-arrow button i,
 .scroll-container .right-arrow button i {
+  margin-top: 0;
   width: unset !important;
   height: unset !important;
   font-size: 1.8em !important;
@@ -900,7 +901,7 @@ footer .terms a:hover {
 }
 
 .expand-button {
-  padding: 5px;
+  padding: 15px 20px 5px 20px;
 }
 
 .expand-button i {
