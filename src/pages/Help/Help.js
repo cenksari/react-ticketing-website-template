@@ -26,7 +26,7 @@ const Help = () => {
 
             {!expand ? (
               <button type='button' className='expand-button' onClick={() => setExpand(true)}>
-                <i className='material-icons'>keyboard_arrow_down</i>
+                <i className='material-symbols-outlined'>keyboard_arrow_down</i>
               </button>
             ) : (
               <>
@@ -59,21 +59,21 @@ const Help = () => {
                   <div className='center'>
                     <Heading type={5} color='gray' text='About us' />
                     <Link to='/' className='blue'>
-                      <i className='material-icons yellow'>star</i>
+                      <i className='material-symbols-outlined yellow'>star</i>
                       What is ticketing?
                     </Link>
                   </div>
                   <div className='center'>
                     <Heading type={5} color='gray' text='Account' />
                     <Link to='/' className='blue'>
-                      <i className='material-icons yellow'>star</i>
+                      <i className='material-symbols-outlined yellow'>star</i>
                       How to sign in?
                     </Link>
                   </div>
                   <div className='center'>
                     <Heading type={5} color='gray' text='Using system' />
                     <Link to='/' className='blue'>
-                      <i className='material-icons yellow'>star</i>
+                      <i className='material-symbols-outlined yellow'>star</i>
                       How can I get my tickets?
                     </Link>
                   </div>
@@ -83,7 +83,7 @@ const Help = () => {
 
             {expand && (
               <button type='button' className='expand-button' onClick={() => setExpand(false)}>
-                <i className='material-icons'>keyboard_arrow_up</i>
+                <i className='material-symbols-outlined'>keyboard_arrow_up</i>
               </button>
             )}
           </div>

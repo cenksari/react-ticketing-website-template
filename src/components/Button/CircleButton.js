@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const CircleButton = memo(({ icon, text, onClick }) => (
   <Link className='circle-button' to={onClick}>
     <div className='circle'>
-      <i className='material-icons right-icon'>{icon}</i>
+      <i className='material-symbols-outlined right-icon'>{icon}</i>
     </div>
     <span>{text}</span>
   </Link>

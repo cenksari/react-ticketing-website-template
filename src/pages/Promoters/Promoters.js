@@ -73,23 +73,23 @@ const Promoters = () => (
       <div className='carousel'>
         <MultipleSlider>
           <Box className='gray'>
-            <i className='material-icons blue'>arrow_forward</i>
+            <i className='material-symbols-outlined blue'>arrow_forward</i>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <i className='material-icons red'>arrow_forward</i>
+            <i className='material-symbols-outlined red'>arrow_forward</i>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <i className='material-icons purple'>arrow_forward</i>
+            <i className='material-symbols-outlined purple'>arrow_forward</i>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <i className='material-icons green'>arrow_forward</i>
+            <i className='material-symbols-outlined green'>arrow_forward</i>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <i className='material-icons yellow'>arrow_forward</i>
+            <i className='material-symbols-outlined yellow'>arrow_forward</i>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
         </MultipleSlider>

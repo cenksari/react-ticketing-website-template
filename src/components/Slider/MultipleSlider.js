@@ -152,7 +152,7 @@ const MultipleSlider = memo(({ children }) => {
             }
             onClick={() => handleHorizantalScroll(navRef.current, 15, -20)}
           >
-            <i className='material-icons'>chevron_left</i>
+            <i className='material-symbols-outlined'>chevron_left</i>
           </button>
         </div>
       )}
@@ -171,7 +171,7 @@ const MultipleSlider = memo(({ children }) => {
             }
             onClick={() => handleHorizantalScroll(navRef.current, 15, 20)}
           >
-            <i className='material-icons'>chevron_right</i>
+            <i className='material-symbols-outlined'>chevron_right</i>
           </button>
         </div>
       )}

@@ -26,7 +26,7 @@ const Venues = () => {
 
             {!expand ? (
               <button type='button' className='expand-button' onClick={() => setExpand(true)}>
-                <i className='material-icons'>keyboard_arrow_down</i>
+                <i className='material-symbols-outlined'>keyboard_arrow_down</i>
               </button>
             ) : (
               <div className='top-search'>
@@ -58,7 +58,7 @@ const Venues = () => {
 
             {expand && (
               <button type='button' className='expand-button' onClick={() => setExpand(false)}>
-                <i className='material-icons'>keyboard_arrow_up</i>
+                <i className='material-symbols-outlined'>keyboard_arrow_up</i>
               </button>
             )}
           </div>

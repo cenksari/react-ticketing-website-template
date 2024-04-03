@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import Input from '../../components/Form/Input';
 import Master from '../../components/Layout/Master';
 import Button from '../../components/Button/Button';
@@ -5,6 +7,8 @@ import Section from '../../components/Section/Section';
 import Heading from '../../components/Heading/Heading';
 
 const ChangePassword = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -65,9 +69,14 @@ const ChangePassword = () => {
                 />
               </div>
               <div className='form-buttons'>
-                <Button type='button' color='gray-overlay' text='Go back' />
+                <Button
+                  type='button'
+                  color='gray-overlay'
+                  text='Go back'
+                  onClick={() => navigate('/members')}
+                />
                 &nbsp; &nbsp;
-                <Button type='submit' color='blue-filled' text='Change password' />
+                <Button type='submit' color='blue-filled' text='Submit' />
               </div>
             </div>
           </form>

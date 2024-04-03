@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 
 const ButtonLink = memo(({ text, leftIcon, rightIcon, color, onClick }) => (
   <Link className={`button ${color}`} to={onClick}>
-    {leftIcon && <i className='material-icons left-icon'>{leftIcon}</i>}
+    {leftIcon && <i className='material-symbols-outlined left-icon'>{leftIcon}</i>}
     {text}
-    {rightIcon && <i className='material-icons right-icon'>{rightIcon}</i>}
+    {rightIcon && <i className='material-symbols-outlined right-icon'>{rightIcon}</i>}
   </Link>
 ));
 

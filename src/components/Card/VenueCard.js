@@ -22,7 +22,7 @@ const EventCard = memo(({ name, location, image, color }) => (
       </div>
       <div className='card-info'>
         <span>
-          <i className='material-icons'>location_on</i> {location}
+          <i className='material-symbols-outlined'>location_on</i> {location}
         </span>
       </div>
     </Link>

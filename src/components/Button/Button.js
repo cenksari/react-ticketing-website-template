@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const Button = memo(({ type, text, leftIcon, rightIcon, color, onClick }) => (
   <button type={type === 'button' ? 'button' : 'submit'} className={color} onClick={onClick}>
-    {leftIcon && <i className='material-icons left-icon'>{leftIcon}</i>}
+    {leftIcon && <i className='material-symbols-outlined left-icon'>{leftIcon}</i>}
     {text}
-    {rightIcon && <i className='material-icons right-icon'>{rightIcon}</i>}
+    {rightIcon && <i className='material-symbols-outlined right-icon'>{rightIcon}</i>}
   </button>
 ));
 

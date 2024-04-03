@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import Input from '../../components/Form/Input';
 import Master from '../../components/Layout/Master';
 import Button from '../../components/Button/Button';
@@ -5,8 +7,12 @@ import Section from '../../components/Section/Section';
 import Heading from '../../components/Heading/Heading';
 
 const ChangeEmail = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    navigate('/members/activate-email');
   };
 
   return (
@@ -56,9 +62,14 @@ const ChangeEmail = () => {
                 </div>
               </div>
               <div className='form-buttons'>
-                <Button type='button' color='gray-overlay' text='Go back' />
+                <Button
+                  type='button'
+                  color='gray-overlay'
+                  text='Go back'
+                  onClick={() => navigate('/members')}
+                />
                 &nbsp; &nbsp;
-                <Button type='submit' color='blue-filled' text='Send activation code' />
+                <Button type='submit' color='blue-filled' text='Submit' />
               </div>
             </div>
           </form>

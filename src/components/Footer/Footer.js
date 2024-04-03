@@ -60,7 +60,7 @@ const Footer = memo(() => (
           required
         />
         <button type='submit'>
-          <i className='material-icons'>arrow_forward</i>
+          <i className='material-symbols-outlined'>arrow_forward</i>
         </button>
       </div>
     </div>

@@ -91,7 +91,10 @@ const Forgot = () => {
                     </div>
                     <span>Child</span>
                     <strong>£20</strong>
-                    <i className='material-icons' title='Information about child tickets'>
+                    <i
+                      className='material-symbols-outlined'
+                      title='Information about child tickets'
+                    >
                       info
                     </i>
                   </div>

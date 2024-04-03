@@ -22,13 +22,13 @@ const EventCard = memo(({ from, when, name, venue, image, color }) => (
       </div>
       <div className='card-info'>
         <span>
-          <i className='material-icons'>event</i> {when}
+          <i className='material-symbols-outlined'>event</i> {when}
         </span>
         <span>
-          <i className='material-icons'>apartment</i> {venue}
+          <i className='material-symbols-outlined'>apartment</i> {venue}
         </span>
         <span>
-          <i className='material-icons'>local_activity</i> from <strong>£{from}</strong>
+          <i className='material-symbols-outlined'>local_activity</i> from <strong>£{from}</strong>
         </span>
       </div>
     </Link>

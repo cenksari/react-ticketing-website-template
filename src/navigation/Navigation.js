@@ -11,6 +11,7 @@ import Activation from '../pages/Members/Activation';
 import Profile from '../pages/Members/Profile';
 import ChangeEmail from '../pages/Members/ChangeEmail';
 import ChangePassword from '../pages/Members/ChangePassword';
+import ActivateEmail from '../pages/Members/ActivateEmail';
 
 import Discover from '../pages/Discover/Discover';
 import Venues from '../pages/Venue/Venues';
@@ -34,6 +35,7 @@ const Navigation = () => (
     <Route path='/members/forgot-password' element={<Forgot />} />
     <Route path='/members/reset-password' element={<Reset />} />
     <Route path='/members/change-email' element={<ChangeEmail />} />
+    <Route path='/members/activate-email' element={<ActivateEmail />} />
     <Route path='/members/change-password' element={<ChangePassword />} />
 
     <Route path='/buy' element={<Payment />} />

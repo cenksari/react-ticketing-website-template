@@ -38,7 +38,7 @@ const Header = memo(() => {
             </svg>
           </Link>
           <button type='button' onClick={() => menuState()}>
-            <i className='material-icons'>menu</i>
+            <i className='material-symbols-outlined'>menu</i>
           </button>
         </div>
         <div className='links responsive-hide'>
@@ -64,7 +64,7 @@ const Header = memo(() => {
           <button type='button' className='menu-opener' onClick={() => setDropdown(!dropdown)}>
             <span>
               Cenk
-              <i className='material-icons'>
+              <i className='material-symbols-outlined'>
                 {dropdown ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}
               </i>
             </span>
@@ -84,7 +84,7 @@ const Header = memo(() => {
           <div className='main-menu'>
             <div className='top'>
               <button type='button' onClick={() => menuState()}>
-                <i className='material-icons'>close</i>
+                <i className='material-symbols-outlined'>close</i>
               </button>
               <div className='center'>
                 <Link to='/' className='logo'>
