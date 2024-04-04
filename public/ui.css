@@ -54,6 +54,7 @@ input, select, textarea, button {
   overflow: auto;
   color: var(--black);
   border-radius: 10px;
+  box-sizing: border-box;
   transition: all .3s ease;
 }
 
@@ -735,6 +736,7 @@ button.disabled {
   height: 200px;
   padding: 10px;
   position: relative;
+  box-sizing: border-box;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
