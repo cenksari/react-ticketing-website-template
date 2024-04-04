@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import Input from '../../components/Form/Input';
-import Button from '../../components/Button/Button';
 import Master from '../../components/Layout/Master';
 import Section from '../../components/Section/Section';
 import Heading from '../../components/Heading/Heading';
@@ -30,27 +29,20 @@ const Venues = () => {
               </button>
             ) : (
               <div className='top-search'>
-                <form className='form' noValidate onSubmit={handleSubmit}>
-                  <div className='form-elements'>
-                    <div className='form-line'>
-                      <Input
-                        type='text'
-                        name='code'
-                        value=''
-                        maxLength={10}
-                        placeholder='Venue name, keyword, location'
-                        onChange={() => {}}
-                        required
-                      />
-                    </div>
-                    <div className='form-buttons'>
-                      <Button
-                        type='submit'
-                        color='blue-filled'
-                        text='Search venues'
-                        leftIcon='search'
-                      />
-                    </div>
+                <form noValidate onSubmit={handleSubmit}>
+                  <div className='search-inputs flex flex-h-center flex-space-between'>
+                    <Input
+                      type='text'
+                      name='code'
+                      value=''
+                      maxLength={10}
+                      placeholder='Venue name, keyword, location'
+                      onChange={() => {}}
+                      required
+                    />
+                    <button type='submit'>
+                      <i className='material-symbols-outlined'>search</i>
+                    </button>
                   </div>
                 </form>
               </div>

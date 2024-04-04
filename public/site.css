@@ -753,7 +753,35 @@ footer .terms a:hover {
 
 .top-search {
   max-width: 80%;
-  margin: 30px auto 0 auto;
+  margin: 30px auto;
+}
+
+.top-search .search-inputs {
+  border-radius: 10px;
+  border: 1px solid #dadada;
+  background-color: #f9f9f9;
+}
+
+.top-search .search-inputs input:hover {
+  background-color: #f9f9f9;
+  border: 1px solid #f9f9f9;
+}
+
+.top-search .search-inputs input:focus {
+  border: none;
+  background-color: #f9f9f9;
+  border: 1px solid #f9f9f9;
+}
+
+.top-search .search-inputs button {
+  padding: 0 20px;
+}
+
+.top-search .search-inputs button i {
+  margin-top: 0;
+  width: unset !important;
+  height: unset !important;
+  font-size: 1.3em !important;
 }
 
 .circle-buttons {
@@ -915,7 +943,8 @@ footer .terms a:hover {
 }
 
 .help-top {
-  margin: 30px 0 10px 0;
+  max-width: 90%;
+  margin: 40px auto 30px auto;
 }
 
 .help-top div {
