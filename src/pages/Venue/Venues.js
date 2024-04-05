@@ -56,7 +56,7 @@ const Venues = () => {
         </div>
       </Section>
 
-      <CardGroup title='Lates venues' color='gray' link='/discover' background='gray'>
+      <CardGroup title='Latest venues' color='gray' link='/discover' background='gray'>
         <VenueCard
           color='gray'
           name='o2 Arena'

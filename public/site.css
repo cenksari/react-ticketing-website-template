@@ -527,8 +527,8 @@ footer .terms a:hover {
 }
 
 .input-file + label {
+  opacity: 0;
   width: 226px;
-  opacity: 0.2;
   height: 226px;
   cursor: pointer;
   user-select: none;
@@ -774,6 +774,7 @@ footer .terms a:hover {
 
 .top-search .search-inputs button {
   padding: 0 20px;
+  border-radius: 0;
 }
 
 .top-search .search-inputs button i {
