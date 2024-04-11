@@ -912,7 +912,7 @@ td {
   background-color: var(--blackest-gray);
 }
 
-.card-title.venue span {
+.card-title.venue h3 {
   color: var(--white);
 }
 

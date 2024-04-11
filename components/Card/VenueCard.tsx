@@ -15,7 +15,7 @@ const VenueCard = ({ url, name, image, color, location }: Props) => (
   <div className='card'>
     <Link href={`/venue/${url}`}>
       <div className='card-title venue'>
-        <span>{name}</span>
+        <h3>{name}</h3>
       </div>
       <div
         className='card-image'

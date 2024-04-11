@@ -17,7 +17,7 @@ const EventCard = ({ url, from, when, name, venue, image, color }: Props) => (
   <div className='card'>
     <Link href={`/event/${url}`}>
       <div className='card-title'>
-        <h4>{name}</h4>
+        <h3>{name}</h3>
       </div>
       <div
         className='card-image'
