@@ -186,4 +186,23 @@ const Page = () => (
   </Master>
 );
 
+const title = 'Event name goes here';
+const canonical = 'https://modern-ticketing.com/event/1';
+const description = 'Modern ticketing is a modern ticketing solution';
+
+export const metadata = {
+  title,
+  description,
+  keywords: 'modern ticketing',
+  alternates: { canonical },
+  openGraph: {
+    title,
+    description,
+    url: canonical,
+    type: 'website',
+    siteName: 'Modern Ticketing',
+    images: 'https://modern-ticketing.com/logo192.png',
+  },
+};
+
 export default Page;
