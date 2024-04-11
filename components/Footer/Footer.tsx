@@ -22,6 +22,9 @@ const Footer = () => (
         <Link href='/members/tickets' className='white'>
           My tickets
         </Link>
+        <Link href='/members/account' className='white'>
+          My account
+        </Link>
       </div>
       <div className='links'>
         <Link href='/help' className='white'>

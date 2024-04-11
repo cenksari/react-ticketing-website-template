@@ -17,7 +17,7 @@ const Page = () => (
             <strong>cenk@cenksari.com</strong>
           </p>
         </div>
-        <form className='form shrink' noValidate>
+        <form method='POST' action='/members/activate/email' className='form shrink' noValidate>
           <div className='form-elements'>
             <div className='form-line'>
               <div className='one-line'>

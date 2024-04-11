@@ -57,46 +57,51 @@ const Page = () => (
               <div className='ticket-box-header'>
                 <Heading type={5} color='gray' text='Tickets' />
               </div>
-              <div className='ticket-box-content'>
-                <div className='ticket-box-line'>
-                  <div className='quantity'>
-                    <button type='button'>-</button>
-                    <input type='text' name='q1' defaultValue='1' />
-                    <button type='button'>+</button>
+              <form method='POST' action='/buy' noValidate>
+                <div className='ticket-box-content'>
+                  <div className='ticket-box-line'>
+                    <div className='quantity'>
+                      <button type='button'>-</button>
+                      <input type='text' name='q1' defaultValue='1' />
+                      <button type='button'>+</button>
+                    </div>
+                    <span>Family</span>
+                    <strong>£20</strong>
                   </div>
-                  <span>Family</span>
-                  <strong>£20</strong>
-                </div>
-                <div className='ticket-box-line'>
-                  <div className='quantity'>
-                    <button type='button'>-</button>
-                    <input type='text' name='q2' defaultValue='1' />
-                    <button type='button'>+</button>
+                  <div className='ticket-box-line'>
+                    <div className='quantity'>
+                      <button type='button'>-</button>
+                      <input type='text' name='q2' defaultValue='1' />
+                      <button type='button'>+</button>
+                    </div>
+                    <span>Adult</span>
+                    <strong>£20</strong>
                   </div>
-                  <span>Adult</span>
-                  <strong>£20</strong>
-                </div>
-                <div className='ticket-box-line'>
-                  <div className='quantity'>
-                    <button type='button'>-</button>
-                    <input type='text' name='q3' defaultValue='1' />
-                    <button type='button'>+</button>
+                  <div className='ticket-box-line'>
+                    <div className='quantity'>
+                      <button type='button'>-</button>
+                      <input type='text' name='q3' defaultValue='1' />
+                      <button type='button'>+</button>
+                    </div>
+                    <span>Child</span>
+                    <strong>£20</strong>
+                    <i
+                      className='material-symbols-outlined'
+                      title='Information about child tickets'
+                    >
+                      info
+                    </i>
                   </div>
-                  <span>Child</span>
-                  <strong>£20</strong>
-                  <i className='material-symbols-outlined' title='Information about child tickets'>
-                    info
-                  </i>
                 </div>
-              </div>
-              <div className='ticket-box-buttons'>
-                <Button
-                  type='button'
-                  color='blue-filled'
-                  text='Buy tickets'
-                  rightIcon='arrow_forward'
-                />
-              </div>
+                <div className='ticket-box-buttons'>
+                  <Button
+                    type='submit'
+                    color='blue-filled'
+                    text='Buy tickets'
+                    rightIcon='arrow_forward'
+                  />
+                </div>
+              </form>
             </div>
           </div>
         </div>

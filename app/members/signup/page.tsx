@@ -21,7 +21,7 @@ const Page = () => (
             to sign in if you already have an account.
           </p>
         </div>
-        <form className='form shrink' noValidate>
+        <form method='POST' action='/members/activate/account' className='form shrink' noValidate>
           <div className='form-elements'>
             <div className='form-line'>
               <div className='one-line'>

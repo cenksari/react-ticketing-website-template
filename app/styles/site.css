@@ -714,6 +714,7 @@ footer .terms a:hover {
 
 .ticket-box .ticket-box-line i {
   cursor: help;
+  font-size: 0.9em;
   user-select: none;
   display: inline-block;
   vertical-align: middle;
@@ -730,7 +731,7 @@ footer .terms a:hover {
 
 .ticket-box .ticket-box-line span,
 .ticket-box .ticket-box-line strong {
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin-right: 5px;
   display: inline-block;
   vertical-align: middle;
@@ -768,7 +769,8 @@ footer .terms a:hover {
 
 .ticket-box .quantity input {
   padding: 0;
-  width: 50px;
+  width: 35px;
+  font-size: 0.9em;
   text-align: center;
   border: 1px solid var(--light-gray);
 }
