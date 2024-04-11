@@ -22,12 +22,11 @@ const Page = (): React.JSX.Element => (
       <div className='center'>
         <div className='container'>
           <div className='top-search'>
-            <form noValidate>
+            <form method='GET' action='/list' noValidate>
               <div className='search-inputs flex flex-h-center flex-space-between'>
                 <Input
                   type='text'
                   name='keyword'
-                  value=''
                   maxLength={10}
                   placeholder='Event, venue, artist, keyword'
                   required

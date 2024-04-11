@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Input from '@components/Form/Input';
 import Master from '@components/Layout/Master';
-import Button from '@components/Button/Button';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
+
+import Form from './components/Form';
 
 const Page = (): React.JSX.Element => (
   <Master>
@@ -18,28 +18,7 @@ const Page = (): React.JSX.Element => (
             check your junk mail or spam folder.
           </p>
         </div>
-        <form className='form shrink' noValidate>
-          <div className='form-elements'>
-            <div className='form-line'>
-              <div className='one-line'>
-                <div className='label-line'>
-                  <label htmlFor='email'>E-mail address</label>
-                </div>
-                <Input
-                  type='email'
-                  name='email'
-                  value=''
-                  maxLength={128}
-                  placeholder='Enter your e-mail address'
-                  required
-                />
-              </div>
-            </div>
-            <div className='form-buttons'>
-              <Button type='submit' color='blue-filled' text='Reset password' />
-            </div>
-          </div>
-        </form>
+        <Form />
       </div>
     </Section>
   </Master>

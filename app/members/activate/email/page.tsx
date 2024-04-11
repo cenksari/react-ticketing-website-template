@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Input from '@components/Form/Input';
 import Master from '@components/Layout/Master';
-import Button from '@components/Button/Button';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
+
+import Form from './components/Form';
 
 const Page = (): React.JSX.Element => (
   <Master>
@@ -17,26 +17,7 @@ const Page = (): React.JSX.Element => (
             you do not see the email in a few minutes, check your junk mail or spam folder.
           </p>
         </div>
-        <form className='form shrink' noValidate>
-          <div className='form-elements'>
-            <div className='form-line'>
-              <div className='label-line flex flex-v-center flex-space-between'>
-                <label htmlFor='code'>Activation code</label>
-              </div>
-              <Input
-                type='text'
-                name='code'
-                value=''
-                maxLength={10}
-                placeholder='Enter your activation code'
-                required
-              />
-            </div>
-            <div className='form-buttons'>
-              <Button type='submit' color='blue-filled' text='Activate e-mail' />
-            </div>
-          </div>
-        </form>
+        <Form />
       </div>
     </Section>
   </Master>

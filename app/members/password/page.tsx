@@ -1,11 +1,10 @@
 import React from 'react';
 
-import Input from '@components/Form/Input';
 import Master from '@components/Layout/Master';
-import Button from '@components/Button/Button';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
-import ButtonLink from '@components/Button/ButtonLink';
+
+import Form from './components/Form';
 
 const Page = (): React.JSX.Element => (
   <Master>
@@ -18,54 +17,7 @@ const Page = (): React.JSX.Element => (
             are not using elsewhere. Your new password must be at least 8 characters.
           </p>
         </div>
-        <form className='form shrink' noValidate>
-          <div className='form-elements'>
-            <div className='form-line'>
-              <div className='label-line'>
-                <label htmlFor='password'>Current password</label>
-              </div>
-              <Input
-                type='password'
-                name='password'
-                value=''
-                maxLength={64}
-                placeholder='Enter your current password'
-                required
-              />
-            </div>
-            <div className='form-line'>
-              <div className='label-line'>
-                <label htmlFor='newPassword'>New password</label>
-              </div>
-              <Input
-                type='password'
-                name='newPassword'
-                value=''
-                maxLength={64}
-                placeholder='Enter your new password'
-                required
-              />
-            </div>
-            <div className='form-line'>
-              <div className='label-line'>
-                <label htmlFor='newPasswordAgain'>Confirm new password</label>
-              </div>
-              <Input
-                type='password'
-                name='newPasswordAgain'
-                value=''
-                maxLength={64}
-                placeholder='Re-enter your new password'
-                required
-              />
-            </div>
-            <div className='form-buttons'>
-              <ButtonLink color='gray-overlay' text='Go back' url='members/profile' />
-              &nbsp; &nbsp;
-              <Button type='submit' color='blue-filled' text='Submit' />
-            </div>
-          </div>
-        </form>
+        <Form />
       </div>
     </Section>
   </Master>

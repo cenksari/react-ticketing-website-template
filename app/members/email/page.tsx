@@ -1,11 +1,10 @@
 import React from 'react';
 
-import Input from '@components/Form/Input';
 import Master from '@components/Layout/Master';
-import Button from '@components/Button/Button';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
-import ButtonLink from '@components/Button/ButtonLink';
+
+import Form from './components/Form';
 
 const Page = (): React.JSX.Element => (
   <Master>
@@ -19,45 +18,7 @@ const Page = (): React.JSX.Element => (
             <strong>cenk@cenksari.com</strong>
           </p>
         </div>
-        <form method='POST' action='/members/activate/email' className='form shrink' noValidate>
-          <div className='form-elements'>
-            <div className='form-line'>
-              <div className='one-line'>
-                <div className='label-line'>
-                  <label htmlFor='email'>E-mail address</label>
-                </div>
-                <Input
-                  type='email'
-                  name='email'
-                  value=''
-                  maxLength={128}
-                  placeholder='Enter your new e-mail address'
-                  required
-                />
-              </div>
-            </div>
-            <div className='form-line'>
-              <div className='one-line'>
-                <div className='label-line'>
-                  <label htmlFor='emailAgain'>Confirm e-mail address</label>
-                </div>
-                <Input
-                  type='email'
-                  name='emailAgain'
-                  value=''
-                  maxLength={128}
-                  placeholder='Re-enter your new e-mail address'
-                  required
-                />
-              </div>
-            </div>
-            <div className='form-buttons'>
-              <ButtonLink color='gray-overlay' text='Go back' url='members/profile' />
-              &nbsp; &nbsp;
-              <Button type='submit' color='blue-filled' text='Submit' />
-            </div>
-          </div>
-        </form>
+        <Form />
       </div>
     </Section>
   </Master>

@@ -17,12 +17,11 @@ const Page = (): React.JSX.Element => (
           <p className='gray'>Welcome to our help center. How can we help today?</p>
 
           <div className='top-search'>
-            <form noValidate>
+            <form method='GET' action='/help' noValidate>
               <div className='search-inputs flex flex-h-center flex-space-between'>
                 <Input
                   type='text'
                   name='keyword'
-                  value=''
                   maxLength={10}
                   placeholder='Search keyword, topic, question'
                   required

@@ -16,7 +16,7 @@ const Page = (): React.JSX.Element => (
           <p className='gray'>Discover the best venues in London.</p>
 
           <div className='top-search'>
-            <form noValidate>
+            <form method='GET' action='/venues' noValidate>
               <div className='search-inputs flex flex-h-center flex-space-between'>
                 <Input
                   type='text'
