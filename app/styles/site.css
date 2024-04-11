@@ -223,12 +223,24 @@ header .container .dropdown {
   color: var(--white);
 }
 
+.black-theme header .members button {
+  color: var(--white);
+}
+
+.black-theme header .members .profile-photo {
+  border: 1px solid var(--gray);
+}
+
 .black-theme .white-background {
-  background-color: #020409;
+  background-color: var(--blackest-gray);
+}
+
+.black-theme .gray-background {
+  background-color: var(--blackest-gray);
 }
 
 .black-theme .gray {
-  color: #e6edf3;
+  color: #ffffff;
 }
 
 .black-theme .paragraph-container p {
