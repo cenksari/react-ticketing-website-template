@@ -17,8 +17,8 @@ const Page = () => (
           </p>
           <div className='button-container'>
             <ButtonGroup color='gray'>
-              <ButtonGroupItem url='members/account' text='My account' />
               <ButtonGroupItem url='members/tickets' text='My tickets' active />
+              <ButtonGroupItem url='members/account' text='My account' />
             </ButtonGroup>
           </div>
         </div>

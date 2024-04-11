@@ -22,8 +22,8 @@ const Page = () => (
           </p>
           <div className='button-container'>
             <ButtonGroup color='gray'>
-              <ButtonGroupItem url='members/account' text='My account' active />
               <ButtonGroupItem url='members/tickets' text='My tickets' />
+              <ButtonGroupItem url='members/account' text='My account' active />
             </ButtonGroup>
           </div>
           <div className='upload-picture'>
@@ -97,7 +97,7 @@ const Page = () => (
               <Input
                 type='password'
                 name='password'
-                value=''
+                value='dummypassword'
                 maxLength={64}
                 placeholder='Enter your password'
                 required
