@@ -19,7 +19,7 @@ const ProfilePhoto = ({ size, text, color, image }: Props): React.JSX.Element =>
   return (
     <div className='profile-photo'>
       <div className={`cover ${size}`} style={{ backgroundImage: `url("${image}")` }} />
-      {text !== null && <span>{text}</span>}
+      {text !== undefined && <span>{text}</span>}
     </div>
   );
 };

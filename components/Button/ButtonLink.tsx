@@ -12,9 +12,11 @@ interface Props {
 
 const ButtonLink = ({ url, text, color, leftIcon, rightIcon }: Props): React.JSX.Element => (
   <Link className={`button ${color}`} href={`/${url}`}>
-    {leftIcon !== null && <span className='material-symbols-outlined left-icon'>{leftIcon}</span>}
+    {leftIcon !== undefined && (
+      <span className='material-symbols-outlined left-icon'>{leftIcon}</span>
+    )}
     {text}
-    {rightIcon !== null && (
+    {rightIcon !== undefined && (
       <span className='material-symbols-outlined right-icon'>{rightIcon}</span>
     )}
   </Link>

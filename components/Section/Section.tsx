@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Section = ({ className, children }: Props): React.JSX.Element => (
-  <section className={className !== null ? `${className}` : 'no-style'}>{children}</section>
+  <section className={className !== undefined ? `${className}` : 'no-style'}>{children}</section>
 );
 
 export default Section;

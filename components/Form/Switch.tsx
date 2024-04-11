@@ -14,7 +14,7 @@ const Switch = ({ name, color, checked, children, onChange }: Props): React.JSX.
       <input name={name} id={name} type='checkbox' defaultChecked={checked} onChange={onChange} />
       <span className='slider round' />
     </label>
-    {children !== null && <span className='switch-description'>{children}</span>}
+    {children !== undefined && <span className='switch-description'>{children}</span>}
   </div>
 );
 
