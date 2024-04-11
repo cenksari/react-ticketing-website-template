@@ -1,17 +1,19 @@
+import React from 'react';
+
 import Link from 'next/link';
 
 import Badge from '@components/Badge/Badge';
 import ButtonLink from '@components/Button/ButtonLink';
 
-type Props = {
+interface Props {
   url: string;
   name: string;
   image: string;
   color: string;
   location: string;
-};
+}
 
-const VenueCard = ({ url, name, image, color, location }: Props) => (
+const VenueCard = ({ url, name, image, color, location }: Props): React.JSX.Element => (
   <div className='card'>
     <Link href={`/venue/${url}`}>
       <div className='card-title venue'>

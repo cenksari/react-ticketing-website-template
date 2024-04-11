@@ -1,10 +1,12 @@
+import React from 'react';
+
 import Input from '@components/Form/Input';
 import Master from '@components/Layout/Master';
 import Button from '@components/Button/Button';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 
-const Page = () => (
+const Page = (): React.JSX.Element => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

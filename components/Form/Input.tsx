@@ -1,14 +1,26 @@
-type Props = {
+import React from 'react';
+
+interface Props {
   name: string;
   type: string;
-  value?: string;
+  value?: string | '';
   maxLength: number;
-  disabled?: boolean;
-  required?: boolean;
+  disabled?: boolean | false;
+  required?: boolean | false;
   placeholder: string;
-};
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
+}
 
-const Input = ({ name, type, value, maxLength, disabled, required, placeholder }: Props) => (
+const Input = ({
+  name,
+  type,
+  value,
+  maxLength,
+  disabled,
+  required,
+  placeholder,
+  onChange,
+}: Props): React.JSX.Element => (
   <input
     id={name}
     type={type}
@@ -17,10 +29,11 @@ const Input = ({ name, type, value, maxLength, disabled, required, placeholder }
     readOnly={disabled}
     disabled={disabled}
     required={required}
-    defaultValue={value}
+    value={value}
     maxLength={maxLength}
     className='input-text'
     placeholder={placeholder}
+    onChange={onChange}
   />
 );
 

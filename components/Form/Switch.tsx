@@ -1,20 +1,19 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
-type Props = {
+interface Props {
   name: string;
   color: string;
-  checked?: boolean;
-  children?: React.ReactNode;
-};
+  checked?: boolean | false;
+  children?: React.ReactNode | null;
+}
 
-const Switch = ({ name, color, checked, children }: Props) => (
+const Switch = ({ name, color, checked, children }: Props): React.JSX.Element => (
   <div className='switch-container'>
     <label htmlFor={name} className={`switch ${color}`}>
       <input name={name} id={name} type='checkbox' defaultChecked={checked} />
       <span className='slider round' />
     </label>
-    {children && <span className='switch-description'>{children}</span>}
+    {children !== null && <span className='switch-description'>{children}</span>}
   </div>
 );
 

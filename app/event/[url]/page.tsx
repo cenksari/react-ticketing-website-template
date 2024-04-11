@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Link from 'next/link';
 
 import Master from '@components/Layout/Master';
@@ -7,7 +9,7 @@ import Heading from '@components/Heading/Heading';
 import EventCard from '@components/Card/EventCard';
 import CardGroup from '@components/Card/CardGroup';
 
-const Page = () => (
+const Page = (): React.JSX.Element => (
   <Master>
     <div className='blur-cover'>
       <div

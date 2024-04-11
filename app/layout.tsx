@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Metadata, Viewport } from 'next';
+import { type Metadata, type Viewport } from 'next';
 
 import './styles/ui.css';
 import './styles/site.css';
 
 export const runtime = 'edge';
 
-const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => (
+const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>): React.JSX.Element => (
   <html lang='en'>
     <body>{children}</body>
   </html>

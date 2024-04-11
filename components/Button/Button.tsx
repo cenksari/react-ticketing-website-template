@@ -1,16 +1,20 @@
-type Props = {
+import React from 'react';
+
+interface Props {
   type?: string | 'button';
   text: string;
   color: string;
-  leftIcon?: string;
-  rightIcon?: string;
-};
+  leftIcon?: string | null;
+  rightIcon?: string | null;
+}
 
-const Button = ({ type, text, color, leftIcon, rightIcon }: Props) => (
+const Button = ({ type, text, color, leftIcon, rightIcon }: Props): React.JSX.Element => (
   <button type={type === 'button' ? 'button' : 'submit'} className={color}>
-    {leftIcon && <span className='material-symbols-outlined left-icon'>{leftIcon}</span>}
+    {leftIcon !== null && <span className='material-symbols-outlined left-icon'>{leftIcon}</span>}
     {text}
-    {rightIcon && <span className='material-symbols-outlined right-icon'>{rightIcon}</span>}
+    {rightIcon !== null && (
+      <span className='material-symbols-outlined right-icon'>{rightIcon}</span>
+    )}
   </button>
 );
 

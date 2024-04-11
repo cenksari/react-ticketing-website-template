@@ -1,18 +1,20 @@
+import React from 'react';
+
 import Link from 'next/link';
 
-type Props = {
+interface Props {
   url: string;
   text: string;
-  active?: boolean;
-  disabled?: boolean;
-};
+  active?: boolean | false;
+  disabled?: boolean | false;
+}
 
-const ButtonGroupItem = ({ url, text, active, disabled }: Props) => {
+const ButtonGroupItem = ({ url, text, active, disabled }: Props): React.JSX.Element => {
   let className = '';
 
-  if (disabled) {
+  if (disabled === true) {
     className = 'disabled';
-  } else if (active) {
+  } else if (active === true) {
     className = 'active';
   } else {
     className = 'passive';

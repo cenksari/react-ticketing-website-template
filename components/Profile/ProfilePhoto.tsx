@@ -1,12 +1,14 @@
-type Props = {
-  size?: string | 'small';
-  text?: string;
-  color?: string;
-  image?: string;
-};
+import React from 'react';
 
-const ProfilePhoto = ({ size, text, color, image }: Props) => {
-  if (!image) {
+interface Props {
+  size?: string | 'small';
+  text?: string | null;
+  color?: string | null;
+  image?: string | null;
+}
+
+const ProfilePhoto = ({ size, text, color, image }: Props): React.JSX.Element => {
+  if (image === null) {
     return (
       <div className='profile-photo'>
         <div className={`avatar ${size} ${color}`}>{text}</div>
@@ -17,7 +19,7 @@ const ProfilePhoto = ({ size, text, color, image }: Props) => {
   return (
     <div className='profile-photo'>
       <div className={`cover ${size}`} style={{ backgroundImage: `url("${image}")` }} />
-      {text && <span>{text}</span>}
+      {text !== null && <span>{text}</span>}
     </div>
   );
 };

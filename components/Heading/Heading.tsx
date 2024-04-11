@@ -1,10 +1,12 @@
-type Props = {
+import React from 'react';
+
+interface Props {
   text: string;
   type: number;
   color: string;
-};
+}
 
-const Heading = ({ text, type, color }: Props) => {
+const Heading = ({ text, type, color }: Props): React.JSX.Element => {
   if (type === 1) {
     return <h1 className={color}>{text}</h1>;
   }
@@ -29,7 +31,7 @@ const Heading = ({ text, type, color }: Props) => {
     return <h6 className={color}>{text}</h6>;
   }
 
-  return null;
+  throw Error('No H tag this type! Please use 1-6 type values.');
 };
 
 export default Heading;

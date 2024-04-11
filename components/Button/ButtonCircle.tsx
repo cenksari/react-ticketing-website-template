@@ -1,12 +1,14 @@
+import React from 'react';
+
 import Link from 'next/link';
 
-type Props = {
+interface Props {
   url: string;
   icon: string;
   text: string;
-};
+}
 
-const ButtonCircle = ({ url, icon, text }: Props) => (
+const ButtonCircle = ({ url, icon, text }: Props): React.JSX.Element => (
   <Link className='circle-button' href={`/${url}`}>
     <div className='circle'>
       <span className='material-symbols-outlined right-icon'>{icon}</span>

@@ -1,12 +1,12 @@
 import React from 'react';
 
-type Props = {
-  className?: string;
+interface Props {
+  className?: string | null;
   children: React.ReactNode;
-};
+}
 
-const Section = ({ className, children }: Props) => (
-  <section className={className ? `${className}` : 'no-style'}>{children}</section>
+const Section = ({ className, children }: Props): React.JSX.Element => (
+  <section className={className !== null ? `${className}` : 'no-style'}>{children}</section>
 );
 
 export default Section;

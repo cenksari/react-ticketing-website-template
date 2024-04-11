@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Link from 'next/link';
 
 import Input from '@components/Form/Input';
@@ -9,7 +11,7 @@ import ButtonGroup from '@components/Button/ButtonGroup';
 import ProfilePhoto from '@components/Profile/ProfilePhoto';
 import ButtonGroupItem from '@components/Button/ButtonGroupItem';
 
-const Page = () => (
+const Page = (): React.JSX.Element => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

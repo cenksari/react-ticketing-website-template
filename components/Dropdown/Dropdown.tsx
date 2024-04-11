@@ -1,11 +1,11 @@
 import React from 'react';
 
-type Props = {
+interface Props {
   color: string;
   children: React.ReactNode;
-};
+}
 
-const Dropdown = ({ color, children }: Props) => (
+const Dropdown = ({ color, children }: Props): React.JSX.Element => (
   <div className={`dropdown ${color}`}>{children}</div>
 );
 

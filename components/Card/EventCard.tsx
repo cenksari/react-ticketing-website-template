@@ -1,9 +1,11 @@
+import React from 'react';
+
 import Link from 'next/link';
 
 import Badge from '@components/Badge/Badge';
 import ButtonLink from '@components/Button/ButtonLink';
 
-type Props = {
+interface Props {
   url: string;
   from: string;
   when: string;
@@ -11,9 +13,9 @@ type Props = {
   venue: string;
   image: string;
   color: string;
-};
+}
 
-const EventCard = ({ url, from, when, name, venue, image, color }: Props) => (
+const EventCard = ({ url, from, when, name, venue, image, color }: Props): React.JSX.Element => (
   <div className='card'>
     <Link href={`/event/${url}`}>
       <div className='card-title'>

@@ -5,15 +5,15 @@ import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import ButtonLink from '@components/Button/ButtonLink';
 
-type Props = {
+interface Props {
   url: string;
   title: string;
   color: string;
   background: string;
   children: React.ReactNode;
-};
+}
 
-const CardGroup = ({ url, title, color, background, children }: Props) => (
+const CardGroup = ({ url, title, color, background, children }: Props): React.JSX.Element => (
   <Section className={`${background}-background`}>
     <div className='container'>
       <div className='title flex flex-v-center flex-space-between'>
@@ -26,7 +26,6 @@ const CardGroup = ({ url, title, color, background, children }: Props) => (
         />
       </div>
     </div>
-
     <div className='carousel'>
       <Slider>{children}</Slider>
     </div>

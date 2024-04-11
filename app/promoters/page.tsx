@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Box from '@components/Box/Box';
 import Master from '@components/Layout/Master';
 import Slider from '@components/Slider/Slider';
@@ -5,7 +7,7 @@ import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import ButtonLink from '@components/Button/ButtonLink';
 
-const Page = () => (
+const Page = (): React.JSX.Element => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

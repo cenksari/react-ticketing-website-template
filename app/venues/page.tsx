@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Input from '@components/Form/Input';
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
@@ -5,7 +7,7 @@ import Heading from '@components/Heading/Heading';
 import VenueCard from '@components/Card/VenueCard';
 import CardGroup from '@components/Card/CardGroup';
 
-const Page = () => (
+const Page = (): React.JSX.Element => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

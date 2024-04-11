@@ -2,26 +2,26 @@
 
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 
-type Props = {
+interface Props {
   children: React.ReactNode;
-};
+}
 
-const Slider = ({ children }: Props) => {
+const Slider = ({ children }: Props): React.JSX.Element => {
   const startX = useRef<number>(0);
   const isDown = useRef<boolean>(false);
   const scrollLeftX = useRef<number>(0);
   const preventClick = useRef<boolean>(false);
-  const navReference = useRef<HTMLDivElement>(null);
+  const navReference = useRef<HTMLDivElement | any>(null);
 
   const [leftArrowDisable, setLeftArrowDisable] = useState<boolean>(true);
   const [rightArrowDisable, setRightArrowDisable] = useState<boolean>(false);
 
-  const buttons = () => {
+  const buttons = (): void => {
     const { offsetWidth, scrollWidth, scrollLeft } = navReference.current;
 
     const hideLeftScroll: boolean = scrollLeft <= 0;
 
-    const hideRightScroll: boolean = scrollWidth - Math.round(scrollLeft) <= offsetWidth;
+    const hideRightScroll: boolean = scrollWidth - Math.round(scrollLeft | 0) <= offsetWidth;
 
     if (hideLeftScroll) {
       setLeftArrowDisable(true);
@@ -36,7 +36,7 @@ const Slider = ({ children }: Props) => {
     }
   };
 
-  // const wheel = (e) => {
+  // const wheel = (e): void => {
   //   if (e.deltaY === 0) return;
 
   //   e.preventDefault();
@@ -46,7 +46,7 @@ const Slider = ({ children }: Props) => {
   //   });
   // };
 
-  const click = (e: MouseEvent) => {
+  const click = (e: MouseEvent): void => {
     if (preventClick.current) {
       e.preventDefault();
     }
@@ -56,7 +56,7 @@ const Slider = ({ children }: Props) => {
     buttons();
   }, []);
 
-  const mouseUp = () => {
+  const mouseUp = (): void => {
     isDown.current = false;
   };
 
@@ -90,7 +90,7 @@ const Slider = ({ children }: Props) => {
     buttons();
   }, []);
 
-  const mouseLeave = () => {
+  const mouseLeave = (): void => {
     isDown.current = false;
   };
 
@@ -126,13 +126,11 @@ const Slider = ({ children }: Props) => {
     };
   }, [mouseDown, mouseMove, scroll]);
 
-  const handleHorizantalScroll = (element: HTMLDivElement, speed: number, step: number) => {
+  const handleHorizantalScroll = (speed: number, step: number): void => {
     let scrollAmount: number = 0;
 
     const slideTimer = setInterval(() => {
-      const e: HTMLDivElement = element;
-
-      e.scrollLeft += step;
+      navReference.current.scrollLeft += step;
 
       scrollAmount += Math.abs(step);
 
@@ -156,7 +154,9 @@ const Slider = ({ children }: Props) => {
                 ? 'button button-gray button-circle'
                 : 'button button-default button-circle'
             }
-            onClick={() => handleHorizantalScroll(navReference.current, 15, -20)}
+            onClick={() => {
+              handleHorizantalScroll(15, -20);
+            }}
           >
             <span className='material-symbols-outlined'>chevron_left</span>
           </button>
@@ -175,7 +175,9 @@ const Slider = ({ children }: Props) => {
                 ? 'button button-gray button-circle'
                 : 'button button-default button-circle'
             }
-            onClick={() => handleHorizantalScroll(navReference.current, 15, 20)}
+            onClick={() => {
+              handleHorizantalScroll(15, 20);
+            }}
           >
             <span className='material-symbols-outlined'>chevron_right</span>
           </button>

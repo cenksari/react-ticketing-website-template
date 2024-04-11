@@ -1,13 +1,15 @@
+import React from 'react';
+
 import Link from 'next/link';
 
-type Props = {
+interface Props {
   url: string;
   text: string;
-  active?: boolean;
-};
+  active?: boolean | false;
+}
 
-const DropdownItem = ({ url, text, active }: Props) => (
-  <Link className={active ? 'button active' : 'button passive'} href={`/${url}`}>
+const DropdownItem = ({ url, text, active }: Props): React.JSX.Element => (
+  <Link className={active === true ? 'button active' : 'button passive'} href={`/${url}`}>
     {text}
   </Link>
 );
