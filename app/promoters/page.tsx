@@ -73,23 +73,23 @@ const Page = () => (
       <div className='carousel'>
         <Slider>
           <Box className='gray'>
-            <i className='material-symbols-outlined blue'>arrow_forward</i>
+            <span className='material-symbols-outlined blue'>arrow_forward</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <i className='material-symbols-outlined red'>arrow_forward</i>
+            <span className='material-symbols-outlined red'>arrow_forward</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <i className='material-symbols-outlined purple'>arrow_forward</i>
+            <span className='material-symbols-outlined purple'>arrow_forward</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <i className='material-symbols-outlined green'>arrow_forward</i>
+            <span className='material-symbols-outlined green'>arrow_forward</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <i className='material-symbols-outlined yellow'>arrow_forward</i>
+            <span className='material-symbols-outlined yellow'>arrow_forward</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
         </Slider>

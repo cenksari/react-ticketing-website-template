@@ -28,15 +28,16 @@ const EventCard = ({ url, from, when, name, venue, image, color }: Props) => (
         <Badge color='gray' text='NEW' />
       </div>
       <div className='card-info'>
-        <span>
-          <i className='material-symbols-outlined'>event</i> {when}
-        </span>
-        <span>
-          <i className='material-symbols-outlined'>apartment</i> {venue}
-        </span>
-        <span>
-          <i className='material-symbols-outlined'>local_activity</i> from <strong>£{from}</strong>
-        </span>
+        <p>
+          <span className='material-symbols-outlined'>event</span> {when}
+        </p>
+        <p>
+          <span className='material-symbols-outlined'>apartment</span> {venue}
+        </p>
+        <p>
+          <span className='material-symbols-outlined'>local_activity</span> from{' '}
+          <strong>£{from}</strong>
+        </p>
       </div>
     </Link>
     <div className='card-buttons'>

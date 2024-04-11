@@ -26,7 +26,7 @@ const Page = () => (
                   required
                 />
                 <button type='submit'>
-                  <i className='material-symbols-outlined'>search</i>
+                  <span className='material-symbols-outlined'>search</span>
                 </button>
               </div>
             </form>
@@ -35,21 +35,21 @@ const Page = () => (
             <div className='center'>
               <Heading type={5} color='gray' text='About us' />
               <Link href='/' className='blue'>
-                <i className='material-symbols-outlined yellow'>star</i>
+                <span className='material-symbols-outlined yellow'>star</span>
                 What is ticketing?
               </Link>
             </div>
             <div className='center'>
               <Heading type={5} color='gray' text='Account' />
               <Link href='/' className='blue'>
-                <i className='material-symbols-outlined yellow'>star</i>
+                <span className='material-symbols-outlined yellow'>star</span>
                 How to sign in?
               </Link>
             </div>
             <div className='center'>
               <Heading type={5} color='gray' text='Using system' />
               <Link href='/' className='blue'>
-                <i className='material-symbols-outlined yellow'>star</i>
+                <span className='material-symbols-outlined yellow'>star</span>
                 How can I get my tickets?
               </Link>
             </div>

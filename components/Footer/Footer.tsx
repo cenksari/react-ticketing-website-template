@@ -59,7 +59,7 @@ const Footer = () => (
           required
         />
         <button type='submit'>
-          <i className='material-symbols-outlined'>arrow_forward</i>
+          <span className='material-symbols-outlined'>arrow_forward</span>
         </button>
       </div>
     </div>

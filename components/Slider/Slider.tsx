@@ -158,7 +158,7 @@ const Slider = ({ children }: Props) => {
             }
             onClick={() => handleHorizantalScroll(navReference.current, 15, -20)}
           >
-            <i className='material-symbols-outlined'>chevron_left</i>
+            <span className='material-symbols-outlined'>chevron_left</span>
           </button>
         </div>
       )}
@@ -177,7 +177,7 @@ const Slider = ({ children }: Props) => {
             }
             onClick={() => handleHorizantalScroll(navReference.current, 15, 20)}
           >
-            <i className='material-symbols-outlined'>chevron_right</i>
+            <span className='material-symbols-outlined'>chevron_right</span>
           </button>
         </div>
       )}

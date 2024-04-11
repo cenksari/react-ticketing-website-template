@@ -34,18 +34,18 @@ const Header = () => {
             </svg>
           </Link>
           <button type='button' onClick={() => menuState()}>
-            <i className='material-symbols-outlined'>menu</i>
+            <span className='material-symbols-outlined'>menu</span>
           </button>
         </div>
         <div className='links responsive-hide'>
           <Link href='/' className='gray'>
             Home
           </Link>
-          <Link href='/news' className='gray'>
-            News
-          </Link>
           <Link href='/contact' className='gray'>
             Contact us
+          </Link>
+          <Link href='/news' className='gray'>
+            News
           </Link>
         </div>
         <div className='members' ref={wrapperRef}>
@@ -58,11 +58,9 @@ const Header = () => {
             <ProfilePhoto image='https://www.cenksari.com/content/profile.jpg' size='small' />
           </Link>
           <button type='button' className='menu-opener' onClick={() => setDropdown(!dropdown)}>
-            <span>
-              Cenk
-              <i className='material-symbols-outlined'>
-                {dropdown ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}
-              </i>
+            Cenk
+            <span className='material-symbols-outlined'>
+              {dropdown ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}
             </span>
           </button>
           {dropdown && (
@@ -80,7 +78,7 @@ const Header = () => {
           <div className='main-menu'>
             <div className='top'>
               <button type='button' onClick={() => menuState()}>
-                <i className='material-symbols-outlined'>close</i>
+                <span className='material-symbols-outlined'>close</span>
               </button>
               <div className='center'>
                 <Link href='/' className='logo'>
@@ -98,13 +96,8 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/venues' className='white'>
-                    Venues
-                  </Link>
-                </li>
-                <li>
-                  <Link href='/tickets' className='white'>
-                    My tickets
+                  <Link href='/news' className='white'>
+                    News
                   </Link>
                 </li>
                 <li>
@@ -113,8 +106,13 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/news' className='white'>
-                    News
+                  <Link href='/venues' className='white'>
+                    Venues
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/tickets' className='white'>
+                    My tickets
                   </Link>
                 </li>
                 <li>

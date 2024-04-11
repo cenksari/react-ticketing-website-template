@@ -123,6 +123,7 @@ header {
 header .container {
   display: flex;
   padding: 0 10px;
+  position: relative;
   align-items: center;
   justify-content: space-between;
 }
@@ -151,11 +152,8 @@ header .container .logo button {
   display: none;
 }
 
-header .container .logo button i {
-  width: unset !important;
-  height: unset !important;
-  font-size: 1.8em !important;
-  vertical-align: unset !important;
+header .container .logo button span {
+  font-size: 1.8em;
 }
 
 header .container .links a {
@@ -194,13 +192,10 @@ header .container .members span {
 
 header .container .members .menu-opener {
   padding: 10px 0;
-  line-height: unset;
 }
 
-header .container .members .menu-opener i {
-  width: unset !important;
-  height: unset !important;
-  font-size: 1.3em !important;
+header .container .members .menu-opener span {
+  font-size: 1.3em;
 }
 
 header .container .members .menu-opener span {
@@ -319,8 +314,8 @@ footer .newsletter .input-container input {
 }
 
 footer .newsletter .input-container button {
-  padding: 20px;
   border-radius: 50em;
+  padding: 20px 25px 20px 20px;
   background-color: transparent;
 }
 
@@ -396,12 +391,9 @@ footer .terms a:hover {
   border: 2px solid var(--dark-gray);
 }
 
-.scroll-container .left-arrow button i,
-.scroll-container .right-arrow button i {
-  margin-top: 0;
-  width: unset !important;
-  height: unset !important;
-  font-size: 1.8em !important;
+.scroll-container .left-arrow button span,
+.scroll-container .right-arrow button span {
+  font-size: 1.8em;
 }
 
 .scrollable {
@@ -459,7 +451,7 @@ footer .terms a:hover {
   justify-content: center;
 }
 
-.box i {
+.box span {
   font-size: 3em;
   margin-bottom: 15px;
 }
@@ -571,7 +563,7 @@ footer .terms a:hover {
   opacity: 0.65;
 }
 
-.input-file + label i {
+.input-file + label span {
   font-size: 3em;
   color: #ffffff;
   margin-top: 75px;
@@ -712,7 +704,7 @@ footer .terms a:hover {
   border-bottom: 1px solid rgba(17, 24, 39, 0.1);
 }
 
-.ticket-box .ticket-box-line i {
+.ticket-box .ticket-box-line .icon {
   cursor: help;
   font-size: 0.9em;
   user-select: none;
@@ -721,7 +713,7 @@ footer .terms a:hover {
   color: var(--dark-gray);
 }
 
-.ticket-box .ticket-box-line i:hover {
+.ticket-box .ticket-box-line .icon:hover {
   color: var(--blue);
 }
 
@@ -809,11 +801,8 @@ footer .terms a:hover {
   border-radius: 0;
 }
 
-.top-search .search-inputs button i {
-  margin-top: 0;
-  width: unset !important;
-  height: unset !important;
-  font-size: 1.3em !important;
+.top-search .search-inputs button span {
+  font-size: 1.3em;
 }
 
 .circle-buttons {
@@ -852,15 +841,14 @@ footer .terms a:hover {
   background-color: var(--light-gray);
 }
 
-.circle-button i {
+.circle-button span {
   font-size: 2.3em;
   color: var(--gray);
 }
 
-.circle-button span {
-  display: block;
+.circle-button .text {
   font-size: 0.8em;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .table {
@@ -918,7 +906,7 @@ td {
 }
 
 .main-menu {
-  width: 90%;
+  width: 100%;
   padding: 20px;
   display: fixed;
   background-color: var(--blackest-gray);
@@ -932,11 +920,9 @@ td {
   padding: 0 0 10px 10px;
 }
 
-.main-menu .top button i {
+.main-menu .top button span {
+  font-size: 1.8em;
   color: var(--white);
-  width: unset !important;
-  height: unset !important;
-  font-size: 1.8em !important;
 }
 
 .main-menu .logo svg {
@@ -996,7 +982,7 @@ td {
   width: 33.33%;
 }
 
-.help-top div i {
+.help-top div span {
   margin-right: 5px;
   vertical-align: middle;
 }
@@ -1033,6 +1019,68 @@ td {
   margin-top: 10px;
   user-select: none;
   color: var(--dark-gray);
+}
+
+.ticket-column {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  justify-content: space-between;
+  border-bottom: 1px solid #dadada;
+}
+
+.ticket-column h6 {
+  margin-bottom: 5px;
+  color: var(--blackest-gray);
+}
+
+.ticket-column p {
+  font-size: 0.9em;
+  color: var(--gray);
+}
+
+.ticket-column p a {
+  color: var(--gray);
+}
+
+.ticket-column p a:hover {
+  text-decoration: underline;
+}
+
+.ticket-column p span {
+  margin-top: -5px;
+  margin-right: 10px;
+  user-select: none;
+  vertical-align: middle;
+  -webkit-user-select: none;
+}
+
+.ticket-column:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.ticket-column .actions a {
+  width: 55px;
+  height: 55px;
+  margin: 0 5px;
+  user-select: none;
+  text-align: center;
+  border-radius: 50em;
+  display: inline-block;
+  -webkit-user-select: none;
+  background-color: var(--blackest-gray);
+}
+
+.ticket-column .actions a:active {
+  background-color: var(--gray);
+}
+
+.ticket-column .actions a span {
+  font-size: 1.5em;
+  margin-top: 11px;
+  color: var(--white);
 }
 
 @media (max-width: 900px) {
@@ -1136,7 +1184,7 @@ td {
     height: 80px;
   }
 
-  .circle-button .circle i {
+  .circle-button .circle span {
     font-size: 1.5em;
   }
 

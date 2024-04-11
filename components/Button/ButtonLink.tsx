@@ -10,9 +10,9 @@ type Props = {
 
 const ButtonLink = ({ url, text, color, leftIcon, rightIcon }: Props) => (
   <Link className={`button ${color}`} href={`/${url}`}>
-    {leftIcon && <i className='material-symbols-outlined left-icon'>{leftIcon}</i>}
+    {leftIcon && <span className='material-symbols-outlined left-icon'>{leftIcon}</span>}
     {text}
-    {rightIcon && <i className='material-symbols-outlined right-icon'>{rightIcon}</i>}
+    {rightIcon && <span className='material-symbols-outlined right-icon'>{rightIcon}</span>}
   </Link>
 );
 

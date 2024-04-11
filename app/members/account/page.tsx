@@ -29,7 +29,7 @@ const Page = () => (
           <div className='upload-picture'>
             <input type='file' name='image' id='image' className='input-file' accept='.jpg,.jpeg' />
             <label htmlFor='image'>
-              <i className='material-symbols-outlined'>add_a_photo</i>
+              <span className='material-symbols-outlined'>add_a_photo</span>
             </label>
             <ProfilePhoto image='https://www.cenksari.com/content/profile.jpg' size='large' />
             <span className='muted'>click profile picture to change</span>

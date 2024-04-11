@@ -26,9 +26,9 @@ const VenueCard = ({ url, name, image, color, location }: Props) => (
         <Badge color='gray' text='NEW' />
       </div>
       <div className='card-info'>
-        <span>
-          <i className='material-symbols-outlined'>location_on</i> {location}
-        </span>
+        <p>
+          <span className='material-symbols-outlined'>location_on</span> {location}
+        </p>
       </div>
     </Link>
     <div className='card-buttons'>

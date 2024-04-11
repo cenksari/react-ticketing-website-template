@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
@@ -20,6 +22,73 @@ const Page = () => (
               <ButtonGroupItem url='members/tickets' text='My tickets' active />
               <ButtonGroupItem url='members/account' text='My account' />
             </ButtonGroup>
+          </div>
+        </div>
+      </div>
+    </Section>
+    <Section className='white-background'>
+      <div className='container'>
+        <div className='ticket-column'>
+          <div>
+            <h6>Event name goes here</h6>
+            <p>
+              <span className='material-symbols-outlined'>local_activity</span>
+              <strong>x2</strong> Tickets in bundle
+            </p>
+            <p>
+              <span className='material-symbols-outlined'>event</span>
+              Tue, Sep 21, 2024 19:00
+            </p>
+            <p>
+              <span className='material-symbols-outlined'>apartment</span>
+              <Link href='/venue/1' className='blue'>
+                Royal Albert Hall
+              </Link>
+            </p>
+            <p>
+              <span className='material-symbols-outlined'>receipt_long</span>
+              <strong>Purchased at</strong> Wed, Aug 11, 2024 14:30
+            </p>
+          </div>
+          <div className='actions'>
+            <Link href='/members/tickets' title='Download tickets'>
+              <span className='material-symbols-outlined'>download</span>
+            </Link>
+            <Link href='/members/tickets' title='Send tickets'>
+              <span className='material-symbols-outlined'>forward_to_inbox</span>
+            </Link>
+          </div>
+        </div>
+
+        <div className='ticket-column'>
+          <div>
+            <h6>Event name goes here</h6>
+            <p>
+              <span className='material-symbols-outlined'>local_activity</span>
+              <strong>x1</strong> Ticket in bundle
+            </p>
+            <p>
+              <span className='material-symbols-outlined'>event</span>
+              Tue, Sep 21, 2024 19:00
+            </p>
+            <p>
+              <span className='material-symbols-outlined'>apartment</span>
+              <Link href='/venue/1' className='blue'>
+                Royal Albert Hall
+              </Link>
+            </p>
+            <p>
+              <span className='material-symbols-outlined'>receipt_long</span>
+              <strong>Purchased at</strong> Wed, Aug 11, 2024 14:30
+            </p>
+          </div>
+          <div className='actions'>
+            <Link href='/members/tickets' title='Download tickets'>
+              <span className='material-symbols-outlined'>download</span>
+            </Link>
+            <Link href='/members/tickets' title='Send tickets'>
+              <span className='material-symbols-outlined'>forward_to_inbox</span>
+            </Link>
           </div>
         </div>
       </div>

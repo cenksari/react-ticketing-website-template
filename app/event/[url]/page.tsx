@@ -85,12 +85,12 @@ const Page = () => (
                     </div>
                     <span>Child</span>
                     <strong>£20</strong>
-                    <i
-                      className='material-symbols-outlined'
+                    <span
+                      className='material-symbols-outlined icon'
                       title='Information about child tickets'
                     >
                       info
-                    </i>
+                    </span>
                   </div>
                 </div>
                 <div className='ticket-box-buttons'>

@@ -9,9 +9,9 @@ type Props = {
 const ButtonCircle = ({ url, icon, text }: Props) => (
   <Link className='circle-button' href={`/${url}`}>
     <div className='circle'>
-      <i className='material-symbols-outlined right-icon'>{icon}</i>
+      <span className='material-symbols-outlined right-icon'>{icon}</span>
     </div>
-    <span>{text}</span>
+    <div className='text'>{text}</div>
   </Link>
 );
 

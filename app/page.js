@@ -31,7 +31,7 @@ const Page = () => (
                   required
                 />
                 <button type='submit'>
-                  <i className='material-symbols-outlined'>search</i>
+                  <span className='material-symbols-outlined'>search</span>
                 </button>
               </div>
             </form>
