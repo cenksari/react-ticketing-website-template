@@ -39,13 +39,13 @@ const Page = () => (
         </div>
         <div className='circle-buttons'>
           <Slider>
-            <ButtonCircle icon='theater_comedy' text='Theater' />
-            <ButtonCircle icon='stadium' text='Concert' />
-            <ButtonCircle icon='child_care' text='Kids' />
-            <ButtonCircle icon='sports_football' text='Sports' />
-            <ButtonCircle icon='attractions' text='Attractions' />
-            <ButtonCircle icon='piano' text='Musical' />
-            <ButtonCircle icon='festival' text='Festival' />
+            <ButtonCircle icon='theater_comedy' text='Theater' url='list' />
+            <ButtonCircle icon='stadium' text='Concert' url='list' />
+            <ButtonCircle icon='child_care' text='Kids' url='list' />
+            <ButtonCircle icon='sports_football' text='Sports' url='list' />
+            <ButtonCircle icon='attractions' text='Attractions' url='list' />
+            <ButtonCircle icon='piano' text='Musical' url='list' />
+            <ButtonCircle icon='festival' text='Festival' url='list' />
           </Slider>
         </div>
       </div>

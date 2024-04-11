@@ -950,6 +950,14 @@ td {
   display: inline-block;
 }
 
+.list-cards .card {
+  margin: 5px 10px 15px 10px;
+}
+
+.list-cards .card:first-child {
+  margin-left: 5px;
+}
+
 .card-title.venue {
   background-color: var(--blackest-gray);
 }

@@ -736,6 +736,7 @@ button.disabled,
 /* Cards */
 .card {
   width: 300px;
+  text-align: left;
   border-radius: 10px;
   display: inline-block;
   margin: 2px 20px 15px 0;
@@ -1402,6 +1403,11 @@ button.disabled,
 .button-group.blue .button {
   color: var(--blue);
   border-right: 1px solid var(--blue);
+}
+
+.button-group button.active,
+.button-group .button.active {
+  pointer-events: none;
 }
 
 .button-group.gray button.active,
