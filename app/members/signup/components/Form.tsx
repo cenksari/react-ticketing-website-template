@@ -38,7 +38,7 @@ const Form = (): React.JSX.Element => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
-    console.log(formValues);
+    window.location.href = '/members/activate/account';
   };
 
   return (

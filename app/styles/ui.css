@@ -73,10 +73,6 @@ select {
   cursor: pointer;
 }
 
-strong {
-  font-weight: 800;
-}
-
 .row {
   width: 100%;
   margin: 0 auto;

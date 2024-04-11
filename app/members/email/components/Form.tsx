@@ -22,6 +22,8 @@ const Form = (): React.JSX.Element => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
+
+    window.location.href = '/members/activate/email';
   };
 
   return (

@@ -39,10 +39,12 @@ const Page = (): React.JSX.Element => (
             </p>
             <p>
               <span className='material-symbols-outlined'>event</span>
-              Tue, Sep 21, 2024 19:00
+              <strong>Date</strong> Tue, Sep 21, 2024 19:00
             </p>
             <p>
               <span className='material-symbols-outlined'>apartment</span>
+              <strong>Venue</strong>
+              &nbsp;
               <Link href='/venue/1' className='blue'>
                 Royal Albert Hall
               </Link>
@@ -71,10 +73,12 @@ const Page = (): React.JSX.Element => (
             </p>
             <p>
               <span className='material-symbols-outlined'>event</span>
-              Tue, Sep 21, 2024 19:00
+              <strong>Date</strong> Tue, Sep 21, 2024 19:00
             </p>
             <p>
               <span className='material-symbols-outlined'>apartment</span>
+              <strong>Venue</strong>
+              &nbsp;
               <Link href='/venue/1' className='blue'>
                 Royal Albert Hall
               </Link>
