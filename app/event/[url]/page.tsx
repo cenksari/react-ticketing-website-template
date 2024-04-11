@@ -127,7 +127,7 @@ const Page = () => (
       </div>
     </Section>
 
-    <CardGroup url='discover' title='Other events' color='orange' background='gray'>
+    <CardGroup url='list' title='Other events' color='orange' background='gray'>
       <EventCard
         url='1'
         from='20'

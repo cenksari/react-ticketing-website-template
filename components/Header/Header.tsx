@@ -11,7 +11,7 @@ import DropdownItem from '@components/Dropdown/DropdownItem';
 import ProfilePhoto from '@components/Profile/ProfilePhoto';
 
 const Header = () => {
-  const wrapperRef = useRef<HTMLDivElement>();
+  const wrapperRef = useRef<any>();
 
   const [menu, setMenu] = useState<boolean>(false);
   const [dropdown, setDropdown] = useState<boolean>(false);
@@ -41,11 +41,11 @@ const Header = () => {
           <Link href='/' className='gray'>
             Home
           </Link>
-          <Link href='/discover' className='gray'>
-            Discover
-          </Link>
           <Link href='/news' className='gray'>
             News
+          </Link>
+          <Link href='/contact' className='gray'>
+            Contact us
           </Link>
         </div>
         <div className='members' ref={wrapperRef}>
@@ -95,11 +95,6 @@ const Header = () => {
                 <li>
                   <Link href='/' className='white'>
                     Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href='/discover' className='white'>
-                    Discover
                   </Link>
                 </li>
                 <li>
