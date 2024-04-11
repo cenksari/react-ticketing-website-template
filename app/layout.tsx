@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title,
   description,
-  robots: 'index, follow',
+  robots: 'noindex, nofollow', // TODO: change in production
   keywords: 'modern ticketing',
   alternates: { canonical },
   icons: {

@@ -1,6 +1,6 @@
 {
   "name": "tsapp",
-  "version": "0.1.0",
+  "version": "0.1.22",
   "private": true,
   "scripts": {
     "dev": "next dev",
