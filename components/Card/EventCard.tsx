@@ -42,7 +42,7 @@ const EventCard = ({ url, from, when, name, venue, image, color }: Props) => (
     </Link>
     <div className='card-buttons'>
       <ButtonLink
-        color={`${color}-filled`}
+        color={`${color}-overlay`}
         text='Details'
         rightIcon='arrow_forward'
         url={`event/${url}`}

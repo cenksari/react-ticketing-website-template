@@ -33,7 +33,7 @@ const VenueCard = ({ url, name, image, color, location }: Props) => (
     </Link>
     <div className='card-buttons'>
       <ButtonLink
-        color={`${color}-filled`}
+        color={`${color}-overlay`}
         text='Details'
         rightIcon='arrow_forward'
         url={`venue/${url}`}
