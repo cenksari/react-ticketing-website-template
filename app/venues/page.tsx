@@ -5,8 +5,6 @@ import Heading from '@components/Heading/Heading';
 import VenueCard from '@components/Card/VenueCard';
 import CardGroup from '@components/Card/CardGroup';
 
-const expand: boolean = true;
-
 const Page = () => (
   <Master>
     <Section className='white-background'>
@@ -15,35 +13,23 @@ const Page = () => (
           <Heading type={1} color='gray' text='Venues' />
           <p className='gray'>Discover the best venues in London.</p>
 
-          {!expand ? (
-            <button type='button' className='expand-button'>
-              <i className='material-symbols-outlined'>keyboard_arrow_down</i>
-            </button>
-          ) : (
-            <div className='top-search'>
-              <form noValidate>
-                <div className='search-inputs flex flex-h-center flex-space-between'>
-                  <Input
-                    type='text'
-                    name='code'
-                    value=''
-                    maxLength={10}
-                    placeholder='Venue name, keyword, location'
-                    required
-                  />
-                  <button type='submit'>
-                    <i className='material-symbols-outlined'>search</i>
-                  </button>
-                </div>
-              </form>
-            </div>
-          )}
-
-          {expand && (
-            <button type='button' className='expand-button'>
-              <i className='material-symbols-outlined'>keyboard_arrow_up</i>
-            </button>
-          )}
+          <div className='top-search'>
+            <form noValidate>
+              <div className='search-inputs flex flex-h-center flex-space-between'>
+                <Input
+                  type='text'
+                  name='code'
+                  value=''
+                  maxLength={10}
+                  placeholder='Venue name, keyword, location'
+                  required
+                />
+                <button type='submit'>
+                  <i className='material-symbols-outlined'>search</i>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </Section>

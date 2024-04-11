@@ -7,8 +7,6 @@ import EventCard from '@components/Card/EventCard';
 import CardGroup from '@components/Card/CardGroup';
 import ButtonCircle from '@components/Button/ButtonCircle';
 
-const expand: boolean = true;
-
 const Page = () => (
   <Master>
     <Section className='white-background'>
@@ -20,50 +18,36 @@ const Page = () => (
       </div>
 
       <div className='center'>
-        {!expand ? (
-          <button type='button' className='expand-button'>
-            <i className='material-symbols-outlined'>keyboard_arrow_down</i>
-          </button>
-        ) : (
-          <>
-            <div className='container'>
-              <div className='top-search'>
-                <form noValidate>
-                  <div className='search-inputs flex flex-h-center flex-space-between'>
-                    <Input
-                      type='text'
-                      name='keyword'
-                      value=''
-                      maxLength={10}
-                      placeholder='Event, venue, artist, keyword'
-                      required
-                    />
-                    <button type='submit'>
-                      <i className='material-symbols-outlined'>search</i>
-                    </button>
-                  </div>
-                </form>
+        <div className='container'>
+          <div className='top-search'>
+            <form noValidate>
+              <div className='search-inputs flex flex-h-center flex-space-between'>
+                <Input
+                  type='text'
+                  name='keyword'
+                  value=''
+                  maxLength={10}
+                  placeholder='Event, venue, artist, keyword'
+                  required
+                />
+                <button type='submit'>
+                  <i className='material-symbols-outlined'>search</i>
+                </button>
               </div>
-            </div>
-            <div className='circle-buttons'>
-              <Slider>
-                <ButtonCircle icon='theater_comedy' text='Theater' />
-                <ButtonCircle icon='stadium' text='Concert' />
-                <ButtonCircle icon='child_care' text='Kids' />
-                <ButtonCircle icon='sports_football' text='Sports' />
-                <ButtonCircle icon='attractions' text='Attractions' />
-                <ButtonCircle icon='piano' text='Musical' />
-                <ButtonCircle icon='festival' text='Festival' />
-              </Slider>
-            </div>
-          </>
-        )}
-
-        {expand && (
-          <button type='button' className='expand-button'>
-            <i className='material-symbols-outlined'>keyboard_arrow_up</i>
-          </button>
-        )}
+            </form>
+          </div>
+        </div>
+        <div className='circle-buttons'>
+          <Slider>
+            <ButtonCircle icon='theater_comedy' text='Theater' />
+            <ButtonCircle icon='stadium' text='Concert' />
+            <ButtonCircle icon='child_care' text='Kids' />
+            <ButtonCircle icon='sports_football' text='Sports' />
+            <ButtonCircle icon='attractions' text='Attractions' />
+            <ButtonCircle icon='piano' text='Musical' />
+            <ButtonCircle icon='festival' text='Festival' />
+          </Slider>
+        </div>
       </div>
     </Section>
 

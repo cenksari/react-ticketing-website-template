@@ -6,8 +6,6 @@ import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import ButtonLink from '@components/Button/ButtonLink';
 
-const expand: boolean = true;
-
 const Page = () => (
   <Master>
     <Section className='white-background'>
@@ -16,60 +14,46 @@ const Page = () => (
           <Heading type={1} color='gray' text='Help' />
           <p className='gray'>Welcome to our help center. How can we help today?</p>
 
-          {!expand ? (
-            <button type='button' className='expand-button'>
-              <i className='material-symbols-outlined'>keyboard_arrow_down</i>
-            </button>
-          ) : (
-            <>
-              <div className='top-search'>
-                <form noValidate>
-                  <div className='search-inputs flex flex-h-center flex-space-between'>
-                    <Input
-                      type='text'
-                      name='keyword'
-                      value=''
-                      maxLength={10}
-                      placeholder='Search keyword, topic, question'
-                      required
-                    />
-                    <button type='submit'>
-                      <i className='material-symbols-outlined'>search</i>
-                    </button>
-                  </div>
-                </form>
+          <div className='top-search'>
+            <form noValidate>
+              <div className='search-inputs flex flex-h-center flex-space-between'>
+                <Input
+                  type='text'
+                  name='keyword'
+                  value=''
+                  maxLength={10}
+                  placeholder='Search keyword, topic, question'
+                  required
+                />
+                <button type='submit'>
+                  <i className='material-symbols-outlined'>search</i>
+                </button>
               </div>
-              <div className='help-top flex flex-v-center flex-space-around'>
-                <div className='center'>
-                  <Heading type={5} color='gray' text='About us' />
-                  <Link href='/' className='blue'>
-                    <i className='material-symbols-outlined yellow'>star</i>
-                    What is ticketing?
-                  </Link>
-                </div>
-                <div className='center'>
-                  <Heading type={5} color='gray' text='Account' />
-                  <Link href='/' className='blue'>
-                    <i className='material-symbols-outlined yellow'>star</i>
-                    How to sign in?
-                  </Link>
-                </div>
-                <div className='center'>
-                  <Heading type={5} color='gray' text='Using system' />
-                  <Link href='/' className='blue'>
-                    <i className='material-symbols-outlined yellow'>star</i>
-                    How can I get my tickets?
-                  </Link>
-                </div>
-              </div>
-            </>
-          )}
-
-          {expand && (
-            <button type='button' className='expand-button'>
-              <i className='material-symbols-outlined'>keyboard_arrow_up</i>
-            </button>
-          )}
+            </form>
+          </div>
+          <div className='help-top flex flex-v-center flex-space-around'>
+            <div className='center'>
+              <Heading type={5} color='gray' text='About us' />
+              <Link href='/' className='blue'>
+                <i className='material-symbols-outlined yellow'>star</i>
+                What is ticketing?
+              </Link>
+            </div>
+            <div className='center'>
+              <Heading type={5} color='gray' text='Account' />
+              <Link href='/' className='blue'>
+                <i className='material-symbols-outlined yellow'>star</i>
+                How to sign in?
+              </Link>
+            </div>
+            <div className='center'>
+              <Heading type={5} color='gray' text='Using system' />
+              <Link href='/' className='blue'>
+                <i className='material-symbols-outlined yellow'>star</i>
+                How can I get my tickets?
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </Section>

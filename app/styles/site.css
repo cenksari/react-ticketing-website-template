@@ -815,8 +815,8 @@ footer .terms a:hover {
 }
 
 .circle-buttons {
+  margin: 30px 0;
   text-align: center;
-  margin: 30px 0 10px 0;
 }
 
 .circle-button {
