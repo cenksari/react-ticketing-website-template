@@ -754,12 +754,13 @@ button.disabled,
   border-top-right-radius: 10px;
 }
 
-.card-title span {
-  padding: 15px;
+.card-title h4 {
+  margin: 0;
   display: block;
   font-size: 0.9em;
   font-weight: 500;
   color: var(--gray);
+  padding: 15px 10px;
 }
 
 .card-image {
