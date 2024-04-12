@@ -5,9 +5,16 @@ import React, { useState, type FormEvent } from 'react';
 import Link from 'next/link';
 
 import Input from '@components/Form/Input';
+import Alert from '@components/Alert/Alert';
 import Button from '@components/Button/Button';
 
 const Form = (): React.JSX.Element => {
+  const [alert, setAlert] = useState<any>({
+    type: '',
+    text: '',
+    show: false,
+  });
+
   const [formValues, setFormValues] = useState<any>({
     email: '',
     password: '',
@@ -22,12 +29,24 @@ const Form = (): React.JSX.Element => {
     });
   };
 
+  const handleAlertClose = (): void => {
+    setAlert({ type: '', text: '', show: false });
+  };
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
+
+    setAlert({ type: 'error', text: 'Alert goes here', show: true });
   };
 
   return (
     <form method='POST' className='form shrink' noValidate onSubmit={handleSubmit}>
+      <Alert
+        type={alert.type}
+        text={alert.text}
+        show={alert.show}
+        onCloseFunction={handleAlertClose}
+      />
       <div className='form-elements'>
         <div className='form-line'>
           <div className='one-line'>

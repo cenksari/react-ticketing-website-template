@@ -25,7 +25,6 @@
         "prettier/prettier": "error",
         "no-use-before-define": "error",
         "newline-before-return": "error",
-        "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": "off",
         "jsx-quotes": ["error", "prefer-single"],
         "react/function-component-definition": "off"
