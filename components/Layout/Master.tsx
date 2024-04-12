@@ -14,10 +14,10 @@ interface IProps {
 
 const Master = ({ children }: IProps): React.JSX.Element => (
   <AlertProvider>
+    <Alert />
     <Header />
     {children}
     <Footer />
-    <Alert />
   </AlertProvider>
 );
 
