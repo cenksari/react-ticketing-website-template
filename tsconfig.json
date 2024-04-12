@@ -21,6 +21,7 @@
     "paths": {
       "@hooks/*": ["./hooks/*"],
       "@utils/*": ["./utils/*"],
+      "@contexts/*": ["./contexts/*"],
       "@components/*": ["./components/*"]
     },
   },

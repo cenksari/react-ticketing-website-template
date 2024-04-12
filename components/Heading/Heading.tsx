@@ -1,12 +1,12 @@
 import React from 'react';
 
-interface Props {
+interface IProps {
   text: string;
   type: number;
   color: string;
 }
 
-const Heading = ({ text, type, color }: Props): React.JSX.Element => {
+const Heading = ({ text, type, color }: IProps): React.JSX.Element => {
   if (type === 1) {
     return <h1 className={color}>{text}</h1>;
   }

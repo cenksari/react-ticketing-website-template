@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface Props {
+interface IProps {
   size?: string | 'small';
   text?: string | null;
   color?: string | null;
   image?: string | null;
 }
 
-const ProfilePhoto = ({ size, text, color, image }: Props): React.JSX.Element => {
+const ProfilePhoto = ({ size, text, color, image }: IProps): React.JSX.Element => {
   if (image === null) {
     return (
       <div className='profile-photo'>

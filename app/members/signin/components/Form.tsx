@@ -1,14 +1,18 @@
 'use client';
 
-import React, { useState, type FormEvent } from 'react';
+import React, { type FormEvent } from 'react';
 
 import Link from 'next/link';
 
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 
+import { AlertContext } from '@contexts/alertContext';
+
 const Form = (): React.JSX.Element => {
-  const [formValues, setFormValues] = useState<any>({
+  const { showAlert } = React.useContext(AlertContext);
+
+  const [formValues, setFormValues] = React.useState<any>({
     email: '',
     password: '',
   });
@@ -24,6 +28,8 @@ const Form = (): React.JSX.Element => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
+
+    showAlert({ type: 'error', text: 'Alert text goes here' });
   };
 
   return (

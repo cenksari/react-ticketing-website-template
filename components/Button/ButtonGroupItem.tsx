@@ -2,14 +2,14 @@ import React from 'react';
 
 import Link from 'next/link';
 
-interface Props {
+interface IProps {
   url: string;
   text: string;
   active?: boolean | false;
   disabled?: boolean | false;
 }
 
-const ButtonGroupItem = ({ url, text, active, disabled }: Props): React.JSX.Element => {
+const ButtonGroupItem = ({ url, text, active, disabled }: IProps): React.JSX.Element => {
   let className = '';
 
   if (disabled === true) {

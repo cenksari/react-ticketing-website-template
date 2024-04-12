@@ -2,7 +2,7 @@ import React from 'react';
 
 import Link from 'next/link';
 
-interface Props {
+interface IProps {
   url: string;
   text: string;
   color: string;
@@ -10,7 +10,7 @@ interface Props {
   rightIcon?: string | null;
 }
 
-const ButtonLink = ({ url, text, color, leftIcon, rightIcon }: Props): React.JSX.Element => (
+const ButtonLink = ({ url, text, color, leftIcon, rightIcon }: IProps): React.JSX.Element => (
   <Link className={`button ${color}`} href={`/${url}`}>
     {leftIcon !== undefined && (
       <span className='material-symbols-outlined left-icon'>{leftIcon}</span>

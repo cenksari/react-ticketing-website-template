@@ -2,11 +2,11 @@
 
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 
-interface Props {
+interface IProps {
   children: React.ReactNode;
 }
 
-const Slider = ({ children }: Props): React.JSX.Element => {
+const Slider = ({ children }: IProps): React.JSX.Element => {
   const startX = useRef<number>(0);
   const isDown = useRef<boolean>(false);
   const scrollLeftX = useRef<number>(0);

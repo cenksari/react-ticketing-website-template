@@ -773,6 +773,76 @@ a.button {
   padding: 10px 20px;
 }
 
+/* Alerts */
+.alert {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 25px 0;
+  position: fixed;
+  z-index: 999999;
+  text-align: center;
+}
+
+.alert .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alert p {
+  width: 100%;
+  font-weight: 500;
+}
+
+.alert i {
+  width: 25px;
+  height: 25px;
+  user-select: none;
+  margin-right: 10px;
+  margin-bottom: 4px;
+  vertical-align: middle;
+}
+
+.alert button {
+  right: 20px;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 5px;
+  padding: 5px 5px 0 5px;
+  background-color: transparent;
+}
+
+.alert button:hover {
+  background-color: var(--blackest-gray);
+}
+
+.alert button span {
+  font-size: 1.3em;
+  color: var(--white);
+}
+
+.alert.info {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.alert.error {
+  color: var(--white);
+  background-color: var(--red);
+}
+
+.alert.warning {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.alert.success {
+  color: var(--white);
+  background-color: var(--green);
+}
+
 /* Badges */
 .badge {
   font-size: 0.9em;

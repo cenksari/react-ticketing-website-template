@@ -5,16 +5,11 @@ import { type Metadata, type Viewport } from 'next';
 import './styles/ui.css';
 import './styles/site.css';
 
-import Alert from '@components/Alert/Alert';
-
 export const runtime = 'edge';
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>): React.JSX.Element => (
   <html lang='en'>
-    <body>
-      {children}
-      <Alert />
-    </body>
+    <body>{children}</body>
   </html>
 );
 

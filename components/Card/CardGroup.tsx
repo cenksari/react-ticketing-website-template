@@ -5,7 +5,7 @@ import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import ButtonLink from '@components/Button/ButtonLink';
 
-interface Props {
+interface IProps {
   url: string;
   title: string;
   color: string;
@@ -13,7 +13,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const CardGroup = ({ url, title, color, background, children }: Props): React.JSX.Element => (
+const CardGroup = ({ url, title, color, background, children }: IProps): React.JSX.Element => (
   <Section className={`${background}-background`}>
     <div className='container'>
       <div className='title flex flex-v-center flex-space-between'>

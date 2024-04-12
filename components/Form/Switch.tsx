@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface Props {
+interface IProps {
   name: string;
   color: string;
   checked?: boolean | false;
@@ -8,7 +8,7 @@ interface Props {
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
 }
 
-const Switch = ({ name, color, checked, children, onChange }: Props): React.JSX.Element => (
+const Switch = ({ name, color, checked, children, onChange }: IProps): React.JSX.Element => (
   <div className='switch-container'>
     <label htmlFor={name} className={`switch ${color}`}>
       <input name={name} id={name} type='checkbox' defaultChecked={checked} onChange={onChange} />

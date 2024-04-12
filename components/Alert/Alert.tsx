@@ -1,19 +1,18 @@
+'use client';
+
 import React from 'react';
 
-interface Props {
-  type: string;
-  text: string;
-  show?: boolean | false;
-  onCloseFunction: () => any;
-}
+import { AlertContext } from '@contexts/alertContext';
 
-const Alert = ({ type, text, show, onCloseFunction }: Props): React.JSX.Element => {
-  if (show === true) {
+const Alert = (): React.JSX.Element => {
+  const { alert, hideAlert } = React.useContext(AlertContext);
+
+  if (alert.show === true) {
     return (
-      <div className={`alert ${type}`}>
+      <div className={`alert ${alert.type}`}>
         <div className='container'>
-          <p>{text}</p>
-          <button type='button' onClick={onCloseFunction}>
+          <p>{alert.text}</p>
+          <button type='button' onClick={hideAlert}>
             <span className='material-symbols-outlined'>close</span>
           </button>
         </div>

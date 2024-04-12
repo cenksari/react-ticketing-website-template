@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Badge from '@components/Badge/Badge';
 import ButtonLink from '@components/Button/ButtonLink';
 
-interface Props {
+interface IProps {
   url: string;
   from: string;
   when: string;
@@ -15,7 +15,7 @@ interface Props {
   color: string;
 }
 
-const EventCard = ({ url, from, when, name, venue, image, color }: Props): React.JSX.Element => (
+const EventCard = ({ url, from, when, name, venue, image, color }: IProps): React.JSX.Element => (
   <div className='card'>
     <Link href={`/event/${url}`}>
       <div className='card-title'>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface Props {
+interface IProps {
   type?: string | 'button';
   text: string;
   color: string;
@@ -8,7 +8,7 @@ interface Props {
   rightIcon?: string | null;
 }
 
-const Button = ({ type, text, color, leftIcon, rightIcon }: Props): React.JSX.Element => (
+const Button = ({ type, text, color, leftIcon, rightIcon }: IProps): React.JSX.Element => (
   <button type={type === 'button' ? 'button' : 'submit'} className={`button ${color}`}>
     {leftIcon !== undefined && (
       <span className='material-symbols-outlined left-icon'>{leftIcon}</span>

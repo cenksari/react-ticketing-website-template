@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface Props {
+interface IProps {
   name: string;
   type: string;
   value?: string | '';
@@ -20,7 +20,7 @@ const Input = ({
   required,
   placeholder,
   onChange,
-}: Props): React.JSX.Element => (
+}: IProps): React.JSX.Element => (
   <input
     id={name}
     type={type}

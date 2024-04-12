@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Badge from '@components/Badge/Badge';
 import ButtonLink from '@components/Button/ButtonLink';
 
-interface Props {
+interface IProps {
   url: string;
   name: string;
   image: string;
@@ -13,7 +13,7 @@ interface Props {
   location: string;
 }
 
-const VenueCard = ({ url, name, image, color, location }: Props): React.JSX.Element => (
+const VenueCard = ({ url, name, image, color, location }: IProps): React.JSX.Element => (
   <div className='card'>
     <Link href={`/venue/${url}`}>
       <div className='card-title venue'>
