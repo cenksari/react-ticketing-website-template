@@ -4,10 +4,10 @@ import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import ButtonGroup from '@components/Button/ButtonGroup';
-import ProfilePhoto from '@components/Profile/ProfilePhoto';
 import ButtonGroupItem from '@components/Button/ButtonGroupItem';
 
-import Form from './components/Form';
+import FormMain from './components/FormMain';
+import FormPhoto from './components/FormPhoto';
 
 const Page = (): React.JSX.Element => (
   <Master>
@@ -26,16 +26,9 @@ const Page = (): React.JSX.Element => (
               <ButtonGroupItem url='members/account' text='My account' active />
             </ButtonGroup>
           </div>
-          <div className='upload-picture'>
-            <input type='file' name='image' id='image' className='input-file' accept='.jpg,.jpeg' />
-            <label htmlFor='image'>
-              <span className='material-symbols-outlined'>add_a_photo</span>
-            </label>
-            <ProfilePhoto image='https://www.cenksari.com/content/profile.jpg' size='large' />
-            <span className='muted'>click profile picture to change</span>
-          </div>
+          <FormPhoto />
         </div>
-        <Form />
+        <FormMain />
       </div>
     </Section>
   </Master>

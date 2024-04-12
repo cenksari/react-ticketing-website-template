@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 
-const Form = (): React.JSX.Element => {
+const FormMain = (): React.JSX.Element => {
   const [formValues, setFormValues] = useState<any>({
     name: '',
     lastname: '',
@@ -105,4 +105,4 @@ const Form = (): React.JSX.Element => {
   );
 };
 
-export default Form;
+export default FormMain;
