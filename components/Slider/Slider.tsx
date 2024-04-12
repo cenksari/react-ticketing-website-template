@@ -1,20 +1,20 @@
 'use client';
 
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React from 'react';
 
 interface IProps {
   children: React.ReactNode;
 }
 
 const Slider = ({ children }: IProps): React.JSX.Element => {
-  const startX = useRef<number>(0);
-  const isDown = useRef<boolean>(false);
-  const scrollLeftX = useRef<number>(0);
-  const preventClick = useRef<boolean>(false);
-  const navReference = useRef<HTMLDivElement | any>(null);
+  const startX = React.useRef<number>(0);
+  const isDown = React.useRef<boolean>(false);
+  const scrollLeftX = React.useRef<number>(0);
+  const preventClick = React.useRef<boolean>(false);
+  const navReference = React.useRef<HTMLDivElement | any>(null);
 
-  const [leftArrowDisable, setLeftArrowDisable] = useState<boolean>(true);
-  const [rightArrowDisable, setRightArrowDisable] = useState<boolean>(false);
+  const [leftArrowDisable, setLeftArrowDisable] = React.useState<boolean>(true);
+  const [rightArrowDisable, setRightArrowDisable] = React.useState<boolean>(false);
 
   const buttons = (): void => {
     const { offsetWidth, scrollWidth, scrollLeft } = navReference.current;
@@ -52,7 +52,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
     }
   };
 
-  const scroll = useCallback(() => {
+  const scroll = React.useCallback(() => {
     buttons();
   }, []);
 
@@ -60,7 +60,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
     isDown.current = false;
   };
 
-  const mouseDown = useCallback((e: MouseEvent) => {
+  const mouseDown = React.useCallback((e: MouseEvent) => {
     e.preventDefault();
 
     isDown.current = true;
@@ -74,7 +74,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
     buttons();
   }, []);
 
-  const mouseMove = useCallback((e: MouseEvent) => {
+  const mouseMove = React.useCallback((e: MouseEvent) => {
     if (!isDown.current) return;
 
     e.preventDefault();
@@ -94,7 +94,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
     isDown.current = false;
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     buttons();
 
     const elementRef: HTMLDivElement = navReference.current;

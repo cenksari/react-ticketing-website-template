@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React from 'react';
 
 import Link from 'next/link';
 
@@ -11,10 +11,10 @@ import DropdownItem from '@components/Dropdown/DropdownItem';
 import ProfilePhoto from '@components/Profile/ProfilePhoto';
 
 const Header = (): React.JSX.Element => {
-  const wrapperRef = useRef<any>();
+  const wrapperRef = React.useRef<any>();
 
-  const [menu, setMenu] = useState<boolean>(false);
-  const [dropdown, setDropdown] = useState<boolean>(false);
+  const [menu, setMenu] = React.useState<boolean>(false);
+  const [dropdown, setDropdown] = React.useState<boolean>(false);
 
   useClickOutside(wrapperRef, () => {
     setDropdown(false);

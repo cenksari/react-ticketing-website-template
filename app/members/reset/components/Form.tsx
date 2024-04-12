@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, type FormEvent } from 'react';
+import React, { type FormEvent } from 'react';
 
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 
 const Form = (): React.JSX.Element => {
-  const [formValues, setFormValues] = useState<any>({
+  const [formValues, setFormValues] = React.useState<any>({
     newPassword: '',
     newPasswordAgain: '',
   });

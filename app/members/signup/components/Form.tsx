@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, type FormEvent } from 'react';
+import React, { type FormEvent } from 'react';
 
 import Link from 'next/link';
 
@@ -9,7 +9,7 @@ import Switch from '@components/Form/Switch';
 import Button from '@components/Button/Button';
 
 const Form = (): React.JSX.Element => {
-  const [formValues, setFormValues] = useState<any>({
+  const [formValues, setFormValues] = React.useState<any>({
     name: '',
     lastname: '',
     email: '',
