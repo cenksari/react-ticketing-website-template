@@ -150,6 +150,8 @@ header .container .logo button {
 header .container .logo button {
   padding: 5px;
   display: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 header .container .logo button span {
@@ -192,14 +194,22 @@ header .container .members span {
 
 header .container .members .menu-opener {
   padding: 10px 0;
-}
-
-header .container .members .menu-opener span {
-  font-size: 1.3em;
+  font-weight: 500;
 }
 
 header .container .members .menu-opener span {
   margin-right: 0;
+  font-size: 1.3em;
+  font-weight: unset;
+}
+
+header .container .members button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+header .container .members button span {
+  vertical-align: middle;
 }
 
 header .container .dropdown {
@@ -313,7 +323,7 @@ footer .newsletter .input-container {
   overflow: hidden;
   align-items: center;
   border-radius: 30em;
-  margin: 15px auto 0 auto;
+  margin: 40px auto 0 auto;
   justify-content: space-between;
   background-color: var(--white);
 }
@@ -326,8 +336,9 @@ footer .newsletter .input-container input {
 }
 
 footer .newsletter .input-container button {
+  cursor: pointer;
   border-radius: 50em;
-  padding: 20px 25px 20px 20px;
+  padding: 20px 20px 15px 15px;
   background-color: transparent;
 }
 
@@ -391,7 +402,7 @@ footer .terms a:hover {
 
 .scroll-container .left-arrow button,
 .scroll-container .right-arrow button {
-  padding: 4px;
+  padding: 4px 0 0 0;
   border-radius: 50em;
   background-color: var(--white);
   border: 2px solid var(--dark-gray);
@@ -750,12 +761,14 @@ footer .terms a:hover {
 .ticket-box .quantity button {
   padding: 0;
   width: 30px;
+  cursor: pointer;
   color: var(--white);
   background-color: var(--blue);
 }
 
 .top-search {
   max-width: 80%;
+  overflow: hidden;
   margin: 30px auto;
 }
 
@@ -777,11 +790,18 @@ footer .terms a:hover {
 }
 
 .top-search .search-inputs button {
+  cursor: pointer;
   padding: 0 20px;
-  border-radius: 0;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.top-search .search-inputs button:active {
+  background-color: var(--light-gray);
 }
 
 .top-search .search-inputs button span {
+  margin-top: 7px;
   font-size: 1.3em;
 }
 
@@ -897,7 +917,9 @@ td {
 }
 
 .main-menu .top button {
+  cursor: pointer;
   padding: 0 0 10px 10px;
+  background-color: transparent;
 }
 
 .main-menu .top button span {

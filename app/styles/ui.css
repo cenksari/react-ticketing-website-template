@@ -51,8 +51,7 @@ h6 {
 
 input,
 select,
-textarea,
-button {
+textarea {
   padding: 10px;
   overflow: auto;
   color: var(--black);
@@ -140,7 +139,6 @@ select {
 }
 
 /* Buttons */
-button,
 .button {
   cursor: pointer;
   font-weight: 500;
@@ -153,171 +151,147 @@ button,
   text-decoration: none !important;
 }
 
-button {
+button.button {
   padding: 15px 30px;
 }
 
-.button {
+a.button {
   padding: 11px 30px;
 }
 
-button span,
 .button span {
   font-size: 22px;
+  margin-top: -3px;
   vertical-align: middle;
 }
 
-button span.left-icon,
 .button span.left-icon {
   margin-right: 5px;
 }
 
-button span.right-icon,
 .button span.right-icon {
   margin-left: 5px;
 }
 
-button.gray-filled,
 .button.gray-filled {
   color: var(--white);
   background-color: var(--gray);
   border: 2px solid var(--gray);
 }
 
-button.gray-overlay,
 .button.gray-overlay {
   color: var(--gray);
   background-color: var(--white);
   border: 2px solid var(--gray);
 }
 
-button.gray-overlay:hover,
 .button.gray-overlay:hover {
   color: var(--white);
   background-color: var(--gray);
 }
 
-button.yellow-filled,
 .button.yellow-filled {
   color: var(--white);
   background-color: var(--yellow);
   border: 2px solid var(--yellow);
 }
 
-button.yellow-overlay,
 .button.yellow-overlay {
   color: var(--yellow);
   background-color: var(--white);
   border: 2px solid var(--yellow);
 }
 
-button.yellow-overlay:hover,
 .button.yellow-overlay:hover {
   color: var(--white);
   background-color: var(--yellow);
 }
 
-button.purple-filled,
 .button.purple-filled {
   color: var(--white);
   background-color: var(--purple);
   border: 2px solid var(--purple);
 }
 
-button.purple-overlay,
 .button.purple-overlay {
   color: var(--purple);
   background-color: var(--white);
   border: 2px solid var(--purple);
 }
 
-button.purple-overlay:hover,
 .button.purple-overlay:hover {
   color: var(--white);
   background-color: var(--purple);
 }
 
-button.red-filled,
 .button.red-filled {
   color: var(--white);
   background-color: var(--red);
   border: 2px solid var(--red);
 }
 
-button.red-overlay,
 .button.red-overlay {
   color: var(--red);
   background-color: var(--white);
   border: 2px solid var(--red);
 }
 
-button.red-overlay:hover,
 .button.red-overlay:hover {
   color: var(--white);
   background-color: var(--red);
 }
 
-button.orange-filled,
 .button.orange-filled {
   color: var(--white);
   background-color: var(--orange);
   border: 2px solid var(--orange);
 }
 
-button.orange-overlay,
 .button.orange-overlay {
   color: var(--orange);
   background-color: var(--white);
   border: 2px solid var(--orange);
 }
 
-button.orange-overlay:hover,
 .button.orange-overlay:hover {
   color: var(--white);
   background-color: var(--orange);
 }
 
-button.green-filled,
 .button.green-filled {
   color: var(--white);
   background-color: var(--green);
   border: 2px solid var(--green);
 }
 
-button.green-overlay,
 .button.green-overlay {
   color: var(--green);
   background-color: var(--white);
   border: 2px solid var(--green);
 }
 
-button.green-overlay:hover,
 .button.green-overlay:hover {
   color: var(--white);
   background-color: var(--green);
 }
 
-button.blue-filled,
 .button.blue-filled {
   color: var(--white);
   background-color: var(--blue);
   border: 2px solid var(--blue);
 }
 
-button.blue-overlay,
 .button.blue-overlay {
   color: var(--blue);
   background-color: var(--white);
   border: 2px solid var(--blue);
 }
 
-button.blue-overlay:hover,
 .button.blue-overlay:hover {
   color: var(--white);
   background-color: var(--blue);
 }
 
-button.disabled,
 .button.disabled {
   cursor: default;
   pointer-events: none;
@@ -797,74 +771,6 @@ button.disabled,
 
 .card-buttons a {
   padding: 10px 20px;
-}
-
-/* Alerts */
-.alert {
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  padding: 25px 0;
-  position: fixed;
-  z-index: 999999;
-  text-align: center;
-}
-
-.alert .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.alert p {
-  width: 100%;
-  font-weight: 500;
-}
-
-.alert i {
-  width: 25px;
-  height: 25px;
-  user-select: none;
-  margin-right: 10px;
-  margin-bottom: 4px;
-  vertical-align: middle;
-}
-
-.alert button {
-  right: 20px;
-  padding: 5px;
-  position: absolute;
-  border-radius: 5px;
-}
-
-.alert button:hover {
-  background-color: var(--blackest-gray);
-}
-
-.alert button span {
-  font-size: 1.5em;
-  color: var(--white);
-}
-
-.alert.info {
-  color: var(--white);
-  background-color: var(--blue);
-}
-
-.alert.error {
-  color: var(--white);
-  background-color: var(--red);
-}
-
-.alert.warning {
-  color: var(--white);
-  background-color: var(--orange);
-}
-
-.alert.success {
-  color: var(--white);
-  background-color: var(--green);
 }
 
 /* Badges */

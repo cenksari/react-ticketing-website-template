@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Button = ({ type, text, color, leftIcon, rightIcon }: Props): React.JSX.Element => (
-  <button type={type === 'button' ? 'button' : 'submit'} className={color}>
+  <button type={type === 'button' ? 'button' : 'submit'} className={`button ${color}`}>
     {leftIcon !== undefined && (
       <span className='material-symbols-outlined left-icon'>{leftIcon}</span>
     )}
