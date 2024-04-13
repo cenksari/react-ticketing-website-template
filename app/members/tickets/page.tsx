@@ -15,9 +15,9 @@ const Page = (): React.JSX.Element => (
         <div className='center'>
           <Heading type={1} color='gray' text='My tickets' />
           <p className='gray'>
-            Before you can sign in, you must activate your account with the code sent to your email
-            address. If you do not see the email in a few minutes, check your junk mail or spam
-            folder.
+            You can access the tickets you purchased from this page at any time. You can download or
+            send your tickets. Please note: You will not be able to see tickets for events that have
+            already ended or been canceled on this page.
           </p>
           <div className='button-container'>
             <ButtonGroup color='gray'>
