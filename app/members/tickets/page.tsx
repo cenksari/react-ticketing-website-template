@@ -30,71 +30,65 @@ const Page = (): React.JSX.Element => (
     </Section>
     <Section className='white-background'>
       <div className='container'>
-        <div className='ticket-column'>
-          <div>
-            <h6>Event name goes here</h6>
-            <p>
-              <span className='material-symbols-outlined'>local_activity</span>
-              <strong>x2</strong> Tickets in bundle
-            </p>
+        <div className='ticket-item'>
+          <div className='item-right'>
+            <h2>21</h2>
+            <p>Sep</p>
+            <span className='material-symbols-outlined'>qr_code_2</span>
+            21EX9P
+            <span className='up-border'></span>
+            <span className='down-border'></span>
+          </div>
+          <div className='item-left'>
+            <p>Music Event</p>
+            <h3>Event name goes here</h3>
             <p>
               <span className='material-symbols-outlined'>event</span>
-              <strong>Date</strong> Tue, Sep 21, 2024 19:00
+              Tue, Sep 21, 2024 19:00
             </p>
             <p>
               <span className='material-symbols-outlined'>apartment</span>
-              <strong>Venue</strong>
-              &nbsp;
-              <Link href='/venue/1' className='blue'>
-                Royal Albert Hall
+              Royal Albert Hall
+            </p>
+            <div className='actions'>
+              <Link href='/members/tickets' title='Download tickets'>
+                <span className='material-symbols-outlined'>download</span>
               </Link>
-            </p>
-            <p>
-              <span className='material-symbols-outlined'>receipt_long</span>
-              <strong>Purchased at</strong> Wed, Aug 11, 2024 14:30
-            </p>
-          </div>
-          <div className='actions'>
-            <Link href='/members/tickets' title='Download tickets'>
-              <span className='material-symbols-outlined'>download</span>
-            </Link>
-            <Link href='/members/tickets' title='Send tickets'>
-              <span className='material-symbols-outlined'>forward_to_inbox</span>
-            </Link>
+              <Link href='/members/tickets' title='Send tickets'>
+                <span className='material-symbols-outlined'>forward_to_inbox</span>
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className='ticket-column'>
-          <div>
-            <h6>Event name goes here</h6>
-            <p>
-              <span className='material-symbols-outlined'>local_activity</span>
-              <strong>x1</strong> Ticket in bundle
-            </p>
+        <div className='ticket-item'>
+          <div className='item-right'>
+            <h2>21</h2>
+            <p>Sep</p>
+            <span className='material-symbols-outlined'>qr_code_2</span>
+            <strong>21EX9P</strong>
+            <span className='up-border'></span>
+            <span className='down-border'></span>
+          </div>
+          <div className='item-left'>
+            <p>Music Event</p>
+            <h3>Event name goes here</h3>
             <p>
               <span className='material-symbols-outlined'>event</span>
-              <strong>Date</strong> Tue, Sep 21, 2024 19:00
+              Tue, Sep 21, 2024 19:00
             </p>
             <p>
               <span className='material-symbols-outlined'>apartment</span>
-              <strong>Venue</strong>
-              &nbsp;
-              <Link href='/venue/1' className='blue'>
-                Royal Albert Hall
+              Royal Albert Hall
+            </p>
+            <div className='actions'>
+              <Link href='/members/tickets' title='Download tickets'>
+                <span className='material-symbols-outlined'>download</span>
               </Link>
-            </p>
-            <p>
-              <span className='material-symbols-outlined'>receipt_long</span>
-              <strong>Purchased at</strong> Wed, Aug 11, 2024 14:30
-            </p>
-          </div>
-          <div className='actions'>
-            <Link href='/members/tickets' title='Download tickets'>
-              <span className='material-symbols-outlined'>download</span>
-            </Link>
-            <Link href='/members/tickets' title='Send tickets'>
-              <span className='material-symbols-outlined'>forward_to_inbox</span>
-            </Link>
+              <Link href='/members/tickets' title='Send tickets'>
+                <span className='material-symbols-outlined'>forward_to_inbox</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
