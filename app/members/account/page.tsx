@@ -15,20 +15,22 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={1} color='gray' text='My account' />
-          <p className='gray'>
-            Before you can sign in, you must activate your account with the code sent to your email
-            address. If you do not see the email in a few minutes, check your junk mail or spam
-            folder.
-          </p>
+          <p className='gray'>You can update your profile photo and your account details here.</p>
           <div className='button-container'>
             <ButtonGroup color='gray'>
               <ButtonGroupItem url='members/tickets' text='My tickets' />
               <ButtonGroupItem url='members/account' text='My account' active />
             </ButtonGroup>
           </div>
-          <FormPhoto />
+          <FormPhoto data='https://www.cenksari.com/content/profile.jpg' />
         </div>
-        <FormMain />
+        <FormMain
+          data={{
+            name: 'Cenk',
+            lastname: 'SARI',
+            email: 'cenk@cenksari.com',
+          }}
+        />
       </div>
     </Section>
   </Master>

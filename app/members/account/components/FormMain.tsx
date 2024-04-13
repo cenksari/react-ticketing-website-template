@@ -7,10 +7,15 @@ import Link from 'next/link';
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 
-const FormMain = (): React.JSX.Element => {
+interface IProps {
+  data: any;
+}
+
+const FormMain = ({ data }: IProps): React.JSX.Element => {
   const [formValues, setFormValues] = React.useState<any>({
-    name: '',
-    lastname: '',
+    name: data.name,
+    lastname: data.lastname,
+    email: data.email,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -72,11 +77,12 @@ const FormMain = (): React.JSX.Element => {
             <Input
               type='email'
               name='email'
-              value=''
+              value={formValues.email}
               maxLength={128}
               placeholder='Enter your e-mail address'
               required
               disabled
+              onChange={() => {}}
             />
           </div>
         </div>
