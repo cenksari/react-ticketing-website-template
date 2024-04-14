@@ -23,10 +23,10 @@ const initialState = {
 export const AlertContext = React.createContext<IAlertContext>(initialState);
 
 const AlertProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [alert, setAlert] = React.useState<IAlert>({ type: '', text: '', show: false });
+  const [alert, setAlert] = React.useState<IAlert>(initialState.alert);
 
   const hideAlert = (): void => {
-    setAlert({ type: '', text: '', show: false });
+    setAlert(initialState.alert);
   };
 
   const showAlert = (payload: IAlert): void => {

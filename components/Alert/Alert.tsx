@@ -2,10 +2,10 @@
 
 import React from 'react';
 
-import { AlertContext } from '@contexts/alertContext';
+import useAlert from '@hooks/useAlert';
 
 const Alert = (): React.JSX.Element => {
-  const { alert, hideAlert } = React.useContext(AlertContext);
+  const { alert, hideAlert } = useAlert();
 
   if (alert.show === true) {
     return (

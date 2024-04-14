@@ -7,10 +7,10 @@ import Link from 'next/link';
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 
-import { AlertContext } from '@contexts/alertContext';
+import useAlert from '@hooks/useAlert';
 
 const Form = (): React.JSX.Element => {
-  const { showAlert } = React.useContext(AlertContext);
+  const { showAlert } = useAlert();
 
   const [formValues, setFormValues] = React.useState<any>({
     email: '',
