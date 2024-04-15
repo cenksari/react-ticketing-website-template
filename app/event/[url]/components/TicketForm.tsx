@@ -4,7 +4,18 @@ import React, { type FormEvent } from 'react';
 
 import Button from '@components/Button/Button';
 
-const TicketForm = (): React.JSX.Element => {
+interface IData {
+  id: number;
+  name: string;
+  price: string;
+  information?: string;
+}
+
+interface IProps {
+  data?: IData[];
+}
+
+const TicketForm = ({ data }: IProps): React.JSX.Element => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 
@@ -19,36 +30,22 @@ const TicketForm = (): React.JSX.Element => {
       }}
     >
       <div className='ticket-box-content'>
-        <div className='ticket-box-line'>
-          <div className='quantity'>
-            <button type='button'>-</button>
-            <input type='text' name='q1' defaultValue='1' />
-            <button type='button'>+</button>
+        {data?.map((ticket) => (
+          <div key={ticket.id} className='ticket-box-line'>
+            <div className='quantity'>
+              <button type='button'>-</button>
+              <input type='text' name={`t-${ticket.id}`} defaultValue='1' />
+              <button type='button'>+</button>
+            </div>
+            <span>{ticket.name}</span>
+            <strong>{ticket.price}</strong>
+            {ticket.information != null && (
+              <span className='material-symbols-outlined icon' title={ticket.information}>
+                info
+              </span>
+            )}
           </div>
-          <span>Family</span>
-          <strong>£20</strong>
-        </div>
-        <div className='ticket-box-line'>
-          <div className='quantity'>
-            <button type='button'>-</button>
-            <input type='text' name='q2' defaultValue='1' />
-            <button type='button'>+</button>
-          </div>
-          <span>Adult</span>
-          <strong>£20</strong>
-        </div>
-        <div className='ticket-box-line'>
-          <div className='quantity'>
-            <button type='button'>-</button>
-            <input type='text' name='q3' defaultValue='1' />
-            <button type='button'>+</button>
-          </div>
-          <span>Child</span>
-          <strong>£20</strong>
-          <span className='material-symbols-outlined icon' title='Information about child tickets'>
-            info
-          </span>
-        </div>
+        ))}
       </div>
       <div className='ticket-box-buttons'>
         <Button type='submit' color='blue-filled' text='Buy tickets' rightIcon='arrow_forward' />

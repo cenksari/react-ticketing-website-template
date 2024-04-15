@@ -60,7 +60,26 @@ const Page = (): React.JSX.Element => (
               <div className='ticket-box-header'>
                 <Heading type={5} color='gray' text='Tickets' />
               </div>
-              <TicketForm />
+              <TicketForm
+                data={[
+                  {
+                    id: 1,
+                    name: 'Family',
+                    price: '£10',
+                  },
+                  {
+                    id: 2,
+                    name: 'Adult',
+                    price: '£20',
+                  },
+                  {
+                    id: 3,
+                    name: 'Child',
+                    price: '£30',
+                    information: 'Information about child tickets',
+                  },
+                ]}
+              />
             </div>
           </div>
         </div>
