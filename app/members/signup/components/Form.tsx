@@ -8,11 +8,19 @@ import Input from '@components/Form/Input';
 import Switch from '@components/Form/Switch';
 import Button from '@components/Button/Button';
 
+interface IFormProps {
+  tos: boolean;
+  name: string;
+  email: string;
+  lastname: string;
+  password: string;
+}
+
 const Form = (): React.JSX.Element => {
-  const [formValues, setFormValues] = React.useState<any>({
+  const [formValues, setFormValues] = React.useState<IFormProps>({
     name: '',
-    lastname: '',
     email: '',
+    lastname: '',
     password: '',
     tos: false,
   });

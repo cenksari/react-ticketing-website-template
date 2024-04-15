@@ -6,8 +6,12 @@ import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 import ButtonLink from '@components/Button/ButtonLink';
 
+interface IFormProps {
+  email: string;
+}
+
 const Form = (): React.JSX.Element => {
-  const [formValues, setFormValues] = React.useState<any>({
+  const [formValues, setFormValues] = React.useState<IFormProps>({
     email: '',
   });
 

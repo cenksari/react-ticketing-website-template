@@ -157,9 +157,9 @@ button.button {
 }
 
 a.button {
-  min-width: 140px;
+  min-width: 150px;
   display: inline-block;
-  padding: 11px 0 11px 0;
+  padding: 11px 20px 11px 20px;
 }
 
 .button span {

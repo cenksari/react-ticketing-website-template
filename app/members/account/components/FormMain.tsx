@@ -11,11 +11,17 @@ interface IProps {
   data: any;
 }
 
+interface IFormProps {
+  name: string;
+  email: string;
+  lastname: string;
+}
+
 const FormMain = ({ data }: IProps): React.JSX.Element => {
-  const [formValues, setFormValues] = React.useState<any>({
+  const [formValues, setFormValues] = React.useState<IFormProps>({
     name: data.name,
-    lastname: data.lastname,
     email: data.email,
+    lastname: data.lastname,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {

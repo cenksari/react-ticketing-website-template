@@ -5,8 +5,12 @@ import React, { type FormEvent } from 'react';
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 
+interface IFormProps {
+  code: string;
+}
+
 const Form = (): React.JSX.Element => {
-  const [formValues, setFormValues] = React.useState<any>({
+  const [formValues, setFormValues] = React.useState<IFormProps>({
     code: '',
   });
 

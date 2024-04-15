@@ -35,7 +35,7 @@ const Page = (): React.JSX.Element => (
             <h2>21</h2>
             <p>Sep</p>
             <span className='material-symbols-outlined'>qr_code_2</span>
-            21EX9P
+            <strong>21EX9P</strong>
             <span className='up-border'></span>
             <span className='down-border'></span>
           </div>

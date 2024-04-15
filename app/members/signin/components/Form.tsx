@@ -9,10 +9,15 @@ import Button from '@components/Button/Button';
 
 import useAlert from '@hooks/useAlert';
 
+interface IFormProps {
+  email: string;
+  password: string;
+}
+
 const Form = (): React.JSX.Element => {
   const { showAlert } = useAlert();
 
-  const [formValues, setFormValues] = React.useState<any>({
+  const [formValues, setFormValues] = React.useState<IFormProps>({
     email: '',
     password: '',
   });
