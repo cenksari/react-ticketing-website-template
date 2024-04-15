@@ -9,12 +9,17 @@ interface IProps {
 }
 
 const FormPhoto = ({ data }: IProps): React.JSX.Element => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
   };
 
   return (
-    <form noValidate onSubmit={handleSubmit}>
+    <form
+      noValidate
+      onSubmit={(e) => {
+        void handleSubmit(e);
+      }}
+    >
       <div className='upload-picture'>
         <input type='file' name='image' id='image' className='input-file' accept='.jpg,.jpeg' />
         <label htmlFor='image'>

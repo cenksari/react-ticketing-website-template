@@ -3,10 +3,10 @@ import React from 'react';
 interface IProps {
   name: string;
   type: string;
-  value?: string | '';
+  value?: string;
   maxLength: number;
-  disabled?: boolean | false;
-  required?: boolean | false;
+  disabled?: boolean;
+  required?: boolean;
   placeholder: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
 }

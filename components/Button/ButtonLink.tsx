@@ -6,8 +6,8 @@ interface IProps {
   url: string;
   text: string;
   color: string;
-  leftIcon?: string | null;
-  rightIcon?: string | null;
+  leftIcon?: string;
+  rightIcon?: string;
 }
 
 const ButtonLink = ({ url, text, color, leftIcon, rightIcon }: IProps): React.JSX.Element => (

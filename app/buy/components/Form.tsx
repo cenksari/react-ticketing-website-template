@@ -34,12 +34,18 @@ const Form = (): React.JSX.Element => {
     });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
   };
 
   return (
-    <form className='form shrink' noValidate onSubmit={handleSubmit}>
+    <form
+      className='form shrink'
+      noValidate
+      onSubmit={(e) => {
+        void handleSubmit(e);
+      }}
+    >
       <div className='form-elements'>
         <div className='form-line padding-top'>
           <Heading type={5} color='gray' text='Buyer info' />

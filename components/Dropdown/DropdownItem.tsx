@@ -5,7 +5,7 @@ import Link from 'next/link';
 interface IProps {
   url: string;
   text: string;
-  active?: boolean | false;
+  active?: boolean;
 }
 
 const DropdownItem = ({ url, text, active }: IProps): React.JSX.Element => (

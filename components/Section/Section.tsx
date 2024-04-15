@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface IProps {
-  className?: string | null;
+  className?: string;
   children: React.ReactNode;
 }
 

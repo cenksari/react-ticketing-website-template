@@ -5,8 +5,8 @@ import Link from 'next/link';
 interface IProps {
   url: string;
   text: string;
-  active?: boolean | false;
-  disabled?: boolean | false;
+  active?: boolean;
+  disabled?: boolean;
 }
 
 const ButtonGroupItem = ({ url, text, active, disabled }: IProps): React.JSX.Element => {

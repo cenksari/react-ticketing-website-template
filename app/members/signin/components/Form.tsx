@@ -9,6 +9,8 @@ import Button from '@components/Button/Button';
 
 import useAlert from '@hooks/useAlert';
 
+import Request, { type IRequest, type IResponse } from '@utils/Request';
+
 interface IFormProps {
   email: string;
   password: string;
@@ -31,14 +33,29 @@ const Form = (): React.JSX.Element => {
     });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 
     showAlert({ type: 'error', text: 'Alert text goes here' });
+
+    const parameters: IRequest = {
+      url: 'v1/search',
+      method: 'POST',
+    };
+
+    const req: IResponse = await Request.getResponse(parameters);
+
+    console.log(req.status, req.data);
   };
 
   return (
-    <form className='form shrink' noValidate onSubmit={handleSubmit}>
+    <form
+      className='form shrink'
+      noValidate
+      onSubmit={(e) => {
+        void handleSubmit(e);
+      }}
+    >
       <div className='form-elements'>
         <div className='form-line'>
           <div className='one-line'>

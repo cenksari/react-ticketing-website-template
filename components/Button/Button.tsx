@@ -4,8 +4,8 @@ interface IProps {
   type?: string | 'button';
   text: string;
   color: string;
-  leftIcon?: string | null;
-  rightIcon?: string | null;
+  leftIcon?: string;
+  rightIcon?: string;
 }
 
 const Button = ({ type, text, color, leftIcon, rightIcon }: IProps): React.JSX.Element => (

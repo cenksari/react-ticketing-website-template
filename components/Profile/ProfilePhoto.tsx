@@ -2,9 +2,9 @@ import React from 'react';
 
 interface IProps {
   size?: string | 'small';
-  text?: string | null;
-  color?: string | null;
-  image?: string | null;
+  text?: string;
+  color?: string;
+  image?: string;
 }
 
 const ProfilePhoto = ({ size, text, color, image }: IProps): React.JSX.Element => {

@@ -3,9 +3,9 @@ import React from 'react';
 interface IProps {
   name: string;
   color: string;
-  checked?: boolean | false;
-  children?: React.ReactNode | null;
-  onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
+  checked?: boolean;
+  children?: React.ReactNode;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 const Switch = ({ name, color, checked, children, onChange }: IProps): React.JSX.Element => (
