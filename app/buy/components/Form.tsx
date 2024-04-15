@@ -39,7 +39,7 @@ const Form = (): React.JSX.Element => {
   };
 
   return (
-    <form method='POST' className='form shrink' noValidate onSubmit={handleSubmit}>
+    <form className='form shrink' noValidate onSubmit={handleSubmit}>
       <div className='form-elements'>
         <div className='form-line padding-top'>
           <Heading type={5} color='gray' text='Buyer info' />

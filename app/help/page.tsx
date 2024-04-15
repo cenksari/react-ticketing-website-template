@@ -2,11 +2,12 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import Input from '@components/Form/Input';
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import ButtonLink from '@components/Button/ButtonLink';
+
+import FormSearch from './components/FormSearch';
 
 const Page = (): React.JSX.Element => (
   <Master>
@@ -17,20 +18,7 @@ const Page = (): React.JSX.Element => (
           <p className='gray'>Welcome to our help center. How can we help today?</p>
 
           <div className='top-search'>
-            <form method='GET' action='/help' noValidate>
-              <div className='search-inputs flex flex-h-center flex-space-between'>
-                <Input
-                  type='text'
-                  name='keyword'
-                  maxLength={10}
-                  placeholder='Search keyword, topic, question'
-                  required
-                />
-                <button type='submit'>
-                  <span className='material-symbols-outlined'>search</span>
-                </button>
-              </div>
-            </form>
+            <FormSearch />
           </div>
           <div className='help-top flex flex-v-center flex-space-around'>
             <div className='center'>

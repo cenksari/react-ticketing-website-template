@@ -59,7 +59,7 @@ const Page = (): React.JSX.Element => (
               <div className='ticket-box-header'>
                 <Heading type={5} color='gray' text='Tickets' />
               </div>
-              <form method='POST' action='/buy' noValidate>
+              <form action='/buy' noValidate>
                 <div className='ticket-box-content'>
                   <div className='ticket-box-line'>
                     <div className='quantity'>

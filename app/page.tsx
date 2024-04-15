@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Input from '@components/Form/Input';
 import Slider from '@components/Slider/Slider';
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
@@ -8,6 +7,8 @@ import Heading from '@components/Heading/Heading';
 import EventCard from '@components/Card/EventCard';
 import CardGroup from '@components/Card/CardGroup';
 import ButtonCircle from '@components/Button/ButtonCircle';
+
+import FormSearch from 'app/home/components/FormSearch';
 
 const Page = (): React.JSX.Element => (
   <Master>
@@ -22,20 +23,7 @@ const Page = (): React.JSX.Element => (
       <div className='center'>
         <div className='container'>
           <div className='top-search'>
-            <form method='GET' action='/list' noValidate>
-              <div className='search-inputs flex flex-h-center flex-space-between'>
-                <Input
-                  type='text'
-                  name='keyword'
-                  maxLength={10}
-                  placeholder='Event, venue, artist, keyword'
-                  required
-                />
-                <button type='submit'>
-                  <span className='material-symbols-outlined'>search</span>
-                </button>
-              </div>
-            </form>
+            <FormSearch />
           </div>
         </div>
         <div className='circle-buttons'>

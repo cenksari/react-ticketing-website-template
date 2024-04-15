@@ -33,7 +33,7 @@ const Form = (): React.JSX.Element => {
   };
 
   return (
-    <form method='POST' className='form shrink' noValidate onSubmit={handleSubmit}>
+    <form className='form shrink' noValidate onSubmit={handleSubmit}>
       <div className='form-elements'>
         <div className='form-line'>
           <div className='label-line'>

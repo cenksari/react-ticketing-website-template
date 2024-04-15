@@ -14,7 +14,7 @@ const FormPhoto = ({ data }: IProps): React.JSX.Element => {
   };
 
   return (
-    <form method='POST' noValidate onSubmit={handleSubmit}>
+    <form noValidate onSubmit={handleSubmit}>
       <div className='upload-picture'>
         <input type='file' name='image' id='image' className='input-file' accept='.jpg,.jpeg' />
         <label htmlFor='image'>

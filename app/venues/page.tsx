@@ -1,11 +1,12 @@
 import React from 'react';
 
-import Input from '@components/Form/Input';
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import VenueCard from '@components/Card/VenueCard';
 import CardGroup from '@components/Card/CardGroup';
+
+import FormSearch from './components/FormSearch';
 
 const Page = (): React.JSX.Element => (
   <Master>
@@ -14,23 +15,8 @@ const Page = (): React.JSX.Element => (
         <div className='center'>
           <Heading type={1} color='gray' text='Venues' />
           <p className='gray'>Discover the best venues in London.</p>
-
           <div className='top-search'>
-            <form method='GET' action='/venues' noValidate>
-              <div className='search-inputs flex flex-h-center flex-space-between'>
-                <Input
-                  type='text'
-                  name='code'
-                  value=''
-                  maxLength={10}
-                  placeholder='Venue name, keyword, location'
-                  required
-                />
-                <button type='submit'>
-                  <span className='material-symbols-outlined'>search</span>
-                </button>
-              </div>
-            </form>
+            <FormSearch />
           </div>
         </div>
       </div>
@@ -88,7 +74,7 @@ const Page = (): React.JSX.Element => (
       />
     </CardGroup>
 
-    <CardGroup url='venues' title='Best venues' color='gray' background='white'>
+    <CardGroup url='venues' title='Other venues' color='gray' background='white'>
       <VenueCard
         url='1'
         color='gray'
