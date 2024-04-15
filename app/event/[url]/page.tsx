@@ -3,11 +3,12 @@ import React from 'react';
 import Link from 'next/link';
 
 import Master from '@components/Layout/Master';
-import Button from '@components/Button/Button';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import EventCard from '@components/Card/EventCard';
 import CardGroup from '@components/Card/CardGroup';
+
+import TicketForm from './components/TicketForm';
 
 const Page = (): React.JSX.Element => (
   <Master>
@@ -59,51 +60,7 @@ const Page = (): React.JSX.Element => (
               <div className='ticket-box-header'>
                 <Heading type={5} color='gray' text='Tickets' />
               </div>
-              <form action='/buy' noValidate>
-                <div className='ticket-box-content'>
-                  <div className='ticket-box-line'>
-                    <div className='quantity'>
-                      <button type='button'>-</button>
-                      <input type='text' name='q1' defaultValue='1' />
-                      <button type='button'>+</button>
-                    </div>
-                    <span>Family</span>
-                    <strong>£20</strong>
-                  </div>
-                  <div className='ticket-box-line'>
-                    <div className='quantity'>
-                      <button type='button'>-</button>
-                      <input type='text' name='q2' defaultValue='1' />
-                      <button type='button'>+</button>
-                    </div>
-                    <span>Adult</span>
-                    <strong>£20</strong>
-                  </div>
-                  <div className='ticket-box-line'>
-                    <div className='quantity'>
-                      <button type='button'>-</button>
-                      <input type='text' name='q3' defaultValue='1' />
-                      <button type='button'>+</button>
-                    </div>
-                    <span>Child</span>
-                    <strong>£20</strong>
-                    <span
-                      className='material-symbols-outlined icon'
-                      title='Information about child tickets'
-                    >
-                      info
-                    </span>
-                  </div>
-                </div>
-                <div className='ticket-box-buttons'>
-                  <Button
-                    type='submit'
-                    color='blue-filled'
-                    text='Buy tickets'
-                    rightIcon='arrow_forward'
-                  />
-                </div>
-              </form>
+              <TicketForm />
             </div>
           </div>
         </div>
