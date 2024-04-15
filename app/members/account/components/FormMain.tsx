@@ -8,7 +8,11 @@ import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 
 interface IProps {
-  data: any;
+  data: {
+    name: string;
+    email: string;
+    lastname: string;
+  };
 }
 
 interface IFormProps {

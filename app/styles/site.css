@@ -508,6 +508,14 @@ footer .terms a:hover {
   padding: 0 10px;
 }
 
+.form .form-elements .form-line .two-line:first-child {
+  padding-left: 0;
+}
+
+.form .form-elements .form-line .two-line:last-child {
+  padding-right: 0;
+}
+
 .form .form-elements .form-line .label-line {
   margin-bottom: 15px;
 }
