@@ -17,7 +17,7 @@ export interface IRequest {
   postData?: any;
 }
 
-export const auth = {
+const auth = {
   username: '68145831',
   password:
     '7cc5005d70004ef08e622c69a603014bda0b39138a48494b8214d6c50262ac7c494087085b194a7cbb66a25e24c249a9',
@@ -35,20 +35,18 @@ const parseResults = (results: string): any => {
   return parse;
 };
 
-let response: AxiosResponse<any, any>;
-
 const getResponse = async (parameters: IRequest): Promise<IResponse> => {
-  const buildedUrl = `${buildUrl()}/${parameters.url}`;
+  let response: AxiosResponse<any, any>;
 
-  const headers = {
-    Authorization: `Basic ${createAuth}`,
-  };
+  const url = `${buildUrl()}/${parameters.url}`;
+
+  const headers = { Authorization: `Basic ${createAuth}` };
 
   try {
     if (parameters.method === 'GET') {
-      response = await axios.get(buildedUrl, { headers, timeout: 15000 });
+      response = await axios.get(url, { headers, timeout: 15000 });
     } else if (parameters.method === 'POST') {
-      response = await axios.post(buildedUrl, parameters.postData, { headers, timeout: 15000 });
+      response = await axios.post(url, parameters.postData, { headers, timeout: 15000 });
     } else {
       throw new Error('Invalid HTTP method. Please use GET or POST.');
     }
