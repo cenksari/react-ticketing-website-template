@@ -150,9 +150,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
             type='button'
             disabled={leftArrowDisable}
             className={
-              leftArrowDisable
-                ? 'button button-gray button-circle'
-                : 'button button-default button-circle'
+              leftArrowDisable ? 'button-gray button-circle' : 'button-default button-circle'
             }
             onClick={() => {
               handleHorizantalScroll(15, -20);
@@ -171,9 +169,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
             type='button'
             disabled={rightArrowDisable}
             className={
-              rightArrowDisable
-                ? 'button button-gray button-circle'
-                : 'button button-default button-circle'
+              rightArrowDisable ? 'button-gray button-circle' : 'button-default button-circle'
             }
             onClick={() => {
               handleHorizantalScroll(15, 20);

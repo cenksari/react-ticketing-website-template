@@ -14,7 +14,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={1} color='gray' text='Sign in' />
-          <p className='gray'>
+          <p className='gray form-information'>
             Please enter your e-mail address and password to sign in. Don&apos;t have an account?{' '}
             <Link href='/members/signup' className='blue'>
               Sign up here

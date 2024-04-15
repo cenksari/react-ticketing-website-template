@@ -12,7 +12,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={1} color='gray' text='E-mail activation' />
-          <p className='gray'>
+          <p className='gray form-information'>
             You must activate your new email address with the code sent to your email address. If
             you do not see the email in a few minutes, check your junk mail or spam folder.
           </p>

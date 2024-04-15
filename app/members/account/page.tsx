@@ -15,7 +15,9 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={1} color='gray' text='My account' />
-          <p className='gray'>You can update your profile photo and your account details here.</p>
+          <p className='gray form-information'>
+            You can update your profile photo and your account details here.
+          </p>
           <div className='button-container'>
             <ButtonGroup color='gray'>
               <ButtonGroupItem url='members/tickets' text='My tickets' />

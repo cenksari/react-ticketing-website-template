@@ -12,7 +12,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={1} color='gray' text='Account activation' />
-          <p className='gray'>
+          <p className='gray form-information'>
             Before you can sign in, you must activate your account with the code sent to your email
             address. If you do not see the email in a few minutes, check your junk mail or spam
             folder.

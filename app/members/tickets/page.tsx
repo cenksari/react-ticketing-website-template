@@ -14,7 +14,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={1} color='gray' text='My tickets' />
-          <p className='gray'>
+          <p className='gray form-information'>
             You can access the tickets you purchased from this page at any time. You can download or
             send your tickets. Please note: You will not be able to see tickets for events that have
             already ended or been canceled on this page.

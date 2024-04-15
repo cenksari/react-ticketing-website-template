@@ -12,7 +12,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={1} color='gray' text='Reset password' />
-          <p className='gray'>
+          <p className='gray form-information'>
             Please enter your new password. We will change your password immediately.
           </p>
         </div>

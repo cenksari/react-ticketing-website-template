@@ -402,7 +402,9 @@ footer .terms a:hover {
 
 .scroll-container .left-arrow button,
 .scroll-container .right-arrow button {
-  padding: 4px 0 0 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
   border-radius: 50em;
   background-color: var(--white);
   border: 2px solid var(--dark-gray);
@@ -416,7 +418,7 @@ footer .terms a:hover {
 
 .scroll-container .left-arrow button span,
 .scroll-container .right-arrow button span {
-  font-size: 1.8em;
+  font-size: 1.75em;
 }
 
 .scrollable {
@@ -490,6 +492,11 @@ footer .terms a:hover {
 .form.shrink {
   max-width: 80%;
   margin: 50px auto;
+}
+
+.form-information a:hover,
+.switch-description a:hover {
+  text-decoration: underline;
 }
 
 .form .form-elements .form-line {

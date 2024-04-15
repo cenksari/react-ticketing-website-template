@@ -14,7 +14,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={1} color='gray' text='Sign up' />
-          <p className='gray'>
+          <p className='gray form-information'>
             Create an account to customize your experience for your ticketing journey.{' '}
             <Link href='/members/signin' className='blue'>
               Click here

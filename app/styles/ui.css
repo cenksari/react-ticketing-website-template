@@ -144,6 +144,7 @@ select {
   font-weight: 500;
   user-select: none;
   line-height: 100%;
+  text-align: center;
   border-radius: 50em;
   white-space: nowrap;
   background: transparent;
@@ -156,12 +157,15 @@ button.button {
 }
 
 a.button {
-  padding: 11px 30px;
+  min-width: 140px;
+  display: inline-block;
+  padding: 11px 0 11px 0;
 }
 
 .button span {
   font-size: 22px;
   margin-top: -3px;
+  transition: all 0.3s;
   vertical-align: middle;
 }
 
@@ -171,6 +175,10 @@ a.button {
 
 .button span.right-icon {
   margin-left: 5px;
+}
+
+.button:hover span {
+  margin-left: 10px;
 }
 
 .button.gray-filled {
@@ -770,7 +778,7 @@ a.button {
 }
 
 .card-buttons a {
-  padding: 10px 20px;
+  padding: 10px 0;
 }
 
 /* Alerts */

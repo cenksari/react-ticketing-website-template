@@ -12,7 +12,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={1} color='gray' text='Change password' />
-          <p className='gray'>
+          <p className='gray form-information'>
             Please enter your new password. It&apos;s a good idea to use a strong password that you
             are not using elsewhere. Your new password must be at least 8 characters.
           </p>
