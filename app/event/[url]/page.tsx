@@ -66,16 +66,20 @@ const Page = (): React.JSX.Element => (
                     id: 1,
                     name: 'Family',
                     price: '£10',
+                    ordering: 1,
+                    soldout: true,
                   },
                   {
                     id: 2,
                     name: 'Adult',
                     price: '£20',
+                    ordering: 2,
                   },
                   {
                     id: 3,
                     name: 'Child',
                     price: '£30',
+                    ordering: 3,
                     information: 'Information about child tickets',
                   },
                 ]}

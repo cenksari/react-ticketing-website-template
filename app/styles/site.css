@@ -690,7 +690,9 @@ footer .terms a:hover {
 
 .ticket-box {
   min-width: 400px;
+  user-select: none;
   border-radius: 10px;
+  --webkit-user-select: none;
   border: 1px solid var(--light-gray);
   box-shadow:
     0 4px 6px -4px rgba(0, 0, 0, 0.1),
