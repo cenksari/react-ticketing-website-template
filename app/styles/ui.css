@@ -778,11 +778,19 @@ a.button {
   top: 0;
   left: 0;
   right: 0;
+  opacity: 0;
   width: 100%;
   padding: 25px 0;
   position: fixed;
   z-index: 999999;
   text-align: center;
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .alert .container {
