@@ -13,12 +13,14 @@ interface IProps {
 }
 
 const Master = ({ children }: IProps): React.JSX.Element => (
-  <AlertProvider>
-    <Alert />
-    <Header />
-    {children}
-    <Footer />
-  </AlertProvider>
+  <div className='light-theme'>
+    <AlertProvider>
+      <Alert />
+      <Header />
+      {children}
+      <Footer />
+    </AlertProvider>
+  </div>
 );
 
 export default Master;

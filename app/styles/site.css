@@ -220,47 +220,6 @@ header .container .dropdown {
   position: absolute;
 }
 
-/* Black theme */
-.black-theme header {
-  box-shadow: none;
-  margin-bottom: 0;
-  border-bottom: 1px solid #000000;
-  background-color: var(--blackest-gray);
-}
-
-.black-theme header .container .logo svg {
-  fill: var(--white);
-}
-
-.black-theme header .container .links a,
-.black-theme header .container .members span {
-  color: var(--white);
-}
-
-.black-theme header .members button {
-  color: var(--white);
-}
-
-.black-theme header .members .profile-photo {
-  border: 1px solid var(--gray);
-}
-
-.black-theme .white-background {
-  background-color: var(--blackest-gray);
-}
-
-.black-theme .gray-background {
-  background-color: var(--blackest-gray);
-}
-
-.black-theme .gray {
-  color: #ffffff;
-}
-
-.black-theme .paragraph-container p {
-  color: #e6edf3;
-}
-
 footer {
   padding: 40px 0;
   color: var(--white);
@@ -593,8 +552,8 @@ footer .terms a:hover {
   border-radius: 5px;
   align-items: center;
   justify-content: center;
-  background-color: #f5f5f5;
   border: 1px solid #dadada;
+  background-color: var(--light-gray);
 }
 
 .google-button:active {
@@ -862,7 +821,7 @@ footer .terms a:hover {
   background-color: var(--light-gray);
 }
 
-.circle-button span {
+.circle-button .circle span {
   font-size: 2.3em;
   color: var(--gray);
 }
@@ -1151,6 +1110,109 @@ td {
   font-size: 1.2em;
   margin: 11px 0 0 0;
   color: var(--white);
+}
+
+/* Black theme */
+.black-theme header {
+  box-shadow: none;
+  margin-bottom: 0;
+  border-bottom: 1px solid #000000;
+  background-color: var(--blackest-gray);
+}
+
+.black-theme header .container .logo svg {
+  fill: var(--white);
+}
+
+.black-theme header .container .links a,
+.black-theme header .container .members span {
+  color: var(--white);
+}
+
+.black-theme header .members button {
+  color: var(--white);
+}
+
+.black-theme header .members .profile-photo {
+  border: 1px solid var(--gray);
+}
+
+.black-theme .white-background {
+  background-color: var(--blackest-gray);
+}
+
+.black-theme .gray-background {
+  background-color: var(--blackest-gray);
+}
+
+.black-theme .gray {
+  color: #ffffff;
+}
+
+.black-theme .paragraph-container p {
+  color: #e6edf3;
+}
+
+.black-theme .circle-button .circle {
+  background-color: var(--gray);
+}
+
+.black-theme .circle-button .circle span {
+  color: var(--white);
+}
+
+.black-theme .circle-button .circle:hover {
+  background-color: var(--gray);
+}
+
+.black-theme .circle-button .circle:active {
+  background-color: var(--gray);
+}
+
+.black-theme .circle-button .text {
+  color: var(--white);
+}
+
+.black-theme .input-text {
+  background-color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.black-theme .input-text:hover {
+  background-color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.black-theme .input-text:focus {
+  background-color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.black-theme .form .form-elements .form-line .label-line label {
+  color: var(--white);
+}
+
+.black-theme input,
+.black-theme select,
+.black-theme textarea {
+  color: var(--blackest-gray);
+}
+
+.black-theme .top-search .search-inputs {
+  background-color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.black-theme .ticket-box {
+  border: 1px solid var(--blackest-gray);
+}
+
+.black-theme .ticket-box .ticket-box-header {
+  background-color: 1px solid var(--blackest-gray);
+}
+
+.black-theme .ticket-box .ticket-box-buttons {
+  background-color: 1px solid var(--blackest-gray);
 }
 
 @media (max-width: 900px) {
