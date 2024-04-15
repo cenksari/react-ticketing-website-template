@@ -1,33 +1,17 @@
 import React from 'react';
 
-import Slider from '@components/Slider/Slider';
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import EventCard from '@components/Card/EventCard';
-import ButtonCircle from '@components/Button/ButtonCircle';
 
 const Page = (): React.JSX.Element => (
   <Master>
     <Section className='white-background'>
       <div className='container'>
-        <div className='center'>
+        <div className='padding-bottom center'>
           <Heading type={1} color='gray' text='Events' />
           <p className='gray'>Discover, search and filter best events in London.</p>
-        </div>
-      </div>
-
-      <div className='center'>
-        <div className='circle-buttons'>
-          <Slider>
-            <ButtonCircle icon='theater_comedy' text='Theater' url='list' />
-            <ButtonCircle icon='stadium' text='Concert' url='list' />
-            <ButtonCircle icon='child_care' text='Kids' url='list' />
-            <ButtonCircle icon='sports_football' text='Sports' url='list' />
-            <ButtonCircle icon='attractions' text='Attractions' url='list' />
-            <ButtonCircle icon='piano' text='Musical' url='list' />
-            <ButtonCircle icon='festival' text='Festival' url='list' />
-          </Slider>
         </div>
       </div>
     </Section>

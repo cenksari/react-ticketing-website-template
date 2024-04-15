@@ -302,6 +302,10 @@ footer .container .members span {
   font-weight: 600;
 }
 
+footer .container .members .button {
+  padding: 11px 0;
+}
+
 footer .copy {
   margin-top: 50px;
   text-align: center;
@@ -1217,11 +1221,11 @@ td {
     text-align: center;
   }
 
-  footer .links {
+  footer .container .links {
     margin: 20px 0;
   }
 
-  footer .members {
+  footer .container .members {
     margin-top: 40px;
   }
 
