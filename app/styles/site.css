@@ -497,7 +497,7 @@ footer .terms a:hover {
 
 .upload-picture {
   width: 225px;
-  height: 250px;
+  height: 240px;
   margin: 0 auto;
   position: relative;
 }
@@ -1034,8 +1034,8 @@ td {
 }
 
 .item-right span {
-  font-size: 6em;
-  margin-top: 30px;
+  font-size: 5em;
+  margin-top: 20px;
 }
 
 .item-right strong {
@@ -1067,12 +1067,13 @@ td {
   border-left: 9px dotted var(--white);
 }
 
-.item-left h3 {
+.item-left h5 {
   line-height: 100%;
   margin-bottom: 20px;
 }
 
 .item-left p {
+  font-size: 0.9em;
   margin-bottom: 10px;
 }
 
@@ -1265,6 +1266,15 @@ td {
     min-width: 100%;
     margin-top: 30px;
   }
+
+  .ticket-item {
+    width: 100%;
+  }
+
+  .item-left .actions a {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -1339,6 +1349,26 @@ td {
 
   .help-bottom-box:last-child {
     margin-bottom: 0;
+  }
+
+  .item-left {
+    padding: 30px 0 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .item-right {
+    display: none;
+  }
+
+  .item-left {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 20px 0;
+  }
+
+  .item-left .actions {
+    text-align: center;
   }
 }
 

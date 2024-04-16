@@ -64,7 +64,7 @@ const FormPhoto = ({ data }: IProps): React.JSX.Element => {
           <span className='material-symbols-outlined'>add_a_photo</span>
         </label>
         <ProfilePhoto image={data} size='large' />
-        <span className='muted'>click profile picture to change</span>
+        <span className='muted'>click picture to change</span>
       </div>
     </form>
   );

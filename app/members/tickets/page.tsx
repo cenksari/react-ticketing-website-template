@@ -33,15 +33,14 @@ const Page = (): React.JSX.Element => (
         <div className='ticket-item'>
           <div className='item-right'>
             <h2>21</h2>
-            <p>Sep</p>
+            <p>September</p>
             <span className='material-symbols-outlined'>qr_code_2</span>
             <strong>21EX9P</strong>
             <span className='up-border'></span>
             <span className='down-border'></span>
           </div>
           <div className='item-left'>
-            <p>Music Event</p>
-            <h3>Event name goes here</h3>
+            <h5>Event name goes here</h5>
             <p>
               <span className='material-symbols-outlined'>event</span>
               Tue, Sep 21, 2024 19:00
@@ -64,15 +63,14 @@ const Page = (): React.JSX.Element => (
         <div className='ticket-item'>
           <div className='item-right'>
             <h2>21</h2>
-            <p>Sep</p>
+            <p>September</p>
             <span className='material-symbols-outlined'>qr_code_2</span>
             <strong>21EX9P</strong>
             <span className='up-border'></span>
             <span className='down-border'></span>
           </div>
           <div className='item-left'>
-            <p>Music Event</p>
-            <h3>Event name goes here</h3>
+            <h5>Event name goes here</h5>
             <p>
               <span className='material-symbols-outlined'>event</span>
               Tue, Sep 21, 2024 19:00
