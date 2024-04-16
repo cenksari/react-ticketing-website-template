@@ -24,8 +24,14 @@ const Page = (): React.JSX.Element => (
               <ButtonGroupItem url='members/account' text='My account' active />
             </ButtonGroup>
           </div>
-          <FormPhoto data='https://www.cenksari.com/content/profile.jpg' />
+          <div className='padding-top'>
+            <FormPhoto data='https://www.cenksari.com/content/profile.jpg' />
+          </div>
         </div>
+      </div>
+    </Section>
+    <Section className='white-background'>
+      <div className='container'>
         <FormMain
           data={{
             name: 'Cenk',

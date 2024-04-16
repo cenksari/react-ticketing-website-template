@@ -470,7 +470,7 @@ footer .terms a:hover {
 
 .form.shrink {
   max-width: 80%;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 .form-information {
@@ -513,12 +513,12 @@ footer .terms a:hover {
 }
 
 .form .form-buttons {
+  margin-top: 25px;
   text-align: right;
 }
 
 .upload-picture {
   width: 225px;
-  height: 240px;
   margin: 0 auto;
   position: relative;
 }
@@ -822,6 +822,7 @@ footer .terms a:hover {
   text-align: center;
   align-items: center;
   border-radius: 50em;
+  transition: all 0.5s;
   justify-content: center;
   border: 1px solid var(--light-gray);
   box-shadow:
@@ -831,11 +832,11 @@ footer .terms a:hover {
 }
 
 .circle-button .circle:hover {
-  background-color: #f9f9f9;
+  background-color: var(--light-gray);
 }
 
 .circle-button .circle:active {
-  background-color: var(--light-gray);
+  background-color: var(--white);
 }
 
 .circle-button .circle span {

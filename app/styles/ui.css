@@ -157,8 +157,8 @@ button.button {
 }
 
 a.button {
-  min-width: 150px;
-  padding: 14px 20px;
+  min-width: 130px;
+  padding: 14px 15px;
   display: inline-block;
 }
 
@@ -1226,10 +1226,6 @@ a.button {
   color: var(--white);
   background-color: var(--red);
   border-radius: 4px !important;
-}
-
-.modal .title button:hover {
-  transform: none;
 }
 
 .modal .title button i {
