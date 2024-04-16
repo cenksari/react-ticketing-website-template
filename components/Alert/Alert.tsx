@@ -7,6 +7,16 @@ import useAlert from '@hooks/useAlert';
 const Alert = (): React.JSX.Element => {
   const { alert, hideAlert } = useAlert();
 
+  React.useEffect(() => {
+    const timeout = setTimeout(() => {
+      hideAlert();
+    }, 7000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [hideAlert]);
+
   if (alert.show === true) {
     return (
       <div className={`alert ${alert.type}`}>

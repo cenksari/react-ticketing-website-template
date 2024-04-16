@@ -371,6 +371,7 @@ footer .terms a:hover {
   height: 40px;
   cursor: pointer;
   border-radius: 50em;
+  transition: all 0.5s;
   background-color: var(--white);
   border: 2px solid var(--dark-gray);
 }
@@ -1105,18 +1106,23 @@ td {
   user-select: none;
   text-align: center;
   border-radius: 50em;
+  transition: all 0.5s;
   display: inline-block;
   -webkit-user-select: none;
   background-color: var(--blackest-gray);
 }
 
-.item-left .actions a:active {
+.item-left .actions a:hover {
   background-color: var(--gray);
+}
+
+.item-left .actions a:active {
+  background-color: var(--dark-gray);
 }
 
 .item-left .actions a span {
   font-size: 1.2em;
-  margin: 11px 0 0 0;
+  margin: 12px 0 0 0;
   color: var(--white);
 }
 

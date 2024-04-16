@@ -5,6 +5,8 @@ import React, { type FormEvent } from 'react';
 import Button from '@components/Button/Button';
 import Loader from '@components/Loader/Loader';
 
+import useAlert from '@hooks/useAlert';
+
 interface IData {
   id: number;
   name: string;
@@ -20,6 +22,8 @@ interface IProps {
 }
 
 const TicketForm = ({ data }: IProps): React.JSX.Element => {
+  const { showAlert, hideAlert } = useAlert();
+
   const [loading, setLoading] = React.useState<boolean>(true);
   const [formValues, setFormValues] = React.useState<IData[]>(data);
 
@@ -86,6 +90,8 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 
+    hideAlert();
+
     const quantity = formValues.reduce((sum, curr) => {
       let q = 0;
 
@@ -100,6 +106,8 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
       setLoading(true);
 
       window.location.href = '/buy';
+    } else {
+      showAlert({ type: 'error', text: 'You must select at least one ticket for this event.' });
     }
   };
 
