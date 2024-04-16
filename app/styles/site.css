@@ -427,6 +427,7 @@ footer .terms a:hover {
   padding: 10px;
   user-select: none;
   text-align: center;
+  vertical-align: top;
   border-radius: 10px;
   display: inline-block;
   box-sizing: border-box;
@@ -444,9 +445,10 @@ footer .terms a:hover {
 }
 
 .box-inner {
-  height: 275px;
+  height: 300px;
   display: flex;
-  border-radius: 10px;
+  align-items: center;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
 }

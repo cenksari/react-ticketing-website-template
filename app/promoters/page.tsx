@@ -13,7 +13,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='padding-bottom center'>
           <Heading type={1} color='gray' text='Promoters' />
-          <p className='gray'>
+          <p className='gray form-information'>
             Whether you&apos;re selling one ticket or a hundred thousand, the Modern ticketing
             infrastructure is designed to meet all your needs. Plus, there are no additional fees or
             surprises added later!
@@ -26,7 +26,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={2} color='red' text='Manage everything with a single application' />
-          <p className='gray'>
+          <p className='gray form-information'>
             With our specially designed Promoter application, you can track ticket sales in
             real-time and admit customers at the door with your barcode scanner. Plus, it&apos;s
             free!
@@ -47,7 +47,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={2} color='purple' text='Sustainable ticketing' />
-          <p className='gray'>
+          <p className='gray form-information'>
             Stunning, white-labelled pages to promote your event. To get started selling tickets
             online with Modern ticketing, you&apos;ll first create a beautiful event website to
             promote your event.
@@ -76,23 +76,23 @@ const Page = (): React.JSX.Element => (
         <Slider>
           <Box className='gray'>
             <span className='material-symbols-outlined blue'>today</span>
-            <p>You have a team dedicated to serving your customers individually</p>
+            <p>Break down silos between marketing, design, and development</p>
           </Box>
           <Box className='gray'>
             <span className='material-symbols-outlined red'>stacked_bar_chart</span>
-            <p>You have a team dedicated to serving your customers individually</p>
+            <p>Backed by enterprise-grade security</p>
           </Box>
           <Box className='gray'>
             <span className='material-symbols-outlined purple'>area_chart</span>
-            <p>You have a team dedicated to serving your customers individually</p>
+            <p>We’ll partner with you to ensure success</p>
           </Box>
           <Box className='gray'>
             <span className='material-symbols-outlined green'>table_chart_view</span>
-            <p>You have a team dedicated to serving your customers individually</p>
+            <p>World-class performance</p>
           </Box>
           <Box className='gray'>
             <span className='material-symbols-outlined yellow'>database</span>
-            <p>You have a team dedicated to serving your customers individually</p>
+            <p>Harness the power of code without writing it</p>
           </Box>
           <Box className='gray'>
             <span className='material-symbols-outlined gray'>pie_chart</span>
