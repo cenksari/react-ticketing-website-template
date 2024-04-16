@@ -37,6 +37,26 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
     };
   }, []);
 
+  const orderTickets = (array: IData[]): IData[] => {
+    return array.sort((a, b) => {
+      return a.ordering - b.ordering;
+    });
+  };
+
+  const countTickets = (array: IData[]): number => {
+    return array.reduce((sum, curr): number => {
+      let q: number = 0;
+
+      if (curr.quantity != null && !isNaN(curr.quantity)) {
+        q = sum + curr.quantity;
+      } else {
+        q = sum;
+      }
+
+      return q;
+    }, 0);
+  };
+
   const handleDecrease = (ticket: IData): void => {
     const tickets: IData[] = formValues.filter((e: IData) => e.id !== ticket.id);
 
@@ -56,7 +76,7 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
 
     tickets.push(newTicket);
 
-    setFormValues(orderArray(tickets));
+    setFormValues(orderTickets(tickets));
   };
 
   const handleIncrease = (ticket: IData): void => {
@@ -78,13 +98,7 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
 
     tickets.push(newTicket);
 
-    setFormValues(orderArray(tickets));
-  };
-
-  const orderArray = (array: IData[]): IData[] => {
-    return array.sort((a, b) => {
-      return a.ordering - b.ordering;
-    });
+    setFormValues(orderTickets(tickets));
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
@@ -92,17 +106,7 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
 
     hideAlert();
 
-    const quantity = formValues.reduce((sum, curr): number => {
-      let q: number = 0;
-
-      if (curr.quantity != null && !isNaN(curr.quantity)) {
-        q = sum + curr.quantity;
-      } else {
-        q = sum;
-      }
-
-      return q;
-    }, 0);
+    const quantity: number = countTickets(formValues);
 
     if (quantity > 0) {
       setLoading(true);
