@@ -158,8 +158,8 @@ button.button {
 
 a.button {
   min-width: 150px;
+  padding: 14px 20px;
   display: inline-block;
-  padding: 11px 20px 11px 20px;
 }
 
 .button span {

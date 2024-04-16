@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 import Loader from '@components/Loader/Loader';
+import ButtonLink from '@components/Button/ButtonLink';
 
 import useAlert from '@hooks/useAlert';
 
@@ -157,6 +158,8 @@ const FormMain = ({ data }: IProps): React.JSX.Element => {
           />
         </div>
         <div className='form-buttons'>
+          <ButtonLink color='gray-overlay' text='Sign out' url='members/signout' />
+          &nbsp; &nbsp;
           <Button type='submit' color='blue-filled' text='Update profile' />
         </div>
       </div>
