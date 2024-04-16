@@ -109,7 +109,7 @@ const Form = (): React.JSX.Element => {
           </div>
         </div>
         <div className='form-buttons'>
-          <ButtonLink color='gray-overlay' text='Go back' url='members/profile' />
+          <ButtonLink color='gray-overlay' text='Go back' url='members/account' />
           &nbsp; &nbsp;
           <Button type='submit' color='blue-filled' text='Submit' />
         </div>

@@ -11,7 +11,7 @@ const Page = (): React.JSX.Element => (
   <Master>
     <Section className='white-background'>
       <div className='container'>
-        <div className='center'>
+        <div className='padding-bottom center'>
           <Heading type={1} color='gray' text='Promoters' />
           <p className='gray'>
             Whether you&apos;re selling one ticket or a hundred thousand, the Modern ticketing
@@ -66,32 +66,32 @@ const Page = (): React.JSX.Element => (
 
     <Section>
       <div className='container'>
-        <div className='center padding-bottom'>
+        <div className='center'>
           <Heading type={2} color='yellow' text='How it works?' />
           <Heading type={5} color='gray' text='100% Modern Ticketing backed guarantee.' />
         </div>
       </div>
 
-      <div className='carousel'>
+      <div className='carousel padding-top'>
         <Slider>
           <Box className='gray'>
-            <span className='material-symbols-outlined blue'>arrow_forward</span>
+            <span className='material-symbols-outlined blue'>today</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <span className='material-symbols-outlined red'>arrow_forward</span>
+            <span className='material-symbols-outlined red'>stacked_bar_chart</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <span className='material-symbols-outlined purple'>arrow_forward</span>
+            <span className='material-symbols-outlined purple'>area_chart</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <span className='material-symbols-outlined green'>arrow_forward</span>
+            <span className='material-symbols-outlined green'>table_chart_view</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
           <Box className='gray'>
-            <span className='material-symbols-outlined yellow'>arrow_forward</span>
+            <span className='material-symbols-outlined yellow'>database</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
         </Slider>

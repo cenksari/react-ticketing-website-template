@@ -21,7 +21,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
 
     const hideLeftScroll: boolean = scrollLeft <= 0;
 
-    const hideRightScroll: boolean = scrollWidth - Math.round(scrollLeft | 0) <= offsetWidth;
+    const hideRightScroll: boolean = scrollWidth - Math.round(scrollLeft | 0) <= offsetWidth + 1;
 
     if (hideLeftScroll) {
       setLeftArrowDisable(true);
@@ -92,39 +92,9 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
 
   const mouseLeave = (): void => {
     isDown.current = false;
+
+    preventClick.current = false;
   };
-
-  React.useEffect(() => {
-    buttons();
-
-    const elementRef: HTMLDivElement = navReference.current;
-
-    window.addEventListener('resize', scroll);
-    // elementRef.addEventListener('wheel', wheel);
-    elementRef.addEventListener('click', click);
-    elementRef.addEventListener('scroll', scroll);
-    elementRef.addEventListener('mouseup', mouseUp);
-    elementRef.addEventListener('mousedown', mouseDown);
-    elementRef.addEventListener('mousemove', mouseMove);
-    elementRef.addEventListener('mouseleave', mouseLeave);
-
-    const { offsetWidth, scrollWidth } = elementRef;
-
-    if (offsetWidth === scrollWidth) {
-      setRightArrowDisable(true);
-    }
-
-    return () => {
-      window.removeEventListener('resize', scroll);
-      // elementRef.removeEventListener('wheel', wheel);
-      elementRef.removeEventListener('click', click);
-      elementRef.removeEventListener('scroll', scroll);
-      elementRef.removeEventListener('mouseup', mouseUp);
-      elementRef.removeEventListener('mousedown', mouseDown);
-      elementRef.removeEventListener('mousemove', mouseMove);
-      elementRef.removeEventListener('mouseleave', mouseLeave);
-    };
-  }, [mouseDown, mouseMove, scroll]);
 
   const handleHorizantalScroll = (speed: number, step: number): void => {
     let scrollAmount: number = 0;
@@ -141,6 +111,32 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
       buttons();
     }, speed);
   };
+
+  React.useEffect(() => {
+    buttons();
+
+    const elementRef: HTMLDivElement = navReference.current;
+
+    window.addEventListener('resize', scroll);
+    // elementRef.addEventListener('wheel', wheel);
+    elementRef.addEventListener('click', click);
+    elementRef.addEventListener('scroll', scroll);
+    elementRef.addEventListener('mouseup', mouseUp);
+    elementRef.addEventListener('mousedown', mouseDown);
+    elementRef.addEventListener('mousemove', mouseMove);
+    elementRef.addEventListener('mouseleave', mouseLeave);
+
+    return () => {
+      window.removeEventListener('resize', scroll);
+      // elementRef.removeEventListener('wheel', wheel);
+      elementRef.removeEventListener('click', click);
+      elementRef.removeEventListener('scroll', scroll);
+      elementRef.removeEventListener('mouseup', mouseUp);
+      elementRef.removeEventListener('mousedown', mouseDown);
+      elementRef.removeEventListener('mousemove', mouseMove);
+      elementRef.removeEventListener('mouseleave', mouseLeave);
+    };
+  }, []);
 
   return (
     <div className='scroll-container'>

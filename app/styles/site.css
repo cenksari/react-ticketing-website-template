@@ -414,13 +414,14 @@ footer .terms a:hover {
 }
 
 .box {
-  width: 300px;
+  width: 280px;
   height: 300px;
   padding: 10px;
   user-select: none;
   text-align: center;
   border-radius: 10px;
   display: inline-block;
+  box-sizing: border-box;
   margin: 2px 20px 15px 0;
   background-color: var(--white);
   white-space: initial !important;
@@ -442,9 +443,13 @@ footer .terms a:hover {
   justify-content: center;
 }
 
-.box span {
-  font-size: 3em;
+.box .box-inner span {
+  font-size: 4em;
   margin-bottom: 15px;
+}
+
+.box .box-inner p {
+  font-size: 0.9em;
 }
 
 .button-container {
