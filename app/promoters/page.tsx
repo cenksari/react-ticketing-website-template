@@ -68,7 +68,7 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={2} color='yellow' text='How it works?' />
-          <Heading type={5} color='gray' text='100% Modern Ticketing backed guarantee.' />
+          <p className='gray'>100% Modern Ticketing backed guarantee.</p>
         </div>
       </div>
 
