@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import Progress from '@components/Progress/Progress';
+
 import useAlert from '@hooks/useAlert';
 
 const Alert = (): React.JSX.Element => {
@@ -27,6 +29,7 @@ const Alert = (): React.JSX.Element => {
               <span className='material-symbols-outlined'>close</span>
             </button>
           </div>
+          <Progress ms={7000} />
         </div>
       </div>
     );
