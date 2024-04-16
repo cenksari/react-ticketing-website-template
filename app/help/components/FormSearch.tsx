@@ -4,11 +4,15 @@ import React, { type FormEvent } from 'react';
 
 import Input from '@components/Form/Input';
 
+import useAlert from '@hooks/useAlert';
+
 interface IFormProps {
   keyword: string;
 }
 
 const FormSearch = (): React.JSX.Element => {
+  const { showAlert } = useAlert();
+
   const [formValues, setFormValues] = React.useState<IFormProps>({
     keyword: '',
   });
@@ -24,6 +28,12 @@ const FormSearch = (): React.JSX.Element => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
+
+    const { keyword } = formValues;
+
+    if (keyword === '' || keyword.length < 3) {
+      showAlert({ type: 'error', text: 'Please enter minimum 3 characters for search.' });
+    }
   };
 
   return (
