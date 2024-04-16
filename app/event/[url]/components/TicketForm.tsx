@@ -92,11 +92,13 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
 
     hideAlert();
 
-    const quantity = formValues.reduce((sum, curr) => {
-      let q = 0;
+    const quantity = formValues.reduce((sum, curr): number => {
+      let q: number = 0;
 
-      if (curr.quantity != null) {
+      if (curr.quantity != null && !isNaN(curr.quantity)) {
         q = sum + curr.quantity;
+      } else {
+        q = sum;
       }
 
       return q;
@@ -148,6 +150,7 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
                     -
                   </button>
                   <input
+                    readOnly
                     type='text'
                     name={`t-${ticket.id}`}
                     value={ticket.quantity ?? 0}

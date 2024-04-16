@@ -696,10 +696,6 @@ footer .terms a:hover {
   color: var(--blue);
 }
 
-.ticket-box .ticket-box-line:hover {
-  background-color: #f9f9f9;
-}
-
 .ticket-box .ticket-box-line span,
 .ticket-box .ticket-box-line strong {
   font-size: 0.8em;
