@@ -26,7 +26,7 @@ const auth = {
 const createAuth = base64.encode(`${auth.username}:${auth.password}`);
 
 const buildUrl = (): string => {
-  return 'https://businesswise-contentapi.azurewebsites.net';
+  return 'https://businesswise-memberapi.azurewebsites.net';
 };
 
 const parseResults = (results: string): any => {

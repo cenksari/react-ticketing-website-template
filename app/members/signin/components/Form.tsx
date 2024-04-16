@@ -6,6 +6,7 @@ import Link from 'next/link';
 
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
+import Loader from '@components/Loader/Loader';
 
 import useAlert from '@hooks/useAlert';
 
@@ -17,8 +18,9 @@ interface IFormProps {
 }
 
 const Form = (): React.JSX.Element => {
-  const { showAlert } = useAlert();
+  const { showAlert, hideAlert } = useAlert();
 
+  const [loading, setLoading] = React.useState<boolean>(false);
   const [formValues, setFormValues] = React.useState<IFormProps>({
     email: '',
     password: '',
@@ -36,17 +38,35 @@ const Form = (): React.JSX.Element => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 
-    showAlert({ type: 'error', text: 'Alert text goes here' });
+    hideAlert();
+
+    setLoading(true);
 
     const parameters: IRequest = {
-      url: 'v1/search',
+      url: 'v1/signin/password',
       method: 'POST',
+      postData: {
+        email: '',
+        password: '',
+      },
     };
 
     const req: IResponse = await Request.getResponse(parameters);
 
-    console.log(req.status, req.data);
+    const { status, data } = req;
+
+    if (status === 200) {
+      //
+    } else {
+      showAlert({ type: 'error', text: data.title ?? '' });
+    }
+
+    setLoading(false);
   };
+
+  if (loading) {
+    return <Loader type='inline' color='gray' text='Hang on a second' />;
+  }
 
   return (
     <form

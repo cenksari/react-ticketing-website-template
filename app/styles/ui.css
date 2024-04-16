@@ -959,7 +959,10 @@ a.button {
 }
 
 .loader {
+  padding: 50px 0;
+  user-select: none;
   display: inline-block;
+  --webkit-user-select: none;
 }
 
 .loader.gray {
@@ -988,6 +991,10 @@ a.button {
 
 .loader.blue {
   fill: var(--blue);
+}
+
+.loader h6 {
+  margin-bottom: 20px;
 }
 
 /* Dropdowns */
