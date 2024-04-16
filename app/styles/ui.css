@@ -783,7 +783,7 @@ a.button {
 }
 
 .card-buttons a {
-  padding: 10px 0;
+  min-width: 100px;
 }
 
 /* Alerts */

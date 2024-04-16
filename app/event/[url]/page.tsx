@@ -58,7 +58,7 @@ const Page = (): React.JSX.Element => (
           <div>
             <div className='ticket-box'>
               <div className='ticket-box-header'>
-                <Heading type={5} color='gray' text='Tickets' />
+                <Heading type={4} color='gray' text='Tickets' />
               </div>
               <TicketForm
                 data={[
@@ -104,10 +104,14 @@ const Page = (): React.JSX.Element => (
           <p>
             <Link href='/venue/1' className='blue'>
               Venue details
-            </Link>{' '}
-            &bull;{' '}
+            </Link>
+            &nbsp; &bull; &nbsp;
             <a target='_blank' href='/' className='blue'>
               Get directions
+            </a>
+            &nbsp; &bull; &nbsp;
+            <a target='_blank' href='/' className='blue'>
+              Show in map
             </a>
           </p>
         </div>

@@ -332,9 +332,17 @@ footer .terms a:hover {
   margin-bottom: 0;
 }
 
+.title .button {
+  min-width: unset;
+}
+
 .paragraph-container p {
   color: var(--gray);
   margin-bottom: 15px;
+}
+
+.paragraph-container a:hover {
+  text-decoration: underline;
 }
 
 .carousel {
@@ -657,7 +665,7 @@ footer .terms a:hover {
 }
 
 .event-details .paragraph-container {
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 .ticket-box {
@@ -1269,7 +1277,7 @@ td {
   }
 
   .event-details {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .event-details .paragraph-container {
@@ -1278,7 +1286,7 @@ td {
 
   .ticket-box {
     min-width: 100%;
-    margin-top: 30px;
+    margin-bottom: 50px;
   }
 
   .ticket-item {
@@ -1288,6 +1296,12 @@ td {
   .item-left .actions a {
     width: 45px;
     height: 45px;
+  }
+
+  .scroll-container .left-arrow button,
+  .scroll-container .right-arrow button {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -1342,7 +1356,7 @@ td {
   }
 
   .circle-button .circle span {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .form .form-buttons {

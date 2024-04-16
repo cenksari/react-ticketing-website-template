@@ -94,6 +94,10 @@ const Page = (): React.JSX.Element => (
             <span className='material-symbols-outlined yellow'>database</span>
             <p>You have a team dedicated to serving your customers individually</p>
           </Box>
+          <Box className='gray'>
+            <span className='material-symbols-outlined gray'>pie_chart</span>
+            <p>You have a team dedicated to serving your customers individually</p>
+          </Box>
         </Slider>
       </div>
 
