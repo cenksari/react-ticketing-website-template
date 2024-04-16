@@ -99,7 +99,7 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
     if (quantity > 0) {
       setLoading(true);
 
-      document.location = '/buy';
+      window.location.href = '/buy';
     }
   };
 

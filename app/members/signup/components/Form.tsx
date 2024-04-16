@@ -77,8 +77,6 @@ const Form = (): React.JSX.Element => {
       showAlert({ type: 'error', text: data.title ?? '' });
     }
 
-    setLoading(false);
-
     window.location.href = '/members/activate/account';
   };
 

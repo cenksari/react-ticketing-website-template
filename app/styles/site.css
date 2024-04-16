@@ -459,6 +459,11 @@ footer .terms a:hover {
   margin: 50px auto;
 }
 
+.form-information {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .form-information a:hover,
 .switch-description a:hover {
   text-decoration: underline;
@@ -1319,6 +1324,7 @@ td {
   }
 
   .top-search,
+  .form-information,
   .form.form.shrink {
     max-width: 97%;
   }

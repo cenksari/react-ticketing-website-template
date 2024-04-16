@@ -15,7 +15,7 @@ const Page = (): React.JSX.Element => (
           <p className='gray form-information'>
             Before you can sign in, you must activate your account with the code sent to your email
             address. If you do not see the email in a few minutes, check your junk mail or spam
-            folder.
+            folder. You can do this later with your e-mail link.
           </p>
         </div>
         <Form />

@@ -13,6 +13,7 @@ import Request, { type IRequest, type IResponse } from '@utils/Request';
 
 interface IFormProps {
   email: string;
+  emailAgain: string;
 }
 
 const Form = (): React.JSX.Element => {
@@ -21,6 +22,7 @@ const Form = (): React.JSX.Element => {
   const [loading, setLoading] = React.useState<boolean>(false);
   const [formValues, setFormValues] = React.useState<IFormProps>({
     email: '',
+    emailAgain: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -57,8 +59,6 @@ const Form = (): React.JSX.Element => {
     } else {
       showAlert({ type: 'error', text: data.title ?? '' });
     }
-
-    setLoading(false);
 
     window.location.href = '/members/activate/email';
   };
@@ -100,10 +100,11 @@ const Form = (): React.JSX.Element => {
             <Input
               type='email'
               name='emailAgain'
-              value=''
+              value={formValues.emailAgain}
               maxLength={128}
               placeholder='Re-enter your new e-mail address'
               required
+              onChange={handleChange}
             />
           </div>
         </div>
