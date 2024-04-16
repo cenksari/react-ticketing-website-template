@@ -4,8 +4,8 @@ import React, { type FormEvent } from 'react';
 
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
-import Heading from '@components/Heading/Heading';
 import Loader from '@components/Loader/Loader';
+import Heading from '@components/Heading/Heading';
 
 import useAlert from '@hooks/useAlert';
 

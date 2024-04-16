@@ -3,6 +3,7 @@
 import React, { type FormEvent } from 'react';
 
 import Button from '@components/Button/Button';
+import Loader from '@components/Loader/Loader';
 
 interface IData {
   id: number;
@@ -19,7 +20,18 @@ interface IProps {
 }
 
 const TicketForm = ({ data }: IProps): React.JSX.Element => {
+  const [loading, setLoading] = React.useState<boolean>(true);
   const [formValues, setFormValues] = React.useState<IData[]>(data);
+
+  React.useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   const handleDecrease = (ticket: IData): void => {
     const tickets: IData[] = formValues.filter((e: IData) => e.id !== ticket.id);
@@ -74,8 +86,26 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 
-    document.location = '/buy';
+    const quantity = formValues.reduce((sum, curr) => {
+      let q = 0;
+
+      if (curr.quantity != null) {
+        q = sum + curr.quantity;
+      }
+
+      return q;
+    }, 0);
+
+    if (quantity > 0) {
+      setLoading(true);
+
+      document.location = '/buy';
+    }
   };
+
+  if (loading) {
+    return <Loader type='inline' color='gray' text='Hang on a second' />;
+  }
 
   return (
     <form
@@ -109,7 +139,12 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
                   >
                     -
                   </button>
-                  <input type='text' name={`t-${ticket.id}`} defaultValue={ticket.quantity ?? 0} />
+                  <input
+                    type='text'
+                    name={`t-${ticket.id}`}
+                    value={ticket.quantity ?? 0}
+                    onChange={() => {}}
+                  />
                   <button
                     type='button'
                     onClick={() => {
