@@ -768,8 +768,13 @@ a.button {
 }
 
 .card-info p span {
+  margin-top: -4px;
   user-select: none;
   vertical-align: middle;
+}
+
+.card-info p.small {
+  font-size: 0.7em;
 }
 
 .card-buttons {

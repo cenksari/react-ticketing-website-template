@@ -25,7 +25,7 @@ const VenueCard = ({ url, name, image, color, location }: IProps): React.JSX.Ele
           backgroundImage: `url("${image}")`,
         }}
       >
-        <Badge color='gray' text='NEW' />
+        <Badge color={color} text='NEW' />
       </div>
       <div className='card-info'>
         <p>
