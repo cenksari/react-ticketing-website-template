@@ -25,16 +25,33 @@ const auth = {
 
 const createAuth = base64.encode(`${auth.username}:${auth.password}`);
 
+/**
+ * Build API URL.
+ *
+ * @return {string} Builded API URL
+ */
 const buildUrl = (): string => {
   return 'https://businesswise-memberapi.azurewebsites.net';
 };
 
-const parseResults = (results: string): any => {
-  const parse = JSON.parse(results);
+/**
+ * Parse returning results as JSON value.
+ *
+ * @param {string} value - String value
+ * @return {object} Parsed result
+ */
+const parseResults = (value: string): any => {
+  const parse = JSON.parse(value);
 
   return parse;
 };
 
+/**
+ * Call API and return results.
+ *
+ * @param {IRequest} parameters - IRequest
+ * @return {IResponse} IResponse - API response
+ */
 const getResponse = async (parameters: IRequest): Promise<IResponse> => {
   let response: AxiosResponse<any, any>;
 
