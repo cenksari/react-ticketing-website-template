@@ -17,7 +17,7 @@ const CardGroup = ({ url, title, color, background, children }: IProps): React.J
   <Section className={`${background}-background`}>
     <div className='container'>
       <div className='title flex flex-v-center flex-space-between'>
-        <Heading type={2} color={color} text={title} />
+        <Heading type={3} color={color} text={title} />
         <ButtonLink
           color={`${color}-filled`}
           text='See all'

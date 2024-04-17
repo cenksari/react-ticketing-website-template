@@ -23,21 +23,21 @@ const Page = (): React.JSX.Element => (
           <div className='help-top flex flex-v-center flex-space-around'>
             <div className='center'>
               <Heading type={5} color='gray' text='About us' />
-              <Link href='/' className='blue'>
+              <Link href='/help/answer/1' className='blue'>
                 <span className='material-symbols-outlined yellow'>star</span>
                 What is ticketing?
               </Link>
             </div>
             <div className='center'>
               <Heading type={5} color='gray' text='Account' />
-              <Link href='/' className='blue'>
+              <Link href='/help/answer/1' className='blue'>
                 <span className='material-symbols-outlined yellow'>star</span>
                 How to sign in?
               </Link>
             </div>
             <div className='center'>
               <Heading type={5} color='gray' text='Using system' />
-              <Link href='/' className='blue'>
+              <Link href='/help/answer/1' className='blue'>
                 <span className='material-symbols-outlined yellow'>star</span>
                 How can I get my tickets?
               </Link>
@@ -55,10 +55,10 @@ const Page = (): React.JSX.Element => (
             <div className='help-bottom-box'>
               <div className='links'>
                 <Heading type={5} color='gray' text='About us' />
-                <Link href='/' className='blue'>
+                <Link href='/help/answer/1' className='blue'>
                   What is ticketing?
                 </Link>
-                <Link href='/' className='blue'>
+                <Link href='/help/answer/1' className='blue'>
                   What is ticketing?
                 </Link>
               </div>
@@ -67,16 +67,16 @@ const Page = (): React.JSX.Element => (
                 color='gray-overlay'
                 rightIcon='arrow_forward'
                 text='See all'
-                url='help'
+                url='help/category/1'
               />
             </div>
             <div className='help-bottom-box'>
               <div className='links'>
                 <Heading type={5} color='gray' text='Account' />
-                <Link href='/' className='blue'>
+                <Link href='/help/answer/1' className='blue'>
                   How to sign in?
                 </Link>
-                <Link href='/' className='blue'>
+                <Link href='/help/answer/1' className='blue'>
                   What is ticketing?
                 </Link>
               </div>
@@ -85,13 +85,13 @@ const Page = (): React.JSX.Element => (
                 color='gray-overlay'
                 rightIcon='arrow_forward'
                 text='See all'
-                url='help'
+                url='help/category/1'
               />
             </div>
             <div className='help-bottom-box'>
               <div className='links'>
                 <Heading type={5} color='gray' text='Using system' />
-                <Link href='/' className='blue'>
+                <Link href='/help/answer/1' className='blue'>
                   How can I get my tickets?
                 </Link>
               </div>
@@ -100,7 +100,7 @@ const Page = (): React.JSX.Element => (
                 color='gray-overlay'
                 rightIcon='arrow_forward'
                 text='See all'
-                url='help'
+                url='help/category/1'
               />
             </div>
           </div>
@@ -110,14 +110,14 @@ const Page = (): React.JSX.Element => (
               color='gray-filled'
               rightIcon='arrow_forward'
               text='See all articles'
-              url='help'
+              url='help/answers'
             />
           </div>
         </div>
       </div>
     </Section>
 
-    <Section className='white-background'>
+    <Section className='gray-background'>
       <div className='container'>
         <div className='center'>
           <Heading type={3} color='gray' text='Any questions?' />
@@ -129,7 +129,7 @@ const Page = (): React.JSX.Element => (
 
           <div className='button-container'>
             <ButtonLink
-              color='blue-overlay'
+              color='blue-filled'
               rightIcon='arrow_forward'
               text='Contact us'
               url='contact'

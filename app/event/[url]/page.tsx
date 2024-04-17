@@ -101,7 +101,7 @@ const Page = (): React.JSX.Element => (
         <Heading type={6} color='gray' text='How to get there?' />
         <div className='paragraph-container'>
           <p className='gray'>Lorem ipsum dolor sit amet consecteteur adispicing elit.</p>
-          <p>
+          <p className='gray'>
             <Link href='/venue/1' className='blue'>
               Venue details
             </Link>

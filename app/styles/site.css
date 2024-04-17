@@ -325,7 +325,7 @@ footer .terms a:hover {
   text-decoration: underline;
 }
 
-.title h2,
+.title h1,
 .title h2,
 .title h3,
 .title h4 {
@@ -338,7 +338,7 @@ footer .terms a:hover {
 
 .paragraph-container p {
   color: var(--gray);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .paragraph-container a:hover {
@@ -429,11 +429,11 @@ footer .terms a:hover {
   text-align: center;
   vertical-align: top;
   border-radius: 10px;
+  white-space: initial;
   display: inline-block;
   box-sizing: border-box;
   margin: 2px 20px 15px 0;
   background-color: var(--white);
-  white-space: initial !important;
   box-shadow:
     0 4px 6px -4px rgba(0, 0, 0, 0.1),
     0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -447,10 +447,11 @@ footer .terms a:hover {
 .box-inner {
   height: 300px;
   display: flex;
+  padding-top: 40px;
   align-items: center;
   box-sizing: border-box;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .box .box-inner span {
@@ -1013,6 +1014,30 @@ td {
 
 .help-bottom-box a:hover {
   text-decoration: underline;
+}
+
+.help-left {
+  flex: 1;
+  padding-top: 5px;
+}
+
+.help-left h2 {
+  margin-bottom: 20px;
+}
+
+.help-left ul li {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.help-left ul li a:hover {
+  text-decoration: underline;
+}
+
+.help-right {
+  flex: 3;
+  padding: 0 20px;
 }
 
 .muted {
