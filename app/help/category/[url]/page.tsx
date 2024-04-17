@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Link from 'next/link';
+
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
@@ -11,7 +13,31 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='center'>
           <Heading type={1} color='gray' text='Help category' />
-          <p>test</p>
+          <p>Showing all answers from this category.</p>
+        </div>
+      </div>
+    </Section>
+
+    <Section className='white-background'>
+      <div className='container'>
+        <div className='help-answers center'>
+          <ul>
+            <li>
+              <Link href='/help/answer/1' className='blue'>
+                How can i sign in?
+              </Link>
+            </li>
+            <li>
+              <Link href='/help/answer/1' className='blue'>
+                How can i sign up?
+              </Link>
+            </li>
+            <li>
+              <Link href='/help/answer/1' className='blue'>
+                Reset your password
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </Section>

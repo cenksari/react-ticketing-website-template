@@ -194,7 +194,6 @@ header .container .members span {
 
 header .container .members .menu-opener {
   padding: 10px 0;
-  font-weight: 500;
 }
 
 header .container .members .menu-opener span {
@@ -239,7 +238,6 @@ footer .container .logo svg {
 
 footer .container .links a {
   display: block;
-  font-weight: 500;
   margin-bottom: 10px;
 }
 
@@ -570,7 +568,6 @@ footer .terms a:hover {
   font-size: 1em;
   cursor: pointer;
   color: #444444;
-  font-weight: 400;
   user-select: none;
   padding: 15px 25px;
   border-radius: 5px;
@@ -592,7 +589,6 @@ footer .terms a:hover {
 
 .or-line {
   height: 10px;
-  font-weight: 500;
   user-select: none;
   position: relative;
   text-align: center;
@@ -662,6 +658,10 @@ footer .terms a:hover {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.cover-info h1 {
+  font-weight: 600;
+}
+
 .event-details {
   display: flex;
   justify-content: space-between;
@@ -690,7 +690,7 @@ footer .terms a:hover {
   background-color: var(--light-gray);
 }
 
-.ticket-box .ticket-box-header h5 {
+.ticket-box .ticket-box-header h4 {
   margin-bottom: 0;
 }
 
@@ -877,8 +877,8 @@ td {
 }
 
 .table th {
-  user-select: none;
   font-weight: 600;
+  user-select: none;
   color: var(--white);
   background-color: var(--blackest-gray);
 }
@@ -1038,6 +1038,27 @@ td {
 .help-right {
   flex: 3;
   padding: 0 20px;
+}
+
+.help-answers h5 {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.help-answers a:hover {
+  text-decoration: underline;
+}
+
+.help-answers ul {
+  margin-bottom: 50px;
+}
+
+.help-answers ul li {
+  margin-bottom: 10px;
+}
+
+.help-answers ul li:last-child {
+  margin-bottom: 0;
 }
 
 .muted {

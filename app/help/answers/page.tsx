@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Link from 'next/link';
+
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
@@ -10,8 +12,58 @@ const Page = (): React.JSX.Element => (
     <Section className='white-background'>
       <div className='container'>
         <div className='center'>
-          <Heading type={1} color='gray' text='Help articles' />
-          <p>test</p>
+          <Heading type={1} color='gray' text='All answers' />
+          <p className='gray'>Showing all help answers and all categories.</p>
+        </div>
+      </div>
+    </Section>
+
+    <Section className='white-background'>
+      <div className='container'>
+        <div className='help-answers center'>
+          <Link href='/help/category/1'>
+            <Heading type={5} color='gray' text='Help category' />
+          </Link>
+
+          <ul>
+            <li>
+              <Link href='/help/answer/1' className='blue'>
+                How can i sign in?
+              </Link>
+            </li>
+            <li>
+              <Link href='/help/answer/1' className='blue'>
+                How can i sign up?
+              </Link>
+            </li>
+            <li>
+              <Link href='/help/answer/1' className='blue'>
+                Reset your password
+              </Link>
+            </li>
+          </ul>
+
+          <Link href='/help/category/1'>
+            <Heading type={5} color='gray' text='Help category' />
+          </Link>
+
+          <ul>
+            <li>
+              <Link href='/help/answer/1' className='blue'>
+                How can i sign in?
+              </Link>
+            </li>
+            <li>
+              <Link href='/help/answer/1' className='blue'>
+                How can i sign up?
+              </Link>
+            </li>
+            <li>
+              <Link href='/help/answer/1' className='blue'>
+                Reset your password
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </Section>

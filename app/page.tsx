@@ -145,7 +145,7 @@ const Page = (): React.JSX.Element => (
       />
     </CardGroup>
 
-    <CardGroup url='list' title='Editors pick' color='orange' background='gray'>
+    <CardGroup url='list' title='Editors choice' color='orange' background='gray'>
       <EventCard
         url='1'
         from='20'

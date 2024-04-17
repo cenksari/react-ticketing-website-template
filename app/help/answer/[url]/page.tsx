@@ -16,17 +16,17 @@ const Page = (): React.JSX.Element => (
             <Heading type={2} color='gray' text='Account' />
             <ul>
               <li>
-                <Link href='/' className='blue'>
+                <Link href='/help/answer/1' className='blue'>
                   How can i sign in?
                 </Link>
               </li>
               <li>
-                <Link href='/' className='blue'>
+                <Link href='/help/answer/1' className='blue'>
                   How can i sign up?
                 </Link>
               </li>
               <li>
-                <Link href='/' className='blue'>
+                <Link href='/help/answer/1' className='blue'>
                   Reset your password
                 </Link>
               </li>
@@ -54,9 +54,9 @@ const Page = (): React.JSX.Element => (
             </div>
 
             <div className='button-container right'>
-              <ButtonLink color='gray-overlay' text='Back to category' url='help' />
+              <ButtonLink color='gray-overlay' text='Back to category' url='help/category/1' />
               &nbsp; &nbsp;
-              <ButtonLink color='blue-filled' text='Back to help centre' url='help' />
+              <ButtonLink color='blue-filled' text='Back to help page' url='help' />
             </div>
           </div>
         </div>

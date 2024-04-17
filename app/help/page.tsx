@@ -50,7 +50,7 @@ const Page = (): React.JSX.Element => (
     <Section className='white-background'>
       <div className='container'>
         <div className='center'>
-          <Heading type={2} color='gray' text='Featured articles' />
+          <Heading type={2} color='gray' text='Featured answers' />
           <div className='help-bottom flex flex-space-around padding-top padding-bottom'>
             <div className='help-bottom-box'>
               <div className='links'>
@@ -109,7 +109,7 @@ const Page = (): React.JSX.Element => (
             <ButtonLink
               color='gray-filled'
               rightIcon='arrow_forward'
-              text='See all articles'
+              text='See all answers'
               url='help/answers'
             />
           </div>

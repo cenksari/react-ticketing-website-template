@@ -21,31 +21,31 @@ h1 {
 
 h2 {
   font-size: 1.9em;
-  font-weight: 800;
+  font-weight: 600;
   margin: 0 0 10px 0;
 }
 
 h3 {
   font-size: 1.7em;
-  font-weight: 800;
+  font-weight: 600;
   margin: 0 0 10px 0;
 }
 
 h4 {
   font-size: 1.5em;
-  font-weight: 800;
+  font-weight: 600;
   margin: 0 0 10px 0;
 }
 
 h5 {
   font-size: 1.3em;
-  font-weight: 800;
+  font-weight: 600;
   margin: 0 0 10px 0;
 }
 
 h6 {
   font-size: 1.1em;
-  font-weight: 800;
+  font-weight: 600;
   margin: 0 0 10px 0;
 }
 
@@ -648,10 +648,9 @@ a.button {
 .tabs .tab-bar .tab a,
 .tabs .tab-bar .tab button {
   display: block;
-  font-weight: 400;
-  color: var(--gray);
   border-radius: 0;
   padding: 10px 15px;
+  color: var(--gray);
   background-color: var(--white);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
@@ -809,7 +808,6 @@ a.button {
 .alert p {
   width: 100%;
   margin: 32px 0;
-  font-weight: 500;
 }
 
 .alert button {
@@ -905,7 +903,6 @@ a.button {
   width: 27px;
   height: 27px;
   padding-top: 5px;
-  font-weight: 800;
   font-size: 0.6em;
   overflow: hidden;
   user-select: none;
@@ -1311,7 +1308,7 @@ a.button {
 .paging ul li.active a,
 .paging ul li.active span {
   cursor: default;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--black);
 }
 
