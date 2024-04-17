@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from 'next/link';
+import { type Metadata } from 'next';
 
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
@@ -181,7 +182,7 @@ const title = 'Event name goes here';
 const canonical = 'https://modern-ticketing.com/event/1';
 const description = 'Modern ticketing is a modern ticketing solution';
 
-export const metadata = {
+export const metadata: Metadata = {
   title,
   description,
   keywords: 'modern ticketing',

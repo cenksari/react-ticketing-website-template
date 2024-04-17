@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { type Metadata } from 'next';
+
 import Box from '@components/Box/Box';
 import Master from '@components/Layout/Master';
 import Slider from '@components/Slider/Slider';
@@ -117,7 +119,7 @@ const title = 'Promoters';
 const canonical = 'https://modern-ticketing.com/promoters';
 const description = 'Modern ticketing is a modern ticketing solution';
 
-export const metadata = {
+export const metadata: Metadata = {
   title,
   description,
   keywords: 'modern ticketing',
