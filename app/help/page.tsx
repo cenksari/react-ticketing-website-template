@@ -122,9 +122,8 @@ const Page = (): React.JSX.Element => (
         <div className='center'>
           <Heading type={3} color='gray' text='Any questions?' />
           <p className='gray'>
-            Try our help centre to browse our articles to find the information you need. If you
-            can&apos;t find what you are looking for or need further support please contact us and
-            we will be happy to help.
+            If you can&apos;t find what you are looking for or need further support please contact
+            us and we will be happy to help.
           </p>
 
           <div className='button-container'>

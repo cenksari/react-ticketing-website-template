@@ -1045,12 +1045,13 @@ td {
   display: inline-block;
 }
 
-.help-answers a:hover {
+.help-answers a:hover,
+.help-answers h5:hover {
   text-decoration: underline;
 }
 
 .help-answers ul {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .help-answers ul li {
