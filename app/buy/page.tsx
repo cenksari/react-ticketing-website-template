@@ -62,7 +62,7 @@ const Page = (): React.JSX.Element => (
           </table>
         </div>
         <Form />
-        <div className='padding-bottom center'>
+        <div className='paragraph-container center'>
           <p>
             By clicking place payment button I agree to the&nbsp;
             <Link href='/legal/terms-of-service' className='blue'>
