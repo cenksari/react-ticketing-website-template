@@ -25,7 +25,7 @@ const Page = (): React.JSX.Element => (
     <Section>
       <div className='container'>
         <div className='center'>
-          <Heading type={2} color='red' text='Manage everything with a single application' />
+          <Heading type={5} color='gray' text='Manage everything with a single application' />
           <p className='gray form-information'>
             With our specially designed Promoter application, you can track ticket sales in
             real-time and admit customers at the door with your barcode scanner. Plus, it&apos;s
@@ -34,7 +34,7 @@ const Page = (): React.JSX.Element => (
           <div className='button-container'>
             <ButtonLink
               text='Get started'
-              color='red-filled'
+              color='gray-filled'
               rightIcon='arrow_forward'
               url='contact'
             />
@@ -46,7 +46,7 @@ const Page = (): React.JSX.Element => (
     <Section className='white-background'>
       <div className='container'>
         <div className='center'>
-          <Heading type={2} color='purple' text='Sustainable ticketing' />
+          <Heading type={5} color='gray' text='Sustainable ticketing' />
           <p className='gray form-information'>
             Stunning, white-labelled pages to promote your event. To get started selling tickets
             online with Modern ticketing, you&apos;ll first create a beautiful event website to
@@ -55,7 +55,7 @@ const Page = (): React.JSX.Element => (
           <div className='button-container'>
             <ButtonLink
               text='Get started'
-              color='purple-filled'
+              color='gray-filled'
               rightIcon='arrow_forward'
               url='contact'
             />
@@ -67,7 +67,7 @@ const Page = (): React.JSX.Element => (
     <Section>
       <div className='container'>
         <div className='center'>
-          <Heading type={2} color='yellow' text='How it works?' />
+          <Heading type={5} color='gray' text='How it works?' />
           <p className='gray'>100% Modern Ticketing backed guarantee.</p>
         </div>
       </div>
@@ -75,23 +75,23 @@ const Page = (): React.JSX.Element => (
       <div className='carousel padding-top'>
         <Slider>
           <Box className='gray'>
-            <span className='material-symbols-outlined blue'>today</span>
+            <span className='material-symbols-outlined gray'>today</span>
             <p>Break down silos between marketing, design, and development</p>
           </Box>
           <Box className='gray'>
-            <span className='material-symbols-outlined red'>stacked_bar_chart</span>
+            <span className='material-symbols-outlined gray'>stacked_bar_chart</span>
             <p>Backed by enterprise-grade security</p>
           </Box>
           <Box className='gray'>
-            <span className='material-symbols-outlined purple'>area_chart</span>
+            <span className='material-symbols-outlined gray'>area_chart</span>
             <p>We’ll partner with you to ensure success</p>
           </Box>
           <Box className='gray'>
-            <span className='material-symbols-outlined green'>table_chart_view</span>
+            <span className='material-symbols-outlined gray'>table_chart_view</span>
             <p>World-class performance</p>
           </Box>
           <Box className='gray'>
-            <span className='material-symbols-outlined yellow'>database</span>
+            <span className='material-symbols-outlined gray'>database</span>
             <p>Harness the power of code without writing it</p>
           </Box>
           <Box className='gray'>
@@ -104,7 +104,7 @@ const Page = (): React.JSX.Element => (
       <div className='button-container center'>
         <ButtonLink
           text='Get started'
-          color='yellow-filled'
+          color='gray-filled'
           rightIcon='arrow_forward'
           url='contact'
         />

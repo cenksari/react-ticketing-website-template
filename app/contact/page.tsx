@@ -56,7 +56,7 @@ const Page = (): React.JSX.Element => (
             before asking us?
           </p>
           <div className='button-container'>
-            <ButtonLink color='gray-filled' text='Help page' rightIcon='arrow_forward' url='' />
+            <ButtonLink color='gray-filled' text='Help page' rightIcon='arrow_forward' url='help' />
           </div>
         </div>
       </div>
