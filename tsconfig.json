@@ -23,6 +23,7 @@
       "@hooks/*": ["./hooks/*"],
       "@utils/*": ["./utils/*"],
       "@contexts/*": ["./contexts/*"],
+      "@providers/*": ["./providers/*"],
       "@components/*": ["./components/*"]
     }
   },

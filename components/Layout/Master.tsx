@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import AlertProvider from '@contexts/alertContext';
+import AlertProvider from '@providers/AlertProvider';
 
 import Alert from '@components/Alert/Alert';
 import Header from '@components/Header/Header';

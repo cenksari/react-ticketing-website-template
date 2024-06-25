@@ -18,9 +18,8 @@ export interface IRequest {
 }
 
 const auth = {
-  username: '68145831',
-  password:
-    '7cc5005d70004ef08e622c69a603014bda0b39138a48494b8214d6c50262ac7c494087085b194a7cbb66a25e24c249a9',
+  username: 'username',
+  password: 'password',
 };
 
 const createAuth = base64.encode(`${auth.username}:${auth.password}`);
@@ -31,7 +30,7 @@ const createAuth = base64.encode(`${auth.username}:${auth.password}`);
  * @return {string} Builded API URL
  */
 const buildUrl = (): string => {
-  return 'https://businesswise-memberapi.azurewebsites.net';
+  return 'https://website-api.com';
 };
 
 /**

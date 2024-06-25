@@ -1,26 +1,6 @@
-'use client';
-
 import React from 'react';
 
-export interface IAlert {
-  type: string;
-  text: string;
-  show?: boolean | false;
-}
-
-export interface IAlertContext {
-  alert: IAlert;
-  hideAlert: () => void;
-  showAlert: (alert: IAlert) => void;
-}
-
-const initialState = {
-  alert: { type: '', text: '', show: false },
-  hideAlert: () => {},
-  showAlert: () => {},
-};
-
-export const AlertContext = React.createContext<IAlertContext>(initialState);
+import { AlertContext, initialState, type IAlert } from '../contexts/alertContext';
 
 const AlertProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [alert, setAlert] = React.useState<IAlert>(initialState.alert);
