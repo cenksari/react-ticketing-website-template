@@ -6,19 +6,19 @@ If you like this resource, please follow me on GitHub. Thank you!
 
 ## Screenshots
 
-![Home](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/dashboard.png)
+![Home](https://raw.githubusercontent.com/cenksari/react-ticketing-website-template/master/screenshots/home.png)
 
-![Event](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/products.png)
+![Event](https://raw.githubusercontent.com/cenksari/react-ticketing-website-template/master/screenshots/event.png)
 
-![Venue](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/product.png)
+![Venue](https://raw.githubusercontent.com/cenksari/react-ticketing-website-template/master/screenshots/venue.png)
 
-![Tickets](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/tables.png)
+![Tickets](https://raw.githubusercontent.com/cenksari/react-ticketing-website-template/master/screenshots/tickets.png)
 
-![Signin](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/signin.png)
+![Signin](https://raw.githubusercontent.com/cenksari/react-ticketing-website-template/master/screenshots/signin.png)
 
-![Venues](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/messages.png)
+![Venues](https://raw.githubusercontent.com/cenksari/react-ticketing-website-template/master/screenshots/venues.png)
 
-![Help](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/comments.png)
+![Help](https://raw.githubusercontent.com/cenksari/react-ticketing-website-template/master/screenshots/help.png)
 
 ## Authors
 
