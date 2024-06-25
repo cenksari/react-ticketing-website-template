@@ -9,28 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^14.2.1",
-    "axios": "^1.6.8",
+    "axios": "^1.7.2",
     "base-64": "^1.0.0",
-    "next": "^14.2.1",
-    "react": "^18",
-    "react-dom": "^18"
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.4",
     "@types/base-64": "^1.0.2",
-    "@types/node": "^20",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@types/node": "^20.14.8",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard-with-typescript": "^43.0.1",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.34.1",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.5"
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "prettier": "^3.3.2",
+    "typescript": "^4.9.5"
   }
 }

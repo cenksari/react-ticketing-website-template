@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -18,13 +18,23 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@hooks/*": ["./hooks/*"],
       "@utils/*": ["./utils/*"],
       "@contexts/*": ["./contexts/*"],
       "@components/*": ["./components/*"]
-    },
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "**/*.mjs"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.mjs",
+    ".eslintrc.cjs",
+    ".prettierrc.cjs",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

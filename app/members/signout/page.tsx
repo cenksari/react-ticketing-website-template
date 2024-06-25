@@ -20,7 +20,7 @@ const Page = (): React.JSX.Element => (
           <div className='button-container'>
             <ButtonLink color='gray-overlay' text='Return to home' url='' />
             &nbsp; &nbsp;
-            <ButtonLink color='blue-filled' text='Sign in again' url='/members/signin' />
+            <ButtonLink color='blue-filled' text='Sign in again' url='members/signin' />
           </div>
         </div>
       </div>

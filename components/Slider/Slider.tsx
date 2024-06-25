@@ -136,6 +136,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
       elementRef.removeEventListener('mousemove', mouseMove);
       elementRef.removeEventListener('mouseleave', mouseLeave);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

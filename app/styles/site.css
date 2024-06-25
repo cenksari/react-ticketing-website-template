@@ -1084,7 +1084,8 @@ td {
   background-color: var(--light-gray);
 }
 
-.item-right, .item-left {
+.item-right,
+.item-left {
   padding: 20px;
 }
 
@@ -1111,7 +1112,8 @@ td {
   letter-spacing: 2px;
 }
 
-.item-right .up-border, .item-right .down-border {
+.item-right .up-border,
+.item-right .down-border {
   position: absolute;
   padding: 14px 15px;
   border-radius: 50em;

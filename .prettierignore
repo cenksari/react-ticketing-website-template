@@ -1,0 +1,6 @@
+**/*.txt
+**/*.png
+**/*.ico
+**/*.xml
+**/*.lock
+**/*ignore

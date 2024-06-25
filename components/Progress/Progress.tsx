@@ -25,6 +25,7 @@ const Progress = ({ ms }: IProps): React.JSX.Element => {
     return () => {
       clearInterval(interval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
