@@ -4,3 +4,4 @@
 **/*.xml
 **/*.lock
 **/*ignore
+**/*license

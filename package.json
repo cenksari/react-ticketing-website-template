@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "eslint": "eslint ./app",
+    "prettier": "prettier --check **",
+    "prettier fix": "prettier --write **"
   },
   "dependencies": {
     "axios": "^1.7.2",
@@ -18,7 +21,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.4",
     "@types/base-64": "^1.0.2",
-    "@types/node": "^20.14.8",
+    "@types/node": "^20.14.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "eslint": "^8.57.0",
