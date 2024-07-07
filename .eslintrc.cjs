@@ -20,7 +20,7 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'warn',
     '@next/next/no-img-element': 'off',
     'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
   },
