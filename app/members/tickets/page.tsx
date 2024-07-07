@@ -16,14 +16,12 @@ const Page = (): React.JSX.Element => (
         <div className='center'>
           <Heading type={1} color='gray' text='My tickets' />
           <p className='gray form-information'>
-            You can access the tickets you purchased from this page at any time. You can download or
-            send your tickets. Please note: You will not be able to see tickets for events that have
-            already ended or been canceled on this page.
+            您可以在任何时候访问您从本页购买的机票。您可以下载或发送您的票。请注意: 您将无法在本页看到已经结束或取消的活动的门票。
           </p>
           <div className='button-container'>
             <ButtonGroup color='gray'>
-              <ButtonGroupItem url='members/tickets' text='My tickets' active />
-              <ButtonGroupItem url='members/account' text='My account' />
+              <ButtonGroupItem url='members/tickets' text='我的门票' active />
+              <ButtonGroupItem url='members/account' text='我的账户' />
             </ButtonGroup>
           </div>
         </div>
@@ -33,22 +31,22 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <div className='ticket-item'>
           <div className='item-right'>
-            <h2>21</h2>
-            <p>September</p>
+            <h2>TBD</h2>
+            <p>TBD</p>
             <span className='material-symbols-outlined'>qr_code_2</span>
             <strong>21EX9P</strong>
             <span className='up-border'></span>
             <span className='down-border'></span>
           </div>
           <div className='item-left'>
-            <h5>Event name goes here</h5>
+            <h5>谷艺凌香港演唱会-VIP门票</h5>
             <p>
               <span className='material-symbols-outlined'>event</span>
               Tue, Sep 21, 2024 19:00
             </p>
             <p>
               <span className='material-symbols-outlined'>apartment</span>
-              Royal Albert Hall
+              Hong Kong TBD
             </p>
             <div className='actions'>
               <Link href='/members/tickets' title='Download tickets'>
@@ -71,7 +69,7 @@ const Page = (): React.JSX.Element => (
             <span className='down-border'></span>
           </div>
           <div className='item-left'>
-            <h5>Event name goes here</h5>
+            <h5>Lisa Crazy Hourse Show</h5>
             <p>
               <span className='material-symbols-outlined'>event</span>
               Tue, Sep 21, 2024 19:00
