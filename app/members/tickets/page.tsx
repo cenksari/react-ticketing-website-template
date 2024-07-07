@@ -16,7 +16,8 @@ const Page = (): React.JSX.Element => (
         <div className='center'>
           <Heading type={1} color='gray' text='My tickets' />
           <p className='gray form-information'>
-            您可以在任何时候访问您从本页购买的机票。您可以下载或发送您的票。请注意: 您将无法在本页看到已经结束或取消的活动的门票。
+            您可以在任何时候访问您从本页购买的机票。您可以下载或发送您的票。
+            请注意: 您将无法在本页看到已经结束或取消的活动的门票。
           </p>
           <div className='button-container'>
             <ButtonGroup color='gray'>
