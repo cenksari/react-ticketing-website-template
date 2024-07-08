@@ -16,18 +16,18 @@ const Page = (): React.JSX.Element => (
     <Section className='white-background'>
       <div className='container'>
         <div className='center'>
-          <Heading type={1} color='gray' text='My account' />
+          <Heading type={1} color='gray' text='我的账户' />
           <p className='gray form-information'>
             You can update your profile photo and your account details here.
           </p>
           <div className='button-container'>
             <ButtonGroup color='gray'>
-              <ButtonGroupItem url='members/tickets' text='My tickets' />
-              <ButtonGroupItem url='members/account' text='My account' active />
+              <ButtonGroupItem url='members/tickets' text='我的门票' />
+              <ButtonGroupItem url='members/account' text='我的账户' active />
             </ButtonGroup>
           </div>
           <div className='padding-top'>
-            <FormPhoto data='https://www.cenksari.com/content/profile.jpg' />
+            {/* <FormPhoto data='https://www.cenksari.com/content/profile.jpg' /> */}
           </div>
         </div>
       </div>
@@ -36,8 +36,8 @@ const Page = (): React.JSX.Element => (
       <div className='container'>
         <FormMain
           data={{
-            name: 'Cenk',
-            lastname: 'SARI',
+            name: '我',
+            lastname: '',
             email: 'cenk@cenksari.com',
           }}
         />
@@ -46,7 +46,7 @@ const Page = (): React.JSX.Element => (
   </Master>
 );
 
-const title = 'My account';
+const title = '我的账户';
 const canonical = 'https://modern-ticketing.com/members/account';
 const description = 'Modern ticketing is a modern ticketing solution';
 

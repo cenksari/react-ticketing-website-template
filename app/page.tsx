@@ -37,7 +37,7 @@ const Page = (): React.JSX.Element => (
         from='20'
         color='blue'
         when='Tue, Sep 21, 2024 19:00'
-        name='Event name goes here'
+        name='谷艺凌香港演唱会'
         venue='Royal Albert Hall'
         image='https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -46,7 +46,7 @@ const Page = (): React.JSX.Element => (
         from='25'
         color='blue'
         when='Wed, Aug 9, 2024 22:00'
-        name='Event name goes here'
+        name='朴彩英个人演唱会'
         venue='o2 Arena'
         image='https://images.unsplash.com/photo-1472691681358-fdf00a4bfcfe?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -55,14 +55,14 @@ const Page = (): React.JSX.Element => (
         from='10'
         color='blue'
         when='Sun, Mar 14, 2024 15:00'
-        name='Event name goes here'
+        name='Lisa疯马秀'
         venue='Wembley Stadium'
         image='https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
       <EventCard
         url='1'
         from='60'
-        color='blue'
+        color='那艺娜-贝塔儿歌首唱会'
         when='Mon, Jul 2, 2024 20:00'
         name='Event name goes here'
         venue='Eventim Apollo'
@@ -73,7 +73,7 @@ const Page = (): React.JSX.Element => (
         from='20'
         color='blue'
         when='Tue, Sep 21, 2024 19:00'
-        name='Event name goes here'
+        name='那艺娜新歌《恨如张冰》发布会'
         venue='Royal Albert Hall'
         image='https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -82,7 +82,7 @@ const Page = (): React.JSX.Element => (
         from='25'
         color='blue'
         when='Wed, Aug 9, 2024 22:00'
-        name='Event name goes here'
+        name='刘德华见面会'
         venue='o2 Arena'
         image='https://images.unsplash.com/photo-1472691681358-fdf00a4bfcfe?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -94,7 +94,7 @@ const Page = (): React.JSX.Element => (
         from='20'
         color='red'
         when='Tue, Sep 21, 2024 19:00'
-        name='Event name goes here'
+        name='胡妈妈情感咨询'
         venue='Royal Albert Hall'
         image='https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -103,7 +103,7 @@ const Page = (): React.JSX.Element => (
         from='25'
         color='red'
         when='Wed, Aug 9, 2024 22:00'
-        name='Event name goes here'
+        name='万邦迷姐新歌发布会'
         venue='o2 Arena'
         image='https://images.unsplash.com/photo-1472691681358-fdf00a4bfcfe?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -112,7 +112,7 @@ const Page = (): React.JSX.Element => (
         from='10'
         color='red'
         when='Sun, Mar 14, 2024 15:00'
-        name='Event name goes here'
+        name='《虾面爱加油菜花》演唱会'
         venue='Wembley Stadium'
         image='https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -121,7 +121,7 @@ const Page = (): React.JSX.Element => (
         from='60'
         color='red'
         when='Mon, Jul 2, 2024 20:00'
-        name='Event name goes here'
+        name='嘎嘎小姐演唱会'
         venue='Eventim Apollo'
         image='https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -130,7 +130,7 @@ const Page = (): React.JSX.Element => (
         from='20'
         color='red'
         when='Tue, Sep 21, 2024 19:00'
-        name='Event name goes here'
+        name='防弹少年团退役见面会'
         venue='Royal Albert Hall'
         image='https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -139,7 +139,7 @@ const Page = (): React.JSX.Element => (
         from='25'
         color='red'
         when='Wed, Aug 9, 2024 22:00'
-        name='Event name goes here'
+        name='鹅妈妈摔倒大会'
         venue='o2 Arena'
         image='https://images.unsplash.com/photo-1472691681358-fdf00a4bfcfe?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -151,7 +151,7 @@ const Page = (): React.JSX.Element => (
         from='20'
         color='orange'
         when='Tue, Sep 21, 2024 19:00'
-        name='Event name goes here'
+        name='周姐印地'
         venue='Royal Albert Hall'
         image='https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -160,7 +160,7 @@ const Page = (): React.JSX.Element => (
         from='25'
         color='orange'
         when='Wed, Aug 9, 2024 22:00'
-        name='Event name goes here'
+        name='橘子姐见面会'
         venue='o2 Arena'
         image='https://images.unsplash.com/photo-1472691681358-fdf00a4bfcfe?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />
@@ -169,7 +169,7 @@ const Page = (): React.JSX.Element => (
         from='10'
         color='orange'
         when='Sun, Mar 14, 2024 15:00'
-        name='Event name goes here'
+        name='大火宝祭奠大会'
         venue='Wembley Stadium'
         image='https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       />

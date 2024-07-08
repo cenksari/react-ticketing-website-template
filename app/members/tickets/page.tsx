@@ -14,7 +14,7 @@ const Page = (): React.JSX.Element => (
     <Section className='white-background'>
       <div className='container'>
         <div className='center'>
-          <Heading type={1} color='gray' text='My tickets' />
+          <Heading type={1} color='gray' text='我的门票' />
           <p className='gray form-information'>
             您可以在任何时候访问您从本页购买的机票。您可以下载或发送您的票。
             请注意: 您将无法在本页看到已经结束或取消的活动的门票。
@@ -94,7 +94,7 @@ const Page = (): React.JSX.Element => (
   </Master>
 );
 
-const title = 'My tickets';
+const title = '我的门票';
 const canonical = 'https://modern-ticketing.com/members/tickets';
 const description = 'Modern ticketing is a modern ticketing solution';
 

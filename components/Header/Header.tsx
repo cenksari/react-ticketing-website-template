@@ -69,15 +69,15 @@ const Header = (): React.JSX.Element => {
               setDropdown(!dropdown);
             }}
           >
-            Cenk
+            我
             <span className='material-symbols-outlined'>
               {dropdown ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}
             </span>
           </button>
           {dropdown && (
             <Dropdown color='gray'>
-              <DropdownItem url='members/tickets' text='My tickets' />
-              <DropdownItem url='members/account' text='My account' />
+              <DropdownItem url='members/tickets' text='我的门票' />
+              <DropdownItem url='members/account' text='我的账户' />
               <hr />
               <DropdownItem url='members/signout' text='Sign out' />
             </Dropdown>
@@ -128,7 +128,7 @@ const Header = (): React.JSX.Element => {
                 </li>
                 <li>
                   <Link href='/tickets' className='white'>
-                    My tickets
+                    我的门票
                   </Link>
                 </li>
                 <li>

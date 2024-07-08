@@ -22,10 +22,10 @@ const Footer = (): React.JSX.Element => (
           Venues
         </Link>
         <Link href='/members/tickets' className='white'>
-          My tickets
+          我的门票
         </Link>
         <Link href='/members/account' className='white'>
-          My account
+          我的账户
         </Link>
       </div>
       <div className='links'>
