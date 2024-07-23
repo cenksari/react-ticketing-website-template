@@ -1,5 +1,6 @@
 import React from 'react';
 
+// interfaces
 interface IProps {
   name: string;
   type: string;

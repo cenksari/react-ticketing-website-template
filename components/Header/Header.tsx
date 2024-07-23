@@ -4,8 +4,10 @@ import React from 'react';
 
 import Link from 'next/link';
 
+// hooks
 import useClickOutside from '@hooks/useClickOutside';
 
+// components
 import Dropdown from '@components/Dropdown/Dropdown';
 import DropdownItem from '@components/Dropdown/DropdownItem';
 import ProfilePhoto from '@components/Profile/ProfilePhoto';
@@ -16,10 +18,18 @@ const Header = (): React.JSX.Element => {
   const [menu, setMenu] = React.useState<boolean>(false);
   const [dropdown, setDropdown] = React.useState<boolean>(false);
 
+  /**
+   * This is a functional component for the Header.
+   * It uses the useClickOutside hook to handle click events outside the component.
+   * It also manages the state of the menu and dropdown.
+   */
   useClickOutside(wrapperRef, () => {
     setDropdown(false);
   });
 
+  /**
+   * Toggles the menu state.
+   */
   const menuState = (): void => {
     setMenu((state) => !state);
   };

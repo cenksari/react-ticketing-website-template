@@ -1,7 +1,9 @@
 import React from 'react';
 
+// components
 import Heading from '@components/Heading/Heading';
 
+// interfaces
 interface IProps {
   type: string;
   text?: string;

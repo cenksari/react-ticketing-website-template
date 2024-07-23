@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+// interfaces
 interface IProps {
   children: React.ReactNode;
 }
@@ -16,6 +17,10 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
   const [leftArrowDisable, setLeftArrowDisable] = React.useState<boolean>(true);
   const [rightArrowDisable, setRightArrowDisable] = React.useState<boolean>(false);
 
+  /**
+   * This function is used to handle the buttons in the slider.
+   * It checks if the left or right scroll buttons should be disabled based on the scroll position.
+   */
   const buttons = (): void => {
     const { offsetWidth, scrollWidth, scrollLeft } = navReference.current;
 
@@ -36,30 +41,45 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
     }
   };
 
-  // const wheel = (e): void => {
-  //   if (e.deltaY === 0) return;
-
-  //   e.preventDefault();
-
-  //   navRef.current.scrollTo({
-  //     left: navRef.current.scrollLeft + e.deltaY,
-  //   });
-  // };
-
+  /**
+   * This function handles the click event on the slider.
+   * It prevents the default click behavior if the preventClick flag is set to true.
+   *
+   * @param {MouseEvent} e - The mouse event object.
+   */
   const click = (e: MouseEvent): void => {
     if (preventClick.current) {
       e.preventDefault();
     }
   };
 
+  /**
+   * This function is used to handle the horizontal scrolling of the slider.
+   * It updates the scroll position based on the mouse movement.
+   *
+   * @param {MouseEvent} e - The mouse event object.
+   */
   const scroll = React.useCallback(() => {
     buttons();
   }, []);
 
+  /**
+   * This function is used to handle the mouse up event on the slider.
+   * It sets the isDown state to false, indicating that the mouse is no longer down.
+   */
   const mouseUp = (): void => {
     isDown.current = false;
   };
 
+  /**
+   * This function is used to handle the mouse down event on the slider.
+   * It sets the isDown state to true, indicating that the mouse is down, and initializes
+   * the starting position of the mouse and the current scroll position of the navigation.
+   * It also sets preventClick to false to allow the click event to be handled.
+   * Finally, it calls the buttons function to update the state of the left and right arrows.
+   *
+   * @param {MouseEvent} e - The mouse event object.
+   */
   const mouseDown = React.useCallback((e: MouseEvent) => {
     e.preventDefault();
 
@@ -74,6 +94,14 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
     buttons();
   }, []);
 
+  /**
+   * This function is used to handle the mouse move event on the slider.
+   * It updates the scroll position based on the mouse movement while the mouse is down.
+   * It also sets preventClick to true to prevent the click event from being handled.
+   * Finally, it calls the buttons function to update the state of the left and right arrows.
+   *
+   * @param {MouseEvent} e - The mouse event object.
+   */
   const mouseMove = React.useCallback((e: MouseEvent) => {
     if (!isDown.current) return;
 
@@ -90,12 +118,26 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
     buttons();
   }, []);
 
+  /**
+   * This function is used to handle the mouse leave event on the slider.
+   * It sets the isDown state to false, indicating that the mouse is no longer down,
+   * and sets preventClick to false to allow the click event to be handled.
+   */
   const mouseLeave = (): void => {
     isDown.current = false;
 
     preventClick.current = false;
   };
 
+  /**
+   * Handles horizontal scrolling of the slider.
+   *
+   * This function scrolls the slider horizontally by a specified step at a given speed.
+   * It stops scrolling when the total scroll amount reaches 320 pixels.
+   *
+   * @param {number} speed - The speed of the scroll in milliseconds.
+   * @param {number} step - The step size of each scroll.
+   */
   const handleHorizantalScroll = (speed: number, step: number): void => {
     let scrollAmount: number = 0;
 
@@ -118,7 +160,6 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
     const elementRef: HTMLDivElement = navReference.current;
 
     window.addEventListener('resize', scroll);
-    // elementRef.addEventListener('wheel', wheel);
     elementRef.addEventListener('click', click);
     elementRef.addEventListener('scroll', scroll);
     elementRef.addEventListener('mouseup', mouseUp);
@@ -128,7 +169,6 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
 
     return () => {
       window.removeEventListener('resize', scroll);
-      // elementRef.removeEventListener('wheel', wheel);
       elementRef.removeEventListener('click', click);
       elementRef.removeEventListener('scroll', scroll);
       elementRef.removeEventListener('mouseup', mouseUp);

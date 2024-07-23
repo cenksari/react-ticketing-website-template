@@ -2,11 +2,14 @@
 
 import React, { type FormEvent } from 'react';
 
+// hooks
+import useAlert from '@hooks/useAlert';
+
+// components
 import Button from '@components/Button/Button';
 import Loader from '@components/Loader/Loader';
 
-import useAlert from '@hooks/useAlert';
-
+// interfaces
 interface IData {
   id: number;
   name: string;
@@ -37,12 +40,24 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
     };
   }, []);
 
+  /**
+   * Orders the tickets in the array based on their ordering.
+   *
+   * @param {IData[]} array - The array of tickets to be ordered.
+   * @return {IData[]} - The ordered array of tickets.
+   */
   const orderTickets = (array: IData[]): IData[] => {
     return array.sort((a, b) => {
       return a.ordering - b.ordering;
     });
   };
 
+  /**
+   * Counts the total quantity of tickets in an array.
+   *
+   * @param {IData[]} array - The array of tickets to count.
+   * @return {number} - The total quantity of tickets.
+   */
   const countTickets = (array: IData[]): number => {
     return array.reduce((sum, curr): number => {
       let q: number = 0;
@@ -57,6 +72,11 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
     }, 0);
   };
 
+  /**
+   * Decreases the quantity of a specific ticket by one, or sets it to 0 if it's not a number or is already 0.
+   *
+   * @param {IData} ticket - The ticket to decrease the quantity of.
+   */
   const handleDecrease = (ticket: IData): void => {
     const tickets: IData[] = formValues.filter((e: IData) => e.id !== ticket.id);
 
@@ -79,6 +99,11 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
     setFormValues(orderTickets(tickets));
   };
 
+  /**
+   * Increases the quantity of a specific ticket by one, or sets it to 1 if it's not a number or is already 9.
+   *
+   * @param {IData} ticket - The ticket to increase the quantity of.
+   */
   const handleIncrease = (ticket: IData): void => {
     const tickets: IData[] = formValues.filter((e: IData) => e.id !== ticket.id);
 
@@ -101,6 +126,15 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
     setFormValues(orderTickets(tickets));
   };
 
+  /**
+   * Handles the form submission event.
+   *
+   * Prevents the default form submission behavior, hides any existing alert, counts the total quantity of tickets selected,
+   * and redirects to the '/buy' page if there are tickets selected. If no tickets are selected, it displays an error alert.
+   *
+   * @param {FormEvent<HTMLFormElement>} e - The event object from the form submission.
+   * @return {Promise<any>} - A promise that resolves to any value.
+   */
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 

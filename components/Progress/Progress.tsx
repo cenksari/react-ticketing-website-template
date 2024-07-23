@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+// interfaces
 interface IProps {
   ms: number;
 }

@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+// interfaces
 export interface IAlert {
   type: string;
   text: string;

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// components
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';

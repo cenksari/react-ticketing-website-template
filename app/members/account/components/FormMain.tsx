@@ -4,15 +4,19 @@ import React, { type FormEvent } from 'react';
 
 import Link from 'next/link';
 
+// hooks
+import useAlert from '@hooks/useAlert';
+
+// components
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 import Loader from '@components/Loader/Loader';
 import ButtonLink from '@components/Button/ButtonLink';
 
-import useAlert from '@hooks/useAlert';
-
+// utils
 import Request, { type IRequest, type IResponse } from '@utils/Request';
 
+// interfaces
 interface IProps {
   data: {
     name: string;
@@ -37,6 +41,11 @@ const FormMain = ({ data }: IProps): React.JSX.Element => {
     lastname: data.lastname,
   });
 
+  /**
+   * Handles the change event for input fields in the form.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The change event.
+   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
 
@@ -46,6 +55,12 @@ const FormMain = ({ data }: IProps): React.JSX.Element => {
     });
   };
 
+  /**
+   * Handles the form submission event.
+   *
+   * @param {FormEvent<HTMLFormElement>} e - The form submission event.
+   * @returns {Promise<any>}
+   */
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 

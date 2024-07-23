@@ -1,8 +1,8 @@
 /**
- * Check string is valid e-mail address.
+ * Checks if the provided string is a valid email address.
  *
- * @param {string} value - E-mail address
- * @return {boolean} - boolean result
+ * @param {string} value - The string to be checked.
+ * @return {boolean} - Returns true if the string is a valid email address, otherwise false.
  */
 const isEmail = (value: string): boolean => {
   const pattern =
@@ -12,22 +12,22 @@ const isEmail = (value: string): boolean => {
 };
 
 /**
- * Check string is valid number format.
+ * Checks if the provided string consists only of digits.
  *
- * @param {string} value - Number
- * @return {boolean} - boolean result
+ * @param {string} value - The string to be checked.
+ * @return {boolean} - Returns true if the string consists only of digits, otherwise false.
  */
 const isNumeric = (value: string): boolean => {
-  const pattern = /^d+$/;
+  const pattern = /^\d+$/;
 
   return pattern.test(value);
 };
 
 /**
- * Check string is valid password.
+ * Checks if the provided string is a strong password.
  *
- * @param {string} value - Password
- * @return {boolean} - boolean result
+ * @param {string} value - The string to be checked.
+ * @return {boolean} - Returns true if the string is a strong password, otherwise false.
  */
 const isStrongPassword = (value: string): boolean => {
   const pattern = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,16}$/;
@@ -36,10 +36,10 @@ const isStrongPassword = (value: string): boolean => {
 };
 
 /**
- * Format number as british currency.
+ * Formats a number as a currency string in GBP with the symbol.
  *
- * @param {number} value - Currency
- * @return {string} - Formatted string value
+ * @param {number} value - The number to be formatted.
+ * @return {string} The formatted currency string.
  */
 const formatCurrency = (value: number): string =>
   new Intl.NumberFormat('en-GB', {

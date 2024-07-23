@@ -2,9 +2,11 @@
 
 import React, { type FormEvent } from 'react';
 
-import Input from '@components/Form/Input';
-
+// hooks
 import useAlert from '@hooks/useAlert';
+
+// components
+import Input from '@components/Form/Input';
 
 interface IFormProps {
   keyword: string;
@@ -17,6 +19,10 @@ const FormSearch = (): React.JSX.Element => {
     keyword: '',
   });
 
+  /**
+   * Handle change in the form input
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The event object
+   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
 
@@ -26,7 +32,14 @@ const FormSearch = (): React.JSX.Element => {
     });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  /**
+   * Handles the form submission event.
+   * Prevents the default form submission behavior and checks if the keyword input is valid.
+   * If the keyword is empty or less than 3 characters, it displays an error alert.
+   *
+   * @param {React.FormEvent<HTMLFormElement>} e - The form submission event.
+   */
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     const { keyword } = formValues;

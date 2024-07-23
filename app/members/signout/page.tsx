@@ -2,6 +2,7 @@ import React from 'react';
 
 import { type Metadata } from 'next';
 
+// components
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';

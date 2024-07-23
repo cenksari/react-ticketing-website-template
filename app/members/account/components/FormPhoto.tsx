@@ -2,13 +2,17 @@
 
 import React, { type FormEvent } from 'react';
 
+// hooks
+import useAlert from '@hooks/useAlert';
+
+// components
 import Loader from '@components/Loader/Loader';
 import ProfilePhoto from '@components/Profile/ProfilePhoto';
 
-import useAlert from '@hooks/useAlert';
-
+// utils
 import Request, { type IRequest, type IResponse } from '@utils/Request';
 
+// interfaces
 interface IProps {
   data: string;
 }
@@ -18,6 +22,17 @@ const FormPhoto = ({ data }: IProps): React.JSX.Element => {
 
   const [loading, setLoading] = React.useState<boolean>(false);
 
+  /**
+   * Handles the form submission event.
+   *
+   * This function is called when the form is submitted. It prevents the default form submission behavior,
+   * hides any existing alert, sets the loading state to true, sends a POST request to the signin/password endpoint,
+   * and handles the response. If the response status is 200, it does nothing. If the status is not 200, it shows an error alert.
+   * Finally, it sets the loading state back to false.
+   *
+   * @param {FormEvent<HTMLFormElement>} e - The form submission event.
+   * @returns {Promise<any>} A promise that resolves when the request is complete.
+   */
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 

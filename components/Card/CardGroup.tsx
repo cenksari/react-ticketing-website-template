@@ -1,10 +1,12 @@
 import React from 'react';
 
+// components
 import Slider from '@components/Slider/Slider';
 import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import ButtonLink from '@components/Button/ButtonLink';
 
+// interfaces
 interface IProps {
   url: string;
   title: string;

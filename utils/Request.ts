@@ -3,6 +3,7 @@
 import base64 from 'base-64';
 import axios, { type AxiosResponse, type AxiosError } from 'axios';
 
+// interfaces
 export interface IResponse {
   data: {
     title?: string;
@@ -17,6 +18,7 @@ export interface IRequest {
   postData?: any;
 }
 
+// variables
 const auth = {
   username: 'username',
   password: 'password',
@@ -25,19 +27,19 @@ const auth = {
 const createAuth = base64.encode(`${auth.username}:${auth.password}`);
 
 /**
- * Build API URL.
+ * Generates the base URL for API requests.
  *
- * @return {string} Builded API URL
+ * @return {string} The base URL for API requests.
  */
 const buildUrl = (): string => {
   return 'https://website-api.com';
 };
 
 /**
- * Parse returning results as JSON value.
+ * Parses a JSON string into a JavaScript object.
  *
- * @param {string} value - String value
- * @return {object} Parsed result
+ * @param {string} value - The JSON string to be parsed.
+ * @return {any} The parsed JavaScript object.
  */
 const parseResults = (value: string): any => {
   const parse = JSON.parse(value);
@@ -46,10 +48,10 @@ const parseResults = (value: string): any => {
 };
 
 /**
- * Call API and return results.
+ * This function makes a request to the API and returns the response.
  *
- * @param {IRequest} parameters - IRequest
- * @return {IResponse} IResponse - API response
+ * @param {IRequest} parameters - The parameters for the request.
+ * @return {Promise<IResponse>} The response from the API.
  */
 const getResponse = async (parameters: IRequest): Promise<IResponse> => {
   let response: AxiosResponse<any, any>;

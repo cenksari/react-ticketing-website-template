@@ -2,9 +2,11 @@
 
 import React from 'react';
 
-import Progress from '@components/Progress/Progress';
-
+// hooks
 import useAlert from '@hooks/useAlert';
+
+// components
+import Progress from '@components/Progress/Progress';
 
 const Alert = (): React.JSX.Element => {
   const { alert, hideAlert } = useAlert();

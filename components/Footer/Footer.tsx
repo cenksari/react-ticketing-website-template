@@ -2,6 +2,7 @@ import React from 'react';
 
 import Link from 'next/link';
 
+// components
 import ButtonLink from '@components/Button/ButtonLink';
 
 const Footer = (): React.JSX.Element => (

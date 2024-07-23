@@ -1,5 +1,6 @@
 import React from 'react';
 
+// components
 import Slider from '@components/Slider/Slider';
 import ButtonCircle from '@components/Button/ButtonCircle';
 

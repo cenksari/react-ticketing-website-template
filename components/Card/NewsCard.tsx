@@ -2,9 +2,11 @@ import React from 'react';
 
 import Link from 'next/link';
 
+// components
 import Badge from '@components/Badge/Badge';
 import ButtonLink from '@components/Button/ButtonLink';
 
+// interfaces
 interface IProps {
   url: string;
   name: string;

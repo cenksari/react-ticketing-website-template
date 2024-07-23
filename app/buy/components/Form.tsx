@@ -2,15 +2,19 @@
 
 import React, { type FormEvent } from 'react';
 
+// hooks
+import useAlert from '@hooks/useAlert';
+
+// components
 import Input from '@components/Form/Input';
 import Button from '@components/Button/Button';
 import Loader from '@components/Loader/Loader';
 import Heading from '@components/Heading/Heading';
 
-import useAlert from '@hooks/useAlert';
-
+// utils
 import Request, { type IRequest, type IResponse } from '@utils/Request';
 
+// interfaces
 interface IFormProps {
   name: string;
   email: string;
@@ -33,6 +37,11 @@ const Form = (): React.JSX.Element => {
     cardExpiration: '',
   });
 
+  /**
+   * Handles changes to form input fields.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The event object from the input change.
+   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
 
@@ -42,6 +51,12 @@ const Form = (): React.JSX.Element => {
     });
   };
 
+  /**
+   * Handles form submission.
+   *
+   * @param {FormEvent<HTMLFormElement>} e - The event object from the form submission.
+   * @return {Promise<any>} - The result of the form submission.
+   */
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 
