@@ -1,7 +1,7 @@
 'use client';
 
 import base64 from 'base-64';
-import axios, { type AxiosResponse, type AxiosError } from 'axios';
+import axios, {type AxiosError, type AxiosResponse} from 'axios';
 
 // interfaces
 export interface IResponse {

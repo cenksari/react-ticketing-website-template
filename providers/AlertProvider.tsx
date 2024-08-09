@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AlertContext, initialState, type IAlert } from '../contexts/alertContext';
+import {AlertContext, type IAlert, initialState} from '../contexts/alertContext';
 
 const AlertProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [alert, setAlert] = React.useState<IAlert>(initialState.alert);

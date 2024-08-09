@@ -1,6 +1,6 @@
 'use client';
 
-import React, { type FormEvent } from 'react';
+import React, {type FormEvent} from 'react';
 
 // hooks
 import useAlert from '@hooks/useAlert';
@@ -11,7 +11,7 @@ import Button from '@components/Button/Button';
 import Loader from '@components/Loader/Loader';
 
 // utils
-import Request, { type IRequest, type IResponse } from '@utils/Request';
+import Request, {type IRequest, type IResponse} from '@utils/Request';
 
 // interfaces
 interface IFormProps {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // types
-import { type Metadata, type Viewport } from 'next';
+import {type Metadata, type Viewport} from 'next';
 
 // styles
 import './styles/ui.css';

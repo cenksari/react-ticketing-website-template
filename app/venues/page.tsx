@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { type Metadata } from 'next';
+import {type Metadata} from 'next';
 
 // components
 import Master from '@components/Layout/Master';

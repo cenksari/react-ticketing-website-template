@@ -1,6 +1,6 @@
 'use client';
 
-import React, { type FormEvent } from 'react';
+import React, {type FormEvent} from 'react';
 
 // hooks
 import useAlert from '@hooks/useAlert';

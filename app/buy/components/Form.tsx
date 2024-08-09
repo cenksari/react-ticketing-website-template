@@ -1,6 +1,6 @@
 'use client';
 
-import React, { type FormEvent } from 'react';
+import React, {type FormEvent} from 'react';
 
 // hooks
 import useAlert from '@hooks/useAlert';
@@ -12,7 +12,7 @@ import Loader from '@components/Loader/Loader';
 import Heading from '@components/Heading/Heading';
 
 // utils
-import Request, { type IRequest, type IResponse } from '@utils/Request';
+import Request, {type IRequest, type IResponse} from '@utils/Request';
 
 // interfaces
 interface IFormProps {
