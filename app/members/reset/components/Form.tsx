@@ -1,6 +1,6 @@
 'use client';
 
-import React, { type FormEvent } from 'react';
+import { useState } from 'react';
 
 // hooks
 import useAlert from '@hooks/useAlert';
@@ -19,11 +19,11 @@ interface IFormProps {
   newPasswordAgain: string;
 }
 
-const Form = (): React.JSX.Element => {
+const Form = (): JSX.Element => {
   const { showAlert, hideAlert } = useAlert();
 
-  const [loading, setLoading] = React.useState<boolean>(false);
-  const [formValues, setFormValues] = React.useState<IFormProps>({
+  const [loading, setLoading] = useState<boolean>(false);
+  const [formValues, setFormValues] = useState<IFormProps>({
     newPassword: '',
     newPasswordAgain: '',
   });
@@ -52,10 +52,10 @@ const Form = (): React.JSX.Element => {
    * and handles the response. If the response status is 200, it does nothing. If the status is not 200, it shows an error alert.
    * Finally, it sets the loading state back to false.
    *
-   * @param {FormEvent<HTMLFormElement>} e - The form submission event.
+   * @param {React.FormEvent<HTMLFormElement>} e - The form submission event.
    * @returns {Promise<any>} A promise that resolves when the request is complete.
    */
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 
     hideAlert();

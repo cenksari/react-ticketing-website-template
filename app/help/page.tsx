@@ -1,6 +1,5 @@
-import React from 'react';
-
 import Link from 'next/link';
+
 import { type Metadata } from 'next';
 
 // components
@@ -11,7 +10,7 @@ import ButtonLink from '@components/Button/ButtonLink';
 
 import FormSearch from './components/FormSearch';
 
-const Page = (): React.JSX.Element => (
+const Page = (): JSX.Element => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

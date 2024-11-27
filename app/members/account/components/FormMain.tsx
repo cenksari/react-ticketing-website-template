@@ -1,6 +1,6 @@
 'use client';
 
-import React, { type FormEvent } from 'react';
+import { useState } from 'react';
 
 import Link from 'next/link';
 
@@ -31,11 +31,11 @@ interface IFormProps {
   lastname: string;
 }
 
-const FormMain = ({ data }: IProps): React.JSX.Element => {
+const FormMain = ({ data }: IProps): JSX.Element => {
   const { showAlert, hideAlert } = useAlert();
 
-  const [loading, setLoading] = React.useState<boolean>(false);
-  const [formValues, setFormValues] = React.useState<IFormProps>({
+  const [loading, setLoading] = useState<boolean>(false);
+  const [formValues, setFormValues] = useState<IFormProps>({
     name: data.name,
     email: data.email,
     lastname: data.lastname,
@@ -58,10 +58,10 @@ const FormMain = ({ data }: IProps): React.JSX.Element => {
   /**
    * Handles the form submission event.
    *
-   * @param {FormEvent<HTMLFormElement>} e - The form submission event.
+   * @param {React.FormEvent<HTMLFormElement>} e - The form submission event.
    * @returns {Promise<any>}
    */
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 
     hideAlert();

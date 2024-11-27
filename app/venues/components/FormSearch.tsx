@@ -1,6 +1,6 @@
 'use client';
 
-import React, { type FormEvent } from 'react';
+import { useState } from 'react';
 
 // hooks
 import useAlert from '@hooks/useAlert';
@@ -12,10 +12,10 @@ interface IFormProps {
   keyword: string;
 }
 
-const FormSearch = (): React.JSX.Element => {
+const FormSearch = (): JSX.Element => {
   const { showAlert } = useAlert();
 
-  const [formValues, setFormValues] = React.useState<IFormProps>({
+  const [formValues, setFormValues] = useState<IFormProps>({
     keyword: '',
   });
 

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { type Metadata } from 'next';
 
 // components
@@ -11,7 +9,7 @@ import CardGroup from '@components/Card/CardGroup';
 
 import FormSearch from './components/FormSearch';
 
-const Page = (): React.JSX.Element => (
+const Page = (): JSX.Element => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

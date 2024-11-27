@@ -1,6 +1,6 @@
 'use client';
 
-import React, { type FormEvent } from 'react';
+import { useState } from 'react';
 
 // hooks
 import useAlert from '@hooks/useAlert';
@@ -24,11 +24,11 @@ interface IFormProps {
   cardExpiration: string;
 }
 
-const Form = (): React.JSX.Element => {
+const Form = (): JSX.Element => {
   const { showAlert, hideAlert } = useAlert();
 
-  const [loading, setLoading] = React.useState<boolean>(false);
-  const [formValues, setFormValues] = React.useState<IFormProps>({
+  const [loading, setLoading] = useState<boolean>(false);
+  const [formValues, setFormValues] = useState<IFormProps>({
     name: '',
     email: '',
     cardCvc: '',
@@ -54,10 +54,10 @@ const Form = (): React.JSX.Element => {
   /**
    * Handles form submission.
    *
-   * @param {FormEvent<HTMLFormElement>} e - The event object from the form submission.
+   * @param {React.FormEvent<HTMLFormElement>} e - The event object from the form submission.
    * @return {Promise<any>} - The result of the form submission.
    */
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 
     hideAlert();

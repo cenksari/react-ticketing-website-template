@@ -1,21 +1,21 @@
 'use client';
 
-import React from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 
 // interfaces
 interface IProps {
   children: React.ReactNode;
 }
 
-const Slider = ({ children }: IProps): React.JSX.Element => {
-  const startX = React.useRef<number>(0);
-  const isDown = React.useRef<boolean>(false);
-  const scrollLeftX = React.useRef<number>(0);
-  const preventClick = React.useRef<boolean>(false);
-  const navReference = React.useRef<HTMLDivElement | any>(null);
+const Slider = ({ children }: IProps): JSX.Element => {
+  const startX = useRef<number>(0);
+  const isDown = useRef<boolean>(false);
+  const scrollLeftX = useRef<number>(0);
+  const preventClick = useRef<boolean>(false);
+  const navReference = useRef<HTMLDivElement | any>(null);
 
-  const [leftArrowDisable, setLeftArrowDisable] = React.useState<boolean>(true);
-  const [rightArrowDisable, setRightArrowDisable] = React.useState<boolean>(false);
+  const [leftArrowDisable, setLeftArrowDisable] = useState<boolean>(true);
+  const [rightArrowDisable, setRightArrowDisable] = useState<boolean>(false);
 
   /**
    * This function is used to handle the buttons in the slider.
@@ -59,7 +59,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
    *
    * @param {MouseEvent} e - The mouse event object.
    */
-  const scroll = React.useCallback(() => {
+  const scroll = useCallback(() => {
     buttons();
   }, []);
 
@@ -80,7 +80,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
    *
    * @param {MouseEvent} e - The mouse event object.
    */
-  const mouseDown = React.useCallback((e: MouseEvent) => {
+  const mouseDown = useCallback((e: MouseEvent) => {
     e.preventDefault();
 
     isDown.current = true;
@@ -102,7 +102,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
    *
    * @param {MouseEvent} e - The mouse event object.
    */
-  const mouseMove = React.useCallback((e: MouseEvent) => {
+  const mouseMove = useCallback((e: MouseEvent) => {
     if (!isDown.current) return;
 
     e.preventDefault();
@@ -154,7 +154,7 @@ const Slider = ({ children }: IProps): React.JSX.Element => {
     }, speed);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     buttons();
 
     const elementRef: HTMLDivElement = navReference.current;

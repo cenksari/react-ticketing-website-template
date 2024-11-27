@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Link from 'next/link';
 
 // interfaces
@@ -9,7 +7,7 @@ interface IProps {
   active?: boolean;
 }
 
-const DropdownItem = ({ url, text, active }: IProps): React.JSX.Element => (
+const DropdownItem = ({ url, text, active }: IProps): JSX.Element => (
   <Link className={active === true ? 'button active' : 'button passive'} href={`/${url}`}>
     {text}
   </Link>

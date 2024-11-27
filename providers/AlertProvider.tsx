@@ -1,9 +1,11 @@
-import React from 'react';
+'use client';
+
+import { useState } from 'react';
 
 import { AlertContext, initialState, type IAlert } from '../contexts/alertContext';
 
 const AlertProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [alert, setAlert] = React.useState<IAlert>(initialState.alert);
+  const [alert, setAlert] = useState<IAlert>(initialState.alert);
 
   /**
    * Hides the alert by setting it to its initial state.

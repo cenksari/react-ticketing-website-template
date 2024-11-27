@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Link from 'next/link';
 
 // interfaces
@@ -10,7 +8,7 @@ interface IProps {
   disabled?: boolean;
 }
 
-const ButtonGroupItem = ({ url, text, active, disabled }: IProps): React.JSX.Element => {
+const ButtonGroupItem = ({ url, text, active, disabled }: IProps): JSX.Element => {
   let className = '';
 
   if (disabled === true) {

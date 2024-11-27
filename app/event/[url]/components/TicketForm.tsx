@@ -1,6 +1,6 @@
 'use client';
 
-import React, { type FormEvent } from 'react';
+import { useState, useEffect } from 'react';
 
 // hooks
 import useAlert from '@hooks/useAlert';
@@ -24,13 +24,13 @@ interface IProps {
   data: IData[];
 }
 
-const TicketForm = ({ data }: IProps): React.JSX.Element => {
+const TicketForm = ({ data }: IProps): JSX.Element => {
   const { showAlert, hideAlert } = useAlert();
 
-  const [loading, setLoading] = React.useState<boolean>(true);
-  const [formValues, setFormValues] = React.useState<IData[]>(data);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [formValues, setFormValues] = useState<IData[]>(data);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
     }, 500);
@@ -132,10 +132,10 @@ const TicketForm = ({ data }: IProps): React.JSX.Element => {
    * Prevents the default form submission behavior, hides any existing alert, counts the total quantity of tickets selected,
    * and redirects to the '/buy' page if there are tickets selected. If no tickets are selected, it displays an error alert.
    *
-   * @param {FormEvent<HTMLFormElement>} e - The event object from the form submission.
+   * @param {React.FormEvent<HTMLFormElement>} e - The event object from the form submission.
    * @return {Promise<any>} - A promise that resolves to any value.
    */
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<any> => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<any> => {
     e.preventDefault();
 
     hideAlert();

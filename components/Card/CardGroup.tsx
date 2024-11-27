@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Slider from '@components/Slider/Slider';
 import Section from '@components/Section/Section';
@@ -15,7 +13,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const CardGroup = ({ url, title, color, background, children }: IProps): React.JSX.Element => (
+const CardGroup = ({ url, title, color, background, children }: IProps): JSX.Element => (
   <Section className={`${background}-background`}>
     <div className='container'>
       <div className='title flex flex-v-center flex-space-between'>

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { useEffect } from 'react';
 
 // hooks
 import useAlert from '@hooks/useAlert';
@@ -8,10 +8,10 @@ import useAlert from '@hooks/useAlert';
 // components
 import Progress from '@components/Progress/Progress';
 
-const Alert = (): React.JSX.Element => {
+const Alert = (): JSX.Element => {
   const { alert, hideAlert } = useAlert();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timeout = setTimeout(() => {
       hideAlert();
     }, 7000);

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { type FormEvent } from 'react';
+import { useState } from 'react';
 
 // hooks
 import useAlert from '@hooks/useAlert';
@@ -13,10 +13,10 @@ interface IFormProps {
   keyword: string;
 }
 
-const FormSearch = (): React.JSX.Element => {
+const FormSearch = (): JSX.Element => {
   const { showAlert } = useAlert();
 
-  const [formValues, setFormValues] = React.useState<IFormProps>({
+  const [formValues, setFormValues] = useState<IFormProps>({
     keyword: '',
   });
 
@@ -40,9 +40,9 @@ const FormSearch = (): React.JSX.Element => {
    * Prevents the default form submission behavior, checks if the keyword input is valid (minimum 3 characters),
    * and displays an error alert if the input is invalid.
    *
-   * @param {FormEvent<HTMLFormElement>} e - The event object from the form submission.
+   * @param {React.FormEvent<HTMLFormElement>} e - The event object from the form submission.
    */
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     const { keyword } = formValues;

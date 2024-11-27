@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 // providers
 import AlertProvider from '@providers/AlertProvider';
 
@@ -15,7 +13,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Master = ({ children }: IProps): React.JSX.Element => (
+const Master = ({ children }: IProps): JSX.Element => (
   <div className='light-theme'>
     <AlertProvider>
       <Alert />

@@ -1,5 +1,3 @@
-import React from 'react';
-
 // interfaces
 interface IProps {
   text: string;
@@ -7,7 +5,7 @@ interface IProps {
   color: string;
 }
 
-const Heading = ({ text, type, color }: IProps): React.JSX.Element => {
+const Heading = ({ text, type, color }: IProps): JSX.Element => {
   if (type === 1) {
     return <h1 className={color}>{text}</h1>;
   }

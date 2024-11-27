@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Link from 'next/link';
 
 // components
@@ -15,7 +13,7 @@ interface IProps {
   color: string;
 }
 
-const NewsCard = ({ url, name, when, image, color }: IProps): React.JSX.Element => (
+const NewsCard = ({ url, name, when, image, color }: IProps): JSX.Element => (
   <div className='card'>
     <Link href={`/news/${url}`}>
       <div

@@ -1,5 +1,3 @@
-import React from 'react';
-
 // interfaces
 interface IProps {
   name: string;
@@ -21,7 +19,7 @@ const Input = ({
   required,
   placeholder,
   onChange,
-}: IProps): React.JSX.Element => (
+}: IProps): JSX.Element => (
   <input
     id={name}
     type={type}

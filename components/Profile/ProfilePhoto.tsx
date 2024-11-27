@@ -1,5 +1,3 @@
-import React from 'react';
-
 // interfaces
 interface IProps {
   size?: string | 'small';
@@ -8,7 +6,7 @@ interface IProps {
   image?: string;
 }
 
-const ProfilePhoto = ({ size, text, color, image }: IProps): React.JSX.Element => {
+const ProfilePhoto = ({ size, text, color, image }: IProps): JSX.Element => {
   if (image === null) {
     return (
       <div className='profile-photo'>

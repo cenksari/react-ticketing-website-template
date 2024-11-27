@@ -1,11 +1,9 @@
-import React from 'react';
-
 import Link from 'next/link';
 
 // components
 import ButtonLink from '@components/Button/ButtonLink';
 
-const Footer = (): React.JSX.Element => (
+const Footer = (): JSX.Element => (
   <footer>
     <div className='container'>
       <div className='logo'>

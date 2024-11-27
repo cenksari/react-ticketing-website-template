@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { type Metadata } from 'next';
 
 // components
@@ -10,7 +8,7 @@ import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import ButtonLink from '@components/Button/ButtonLink';
 
-const Page = (): React.JSX.Element => (
+const Page = (): JSX.Element => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

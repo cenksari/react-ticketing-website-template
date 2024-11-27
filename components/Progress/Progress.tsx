@@ -1,16 +1,16 @@
 'use client';
 
-import React from 'react';
+import { useState, useEffect } from 'react';
 
 // interfaces
 interface IProps {
   ms: number;
 }
 
-const Progress = ({ ms }: IProps): React.JSX.Element => {
-  const [progress, setProgress] = React.useState<number>(0);
+const Progress = ({ ms }: IProps): JSX.Element => {
+  const [progress, setProgress] = useState<number>(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
         const newProgress = prev + 50 / (ms / 100);

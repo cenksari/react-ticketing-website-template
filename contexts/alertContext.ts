@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { createContext } from 'react';
 
 // interfaces
 export interface IAlert {
@@ -21,4 +21,4 @@ export const initialState = {
   showAlert: () => {},
 };
 
-export const AlertContext = React.createContext<IAlertContext>(initialState);
+export const AlertContext = createContext<IAlertContext>(initialState);

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Link from 'next/link';
 
 // interfaces
@@ -11,7 +9,7 @@ interface IProps {
   rightIcon?: string;
 }
 
-const ButtonLink = ({ url, text, color, leftIcon, rightIcon }: IProps): React.JSX.Element => (
+const ButtonLink = ({ url, text, color, leftIcon, rightIcon }: IProps): JSX.Element => (
   <Link className={`button ${color}`} href={`/${url}`}>
     {leftIcon !== undefined && (
       <span className='material-symbols-outlined left-icon'>{leftIcon}</span>

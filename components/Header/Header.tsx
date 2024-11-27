@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { useRef, useState } from 'react';
 
 import Link from 'next/link';
 
@@ -12,11 +12,11 @@ import Dropdown from '@components/Dropdown/Dropdown';
 import DropdownItem from '@components/Dropdown/DropdownItem';
 import ProfilePhoto from '@components/Profile/ProfilePhoto';
 
-const Header = (): React.JSX.Element => {
-  const wrapperRef = React.useRef<any>();
+const Header = (): JSX.Element => {
+  const wrapperRef = useRef<any>();
 
-  const [menu, setMenu] = React.useState<boolean>(false);
-  const [dropdown, setDropdown] = React.useState<boolean>(false);
+  const [menu, setMenu] = useState<boolean>(false);
+  const [dropdown, setDropdown] = useState<boolean>(false);
 
   /**
    * This is a functional component for the Header.

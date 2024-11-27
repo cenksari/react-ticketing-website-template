@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Link from 'next/link';
 
 // interfaces
@@ -9,7 +7,7 @@ interface IProps {
   text: string;
 }
 
-const ButtonCircle = ({ url, icon, text }: IProps): React.JSX.Element => (
+const ButtonCircle = ({ url, icon, text }: IProps): JSX.Element => (
   <Link className='circle-button' href={`/${url}`}>
     <div className='circle'>
       <span className='material-symbols-outlined right-icon'>{icon}</span>

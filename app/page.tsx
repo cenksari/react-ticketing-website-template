@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Master from '@components/Layout/Master';
 import Section from '@components/Section/Section';
@@ -7,10 +5,10 @@ import Heading from '@components/Heading/Heading';
 import EventCard from '@components/Card/EventCard';
 import CardGroup from '@components/Card/CardGroup';
 
-import FormSearch from 'app/home/components/FormSearch';
-import CircleButtons from 'app/home/components/CircleButtons';
+import FormSearch from './home/components/FormSearch';
+import CircleButtons from './home/components/CircleButtons';
 
-const Page = (): React.JSX.Element => (
+const Page = (): JSX.Element => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

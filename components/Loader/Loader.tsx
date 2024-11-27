@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Heading from '@components/Heading/Heading';
 
@@ -10,7 +8,7 @@ interface IProps {
   color: string;
 }
 
-const Loader = ({ type, text, color }: IProps): React.JSX.Element => {
+const Loader = ({ type, text, color }: IProps): JSX.Element => {
   if (type === 'inline') {
     return (
       <div className='center'>

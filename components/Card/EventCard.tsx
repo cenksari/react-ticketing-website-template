@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Link from 'next/link';
 
 // components
@@ -17,7 +15,7 @@ interface IProps {
   color: string;
 }
 
-const EventCard = ({ url, from, when, name, venue, image, color }: IProps): React.JSX.Element => (
+const EventCard = ({ url, from, when, name, venue, image, color }: IProps): JSX.Element => (
   <div className='card'>
     <Link href={`/event/${url}`}>
       <div className='card-title'>

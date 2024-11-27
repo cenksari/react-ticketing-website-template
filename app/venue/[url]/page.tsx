@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { type Metadata } from 'next';
 
 // components
@@ -9,7 +7,7 @@ import Heading from '@components/Heading/Heading';
 import EventCard from '@components/Card/EventCard';
 import CardGroup from '@components/Card/CardGroup';
 
-const Page = (): React.JSX.Element => (
+const Page = (): JSX.Element => (
   <Master>
     <div className='blur-cover'>
       <div

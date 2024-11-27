@@ -4,11 +4,10 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -18,24 +17,24 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
       "@hooks/*": ["./hooks/*"],
       "@utils/*": ["./utils/*"],
       "@contexts/*": ["./contexts/*"],
       "@providers/*": ["./providers/*"],
       "@components/*": ["./components/*"]
-    }
+    },
+    "target": "ES2017"
   },
   "include": [
+    "src",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.cjs",
-    "**/*.mjs",
-    ".eslintrc.cjs",
-    ".prettierrc.cjs",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".prettierrc.mjs",
+    "eslint.config.mjs",
+    ".next/types/**/*.ts",
+    "build/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
