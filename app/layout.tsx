@@ -8,7 +8,7 @@ import './styles/site.css';
 // variables
 export const runtime = 'edge';
 
-const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>): JSX.Element => (
+const RootLayout: React.FC<Readonly<{ children: React.ReactNode }>> = ({ children }) => (
   <html lang='en'>
     <body>{children}</body>
   </html>

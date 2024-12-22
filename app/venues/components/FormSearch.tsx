@@ -12,7 +12,7 @@ interface IFormProps {
   keyword: string;
 }
 
-const FormSearch = (): JSX.Element => {
+const FormSearch: React.FC = () => {
   const { showAlert } = useAlert();
 
   const [formValues, setFormValues] = useState<IFormProps>({

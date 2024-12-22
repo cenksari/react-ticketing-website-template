@@ -13,7 +13,7 @@ interface IProps {
   location: string;
 }
 
-const VenueCard = ({ url, name, image, color, location }: IProps): JSX.Element => (
+const VenueCard: React.FC<IProps> = ({ url, name, image, color, location }) => (
   <div className='card'>
     <Link href={`/venue/${url}`}>
       <div className='card-title venue'>

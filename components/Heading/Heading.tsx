@@ -5,7 +5,7 @@ interface IProps {
   color: string;
 }
 
-const Heading = ({ text, type, color }: IProps): JSX.Element => {
+const Heading: React.FC<IProps> = ({ text, type, color }) => {
   if (type === 1) {
     return <h1 className={color}>{text}</h1>;
   }

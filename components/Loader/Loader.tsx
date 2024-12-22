@@ -8,7 +8,7 @@ interface IProps {
   color: string;
 }
 
-const Loader = ({ type, text, color }: IProps): JSX.Element => {
+const Loader: React.FC<IProps> = ({ type, text, color }) => {
   if (type === 'inline') {
     return (
       <div className='center'>

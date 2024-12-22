@@ -11,7 +11,7 @@ import CardGroup from '@components/Card/CardGroup';
 
 import TicketForm from './components/TicketForm';
 
-const Page = (): JSX.Element => (
+const Page: React.FC = () => (
   <Master>
     <div className='blur-cover'>
       <div

@@ -24,7 +24,7 @@ interface IProps {
   data: IData[];
 }
 
-const TicketForm = ({ data }: IProps): JSX.Element => {
+const TicketForm: React.FC<IProps> = ({ data }) => {
   const { showAlert, hideAlert } = useAlert();
 
   const [loading, setLoading] = useState<boolean>(true);

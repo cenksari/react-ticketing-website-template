@@ -17,7 +17,7 @@ interface IProps {
   data: string;
 }
 
-const FormPhoto = ({ data }: IProps): JSX.Element => {
+const FormPhoto: React.FC<IProps> = ({ data }) => {
   const { showAlert, hideAlert } = useAlert();
 
   const [loading, setLoading] = useState<boolean>(false);

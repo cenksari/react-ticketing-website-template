@@ -3,7 +3,7 @@ import Link from 'next/link';
 // components
 import ButtonLink from '@components/Button/ButtonLink';
 
-const Footer = (): JSX.Element => (
+const Footer: React.FC = () => (
   <footer>
     <div className='container'>
       <div className='logo'>

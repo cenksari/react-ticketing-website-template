@@ -1,33 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import { AlertContext, initialState, type IAlert } from '../contexts/alertContext';
 
 const AlertProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [alert, setAlert] = useState<IAlert>(initialState.alert);
 
-  /**
-   * Hides the alert by setting it to its initial state.
-   */
-  const hideAlert = (): void => {
-    setAlert(initialState.alert);
-  };
-
-  /**
-   * Displays an alert with the specified type and text.
-   *
-   * @param {IAlert} payload - The alert payload containing the type and text of the alert.
-   */
-  const showAlert = (payload: IAlert): void => {
-    setAlert({ type: payload.type, text: payload.text, show: true });
-  };
-
-  return (
-    <AlertContext.Provider value={{ alert, hideAlert, showAlert }}>
-      {children}
-    </AlertContext.Provider>
+  const contextValue = useMemo(
+    () => ({
+      alert,
+      hideAlert: () => setAlert(initialState.alert),
+      showAlert: (payload: IAlert) => setAlert({ ...payload, show: true }),
+    }),
+    [alert]
   );
+
+  return <AlertContext.Provider value={contextValue}>{children}</AlertContext.Provider>;
 };
 
 export default AlertProvider;

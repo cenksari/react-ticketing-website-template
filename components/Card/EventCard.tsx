@@ -15,7 +15,7 @@ interface IProps {
   color: string;
 }
 
-const EventCard = ({ url, from, when, name, venue, image, color }: IProps): JSX.Element => (
+const EventCard: React.FC<IProps> = ({ url, from, when, name, venue, image, color }) => (
   <div className='card'>
     <Link href={`/event/${url}`}>
       <div className='card-title'>

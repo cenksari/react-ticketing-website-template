@@ -7,7 +7,7 @@ import Heading from '@components/Heading/Heading';
 import EventCard from '@components/Card/EventCard';
 import CardGroup from '@components/Card/CardGroup';
 
-const Page = (): JSX.Element => (
+const Page: React.FC = () => (
   <Master>
     <div className='blur-cover'>
       <div

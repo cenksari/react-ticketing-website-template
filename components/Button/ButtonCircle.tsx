@@ -7,7 +7,7 @@ interface IProps {
   text: string;
 }
 
-const ButtonCircle = ({ url, icon, text }: IProps): JSX.Element => (
+const ButtonCircle: React.FC<IProps> = ({ url, icon, text }) => (
   <Link className='circle-button' href={`/${url}`}>
     <div className='circle'>
       <span className='material-symbols-outlined right-icon'>{icon}</span>

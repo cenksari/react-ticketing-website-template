@@ -2,7 +2,7 @@
 import Slider from '@components/Slider/Slider';
 import ButtonCircle from '@components/Button/ButtonCircle';
 
-const CircleButtons = (): JSX.Element => (
+const CircleButtons: React.FC = () => (
   <Slider>
     <ButtonCircle icon='theater_comedy' text='Theater' url='list' />
     <ButtonCircle icon='stadium' text='Concert' url='list' />

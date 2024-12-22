@@ -6,7 +6,7 @@ interface IProps {
   image?: string;
 }
 
-const ProfilePhoto = ({ size, text, color, image }: IProps): JSX.Element => {
+const ProfilePhoto: React.FC<IProps> = ({ size, text, color, image }) => {
   if (image === null) {
     return (
       <div className='profile-photo'>

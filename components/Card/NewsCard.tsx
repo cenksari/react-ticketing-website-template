@@ -13,7 +13,7 @@ interface IProps {
   color: string;
 }
 
-const NewsCard = ({ url, name, when, image, color }: IProps): JSX.Element => (
+const NewsCard: React.FC<IProps> = ({ url, name, when, image, color }) => (
   <div className='card'>
     <Link href={`/news/${url}`}>
       <div

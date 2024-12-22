@@ -7,7 +7,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Slider = ({ children }: IProps): JSX.Element => {
+const Slider: React.FC<IProps> = ({ children }) => {
   const startX = useRef<number>(0);
   const isDown = useRef<boolean>(false);
   const scrollLeftX = useRef<number>(0);

@@ -8,7 +8,7 @@ import Section from '@components/Section/Section';
 import Heading from '@components/Heading/Heading';
 import ButtonLink from '@components/Button/ButtonLink';
 
-const Page = (): JSX.Element => (
+const Page: React.FC = () => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

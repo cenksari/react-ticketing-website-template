@@ -13,7 +13,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const CardGroup = ({ url, title, color, background, children }: IProps): JSX.Element => (
+const CardGroup: React.FC<IProps> = ({ url, title, color, background, children }) => (
   <Section className={`${background}-background`}>
     <div className='container'>
       <div className='title flex flex-v-center flex-space-between'>

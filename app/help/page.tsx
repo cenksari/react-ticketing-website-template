@@ -10,7 +10,7 @@ import ButtonLink from '@components/Button/ButtonLink';
 
 import FormSearch from './components/FormSearch';
 
-const Page = (): JSX.Element => (
+const Page: React.FC = () => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

@@ -7,7 +7,7 @@ interface IProps {
   ms: number;
 }
 
-const Progress = ({ ms }: IProps): JSX.Element => {
+const Progress: React.FC<IProps> = ({ ms }) => {
   const [progress, setProgress] = useState<number>(0);
 
   useEffect(() => {

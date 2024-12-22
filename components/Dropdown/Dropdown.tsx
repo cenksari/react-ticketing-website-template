@@ -4,7 +4,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Dropdown = ({ color, children }: IProps): JSX.Element => (
+const Dropdown: React.FC<IProps> = ({ color, children }) => (
   <div className={`dropdown ${color}`}>{children}</div>
 );
 

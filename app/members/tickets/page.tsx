@@ -9,7 +9,7 @@ import Heading from '@components/Heading/Heading';
 import ButtonGroup from '@components/Button/ButtonGroup';
 import ButtonGroupItem from '@components/Button/ButtonGroupItem';
 
-const Page = (): JSX.Element => (
+const Page: React.FC = () => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

@@ -7,7 +7,7 @@ interface IProps {
   rightIcon?: string;
 }
 
-const Button = ({ type, text, color, leftIcon, rightIcon }: IProps): JSX.Element => (
+const Button: React.FC<IProps> = ({ type, text, color, leftIcon, rightIcon }) => (
   <button type={type === 'button' ? 'button' : 'submit'} className={`button ${color}`}>
     {leftIcon !== undefined && (
       <span className='material-symbols-outlined left-icon'>{leftIcon}</span>

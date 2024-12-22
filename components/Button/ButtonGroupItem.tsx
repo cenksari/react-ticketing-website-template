@@ -8,7 +8,7 @@ interface IProps {
   disabled?: boolean;
 }
 
-const ButtonGroupItem = ({ url, text, active, disabled }: IProps): JSX.Element => {
+const ButtonGroupItem: React.FC<IProps> = ({ url, text, active, disabled }) => {
   let className = '';
 
   if (disabled === true) {

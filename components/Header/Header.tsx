@@ -12,8 +12,8 @@ import Dropdown from '@components/Dropdown/Dropdown';
 import DropdownItem from '@components/Dropdown/DropdownItem';
 import ProfilePhoto from '@components/Profile/ProfilePhoto';
 
-const Header = (): JSX.Element => {
-  const wrapperRef = useRef<any>();
+const Header: React.FC = () => {
+  const wrapperRef = useRef<any>(null);
 
   const [menu, setMenu] = useState<boolean>(false);
   const [dropdown, setDropdown] = useState<boolean>(false);

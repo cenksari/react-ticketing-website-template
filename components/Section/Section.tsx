@@ -4,7 +4,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Section = ({ className, children }: IProps): JSX.Element => (
+const Section: React.FC<IProps> = ({ className, children }) => (
   <section className={className !== undefined ? `${className}` : 'no-style'}>{children}</section>
 );
 

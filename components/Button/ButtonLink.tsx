@@ -9,7 +9,7 @@ interface IProps {
   rightIcon?: string;
 }
 
-const ButtonLink = ({ url, text, color, leftIcon, rightIcon }: IProps): JSX.Element => (
+const ButtonLink: React.FC<IProps> = ({ url, text, color, leftIcon, rightIcon }) => (
   <Link className={`button ${color}`} href={`/${url}`}>
     {leftIcon !== undefined && (
       <span className='material-symbols-outlined left-icon'>{leftIcon}</span>

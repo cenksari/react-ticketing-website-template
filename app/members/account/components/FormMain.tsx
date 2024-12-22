@@ -31,7 +31,7 @@ interface IFormProps {
   lastname: string;
 }
 
-const FormMain = ({ data }: IProps): JSX.Element => {
+const FormMain: React.FC<IProps> = ({ data }) => {
   const { showAlert, hideAlert } = useAlert();
 
   const [loading, setLoading] = useState<boolean>(false);

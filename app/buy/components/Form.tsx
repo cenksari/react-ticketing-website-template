@@ -24,7 +24,7 @@ interface IFormProps {
   cardExpiration: string;
 }
 
-const Form = (): JSX.Element => {
+const Form: React.FC = () => {
   const { showAlert, hideAlert } = useAlert();
 
   const [loading, setLoading] = useState<boolean>(false);

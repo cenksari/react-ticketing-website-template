@@ -7,7 +7,7 @@ interface IProps {
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-const Switch = ({ name, color, checked, children, onChange }: IProps): JSX.Element => (
+const Switch: React.FC<IProps> = ({ name, color, checked, children, onChange }) => (
   <div className='switch-container'>
     <label htmlFor={name} className={`switch ${color}`}>
       <input name={name} id={name} type='checkbox' defaultChecked={checked} onChange={onChange} />

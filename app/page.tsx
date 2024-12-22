@@ -8,7 +8,7 @@ import CardGroup from '@components/Card/CardGroup';
 import FormSearch from './home/components/FormSearch';
 import CircleButtons from './home/components/CircleButtons';
 
-const Page = (): JSX.Element => (
+const Page: React.FC = () => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

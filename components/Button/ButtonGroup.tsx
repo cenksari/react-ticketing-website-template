@@ -4,7 +4,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const ButtonGroup = ({ color, children }: IProps): JSX.Element => (
+const ButtonGroup: React.FC<IProps> = ({ color, children }) => (
   <div className={`button-group ${color}`}>{children}</div>
 );
 

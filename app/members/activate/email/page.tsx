@@ -7,7 +7,7 @@ import Heading from '@components/Heading/Heading';
 
 import Form from './components/Form';
 
-const Page = (): JSX.Element => (
+const Page: React.FC = () => (
   <Master>
     <Section className='white-background'>
       <div className='container'>

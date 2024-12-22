@@ -8,7 +8,7 @@ import useAlert from '@hooks/useAlert';
 // components
 import Progress from '@components/Progress/Progress';
 
-const Alert = (): JSX.Element => {
+const Alert: React.FC = () => {
   const { alert, hideAlert } = useAlert();
 
   useEffect(() => {
