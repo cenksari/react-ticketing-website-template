@@ -4,213 +4,196 @@ import { useRef, useState, useEffect, useCallback } from 'react';
 
 // interfaces
 interface IProps {
+  touch?: boolean;
+  margin?: number;
   children: React.ReactNode;
 }
 
-const Slider: React.FC<IProps> = ({ children }) => {
+const Slider: React.FC<IProps> = ({ margin, touch, children }) => {
   const startX = useRef<number>(0);
   const isDown = useRef<boolean>(false);
+  const itemWidth = useRef<number>(0);
   const scrollLeftX = useRef<number>(0);
   const preventClick = useRef<boolean>(false);
-  const navReference = useRef<HTMLDivElement | any>(null);
+  const movedDistance = useRef<number>(0);
+  const navReferenceDiv = useRef<HTMLDivElement | null>(null);
 
-  const [leftArrowDisable, setLeftArrowDisable] = useState<boolean>(true);
-  const [rightArrowDisable, setRightArrowDisable] = useState<boolean>(false);
+  const [leftArrowDisabled, setLeftArrowDisabled] = useState<boolean>(true);
+  const [rightArrowDisabled, setRightArrowDisabled] = useState<boolean>(false);
 
   /**
-   * This function is used to handle the buttons in the slider.
-   * It checks if the left or right scroll buttons should be disabled based on the scroll position.
+   * Updates the disabled state of the left and right arrow buttons based on the current scroll position.
+   * If the current scroll position is at the start or the end, the corresponding arrow will be disabled.
    */
-  const buttons = (): void => {
-    const { offsetWidth, scrollWidth, scrollLeft } = navReference.current;
+  const updateButtons = () => {
+    const { offsetWidth, scrollWidth, scrollLeft } = navReferenceDiv.current!;
 
-    const hideLeftScroll: boolean = scrollLeft <= 0;
+    setLeftArrowDisabled(scrollLeft <= 0);
 
-    const hideRightScroll: boolean = scrollWidth - Math.round(scrollLeft | 0) <= offsetWidth + 1;
-
-    if (hideLeftScroll) {
-      setLeftArrowDisable(true);
-    } else {
-      setLeftArrowDisable(false);
-    }
-
-    if (hideRightScroll) {
-      setRightArrowDisable(true);
-    } else {
-      setRightArrowDisable(false);
-    }
+    setRightArrowDisabled(scrollWidth - Math.round(scrollLeft) <= offsetWidth + 1);
   };
 
   /**
-   * This function handles the click event on the slider.
-   * It prevents the default click behavior if the preventClick flag is set to true.
+   * Handles mouse movement during a drag interaction.
+   * Updates the scroll position based on the amount the mouse has moved.
+   * Prevents click event if the mouse has been dragged more than 5 pixels.
    *
-   * @param {MouseEvent} e - The mouse event object.
+   * @param e - The `MouseEvent` representing the mouse move event.
    */
-  const click = (e: MouseEvent): void => {
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    if (!isDown.current) return;
+
+    const x = e.pageX - navReferenceDiv.current!.offsetLeft;
+
+    const walk = x - startX.current;
+
+    navReferenceDiv.current!.scrollLeft = scrollLeftX.current - walk;
+
+    movedDistance.current = Math.abs(walk);
+
+    preventClick.current = movedDistance.current > 5;
+
+    updateButtons();
+  }, []);
+
+  /**
+   * Initiates a drag interaction when the mouse button is pressed down on the navigation element.
+   * Records the starting X position of the mouse and the initial scroll position.
+   *
+   * @param e - The `MouseEvent` representing the mouse down event.
+   */
+  const handleMouseDown = useCallback((e: MouseEvent) => {
+    e.preventDefault();
+
+    isDown.current = true;
+
+    startX.current = e.pageX - navReferenceDiv.current!.offsetLeft;
+
+    scrollLeftX.current = navReferenceDiv.current!.scrollLeft;
+
+    preventClick.current = false;
+
+    movedDistance.current = 0;
+
+    updateButtons();
+  }, []);
+
+  /**
+   * Ends the drag interaction when the mouse button is released.
+   */
+  const handleMouseUp = () => {
+    isDown.current = false;
+  };
+
+  /**
+   * Ends the drag interaction when the mouse leaves the navigation area.
+   */
+  const handleMouseLeave = () => {
+    isDown.current = false;
+    preventClick.current = false;
+  };
+
+  /**
+   * Updates the arrow button state during scrolling.
+   * Calls the `updateButtons` function to determine whether the left or right arrow buttons should be disabled.
+   */
+  const handleScroll = useCallback(updateButtons, []);
+
+  /**
+   * Prevents the default click action if the mouse has been dragged to avoid accidental clicks on child elements during scrolling.
+   *
+   * @param e - The `MouseEvent` representing the click event.
+   */
+  const handleClick = (e: MouseEvent) => {
     if (preventClick.current) {
       e.preventDefault();
     }
   };
 
   /**
-   * This function is used to handle the horizontal scrolling of the slider.
-   * It updates the scroll position based on the mouse movement.
+   * Scrolls the navigation container horizontally by one item width.
+   * This function performs a smooth horizontal scroll based on the direction ('left' or 'right').
+   * It scrolls exactly by one element width for each click.
    *
-   * @param {MouseEvent} e - The mouse event object.
+   * @param direction - A string indicating the direction to scroll, either 'left' or 'right'.
    */
-  const scroll = useCallback(() => {
-    buttons();
-  }, []);
+  const handleHorizontalScroll = (direction: 'left' | 'right') => {
+    const scrollAmount = direction === 'left' ? -itemWidth.current : itemWidth.current;
 
-  /**
-   * This function is used to handle the mouse up event on the slider.
-   * It sets the isDown state to false, indicating that the mouse is no longer down.
-   */
-  const mouseUp = (): void => {
-    isDown.current = false;
+    navReferenceDiv.current!.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth',
+    });
+
+    updateButtons();
   };
 
   /**
-   * This function is used to handle the mouse down event on the slider.
-   * It sets the isDown state to true, indicating that the mouse is down, and initializes
-   * the starting position of the mouse and the current scroll position of the navigation.
-   * It also sets preventClick to false to allow the click event to be handled.
-   * Finally, it calls the buttons function to update the state of the left and right arrows.
-   *
-   * @param {MouseEvent} e - The mouse event object.
+   * Sets up the scroll functionality and event listeners on the navigation element.
+   * Calculates the width of the first child element to use for scrolling by item width.
+   * Adds event listeners for mouse interaction, scrolling, and resizing.
    */
-  const mouseDown = useCallback((e: MouseEvent) => {
-    e.preventDefault();
-
-    isDown.current = true;
-
-    startX.current = e.pageX - navReference.current.offsetLeft;
-
-    scrollLeftX.current = navReference.current.scrollLeft;
-
-    preventClick.current = false;
-
-    buttons();
-  }, []);
-
-  /**
-   * This function is used to handle the mouse move event on the slider.
-   * It updates the scroll position based on the mouse movement while the mouse is down.
-   * It also sets preventClick to true to prevent the click event from being handled.
-   * Finally, it calls the buttons function to update the state of the left and right arrows.
-   *
-   * @param {MouseEvent} e - The mouse event object.
-   */
-  const mouseMove = useCallback((e: MouseEvent) => {
-    if (!isDown.current) return;
-
-    e.preventDefault();
-
-    const x: number = e.pageX - navReference.current.offsetLeft;
-
-    const walk: number = x - startX.current;
-
-    navReference.current.scrollLeft = scrollLeftX.current - walk;
-
-    preventClick.current = true;
-
-    buttons();
-  }, []);
-
-  /**
-   * This function is used to handle the mouse leave event on the slider.
-   * It sets the isDown state to false, indicating that the mouse is no longer down,
-   * and sets preventClick to false to allow the click event to be handled.
-   */
-  const mouseLeave = (): void => {
-    isDown.current = false;
-
-    preventClick.current = false;
-  };
-
-  /**
-   * Handles horizontal scrolling of the slider.
-   *
-   * This function scrolls the slider horizontally by a specified step at a given speed.
-   * It stops scrolling when the total scroll amount reaches 320 pixels.
-   *
-   * @param {number} speed - The speed of the scroll in milliseconds.
-   * @param {number} step - The step size of each scroll.
-   */
-  const handleHorizantalScroll = (speed: number, step: number): void => {
-    let scrollAmount: number = 0;
-
-    const slideTimer = setInterval(() => {
-      navReference.current.scrollLeft += step;
-
-      scrollAmount += Math.abs(step);
-
-      if (scrollAmount >= 320) {
-        clearInterval(slideTimer);
-      }
-
-      buttons();
-    }, speed);
-  };
-
   useEffect(() => {
-    buttons();
+    const currentNav = navReferenceDiv.current!;
 
-    const elementRef: HTMLDivElement = navReference.current;
+    // Get the width of the first child element and store it in itemWidth.current
+    if (currentNav.children.length > 0) {
+      const firstChild = currentNav.children[0] as HTMLElement;
 
-    window.addEventListener('resize', scroll);
-    elementRef.addEventListener('click', click);
-    elementRef.addEventListener('scroll', scroll);
-    elementRef.addEventListener('mouseup', mouseUp);
-    elementRef.addEventListener('mousedown', mouseDown);
-    elementRef.addEventListener('mousemove', mouseMove);
-    elementRef.addEventListener('mouseleave', mouseLeave);
+      itemWidth.current = firstChild.offsetWidth + (margin ?? 0);
+    }
+
+    updateButtons();
+
+    window.addEventListener('resize', updateButtons);
+    currentNav.addEventListener('click', handleClick);
+    currentNav.addEventListener('scroll', handleScroll);
+
+    if (touch) {
+      currentNav.addEventListener('mouseup', handleMouseUp);
+      currentNav.addEventListener('mousedown', handleMouseDown);
+      currentNav.addEventListener('mousemove', handleMouseMove);
+      currentNav.addEventListener('mouseleave', handleMouseLeave);
+    }
 
     return () => {
-      window.removeEventListener('resize', scroll);
-      elementRef.removeEventListener('click', click);
-      elementRef.removeEventListener('scroll', scroll);
-      elementRef.removeEventListener('mouseup', mouseUp);
-      elementRef.removeEventListener('mousedown', mouseDown);
-      elementRef.removeEventListener('mousemove', mouseMove);
-      elementRef.removeEventListener('mouseleave', mouseLeave);
+      window.removeEventListener('resize', updateButtons);
+      currentNav.removeEventListener('click', handleClick);
+      currentNav.removeEventListener('scroll', handleScroll);
+
+      if (touch) {
+        currentNav.removeEventListener('mouseup', handleMouseUp);
+        currentNav.removeEventListener('mousedown', handleMouseDown);
+        currentNav.removeEventListener('mousemove', handleMouseMove);
+        currentNav.removeEventListener('mouseleave', handleMouseLeave);
+      }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [touch, margin, handleMouseMove, handleMouseDown, handleScroll]);
 
   return (
     <div className='scroll-container'>
-      {!leftArrowDisable && (
+      {!leftArrowDisabled && (
         <div className='left-arrow'>
           <button
             type='button'
-            disabled={leftArrowDisable}
-            className={
-              leftArrowDisable ? 'button-gray button-circle' : 'button-default button-circle'
-            }
-            onClick={() => {
-              handleHorizantalScroll(15, -20);
-            }}
+            disabled={leftArrowDisabled}
+            onClick={() => handleHorizontalScroll('left')}
+            className={`button-circle ${leftArrowDisabled ? 'button-gray' : 'button-default'}`}
           >
             <span className='material-symbols-outlined'>chevron_left</span>
           </button>
         </div>
       )}
-      <div className='scrollable' ref={navReference}>
+      <div className='scrollable' ref={navReferenceDiv}>
         {children}
       </div>
-      {!rightArrowDisable && (
+      {!rightArrowDisabled && (
         <div className='right-arrow'>
           <button
             type='button'
-            disabled={rightArrowDisable}
-            className={
-              rightArrowDisable ? 'button-gray button-circle' : 'button-default button-circle'
-            }
-            onClick={() => {
-              handleHorizantalScroll(15, 20);
-            }}
+            disabled={rightArrowDisabled}
+            onClick={() => handleHorizontalScroll('right')}
+            className={`button-circle ${rightArrowDisabled ? 'button-gray' : 'button-default'}`}
           >
             <span className='material-symbols-outlined'>chevron_right</span>
           </button>
